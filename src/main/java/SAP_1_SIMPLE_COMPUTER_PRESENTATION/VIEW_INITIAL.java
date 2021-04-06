@@ -50,6 +50,11 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
         });
 
         PLAY_PAUSE.setText("PLAY/PAUSE");
+        PLAY_PAUSE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PLAY_PAUSEActionPerformed(evt);
+            }
+        });
 
         CARGAR.setText("CARGAR PROGRAMA");
         CARGAR.addActionListener(new java.awt.event.ActionListener() {
@@ -68,7 +73,7 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
         );
         jInternalFrame1Layout.setVerticalGroup(
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 506, Short.MAX_VALUE)
+            .addGap(0, 510, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -120,6 +125,10 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
         VIEW_LOAD_PROGRAM load = new VIEW_LOAD_PROGRAM();
         load.show();
     }//GEN-LAST:event_CARGARActionPerformed
+
+    private void PLAY_PAUSEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PLAY_PAUSEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PLAY_PAUSEActionPerformed
 
     /**
      * @param args the command line arguments
