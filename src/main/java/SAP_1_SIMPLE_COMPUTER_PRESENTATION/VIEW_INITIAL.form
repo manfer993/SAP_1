@@ -251,7 +251,7 @@
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="AcPanel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="AccPanel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jLabel92" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -390,7 +390,7 @@
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel92" min="-2" max="-2" attributes="0"/>
-                                          <Component id="AcPanel2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="AccPanel" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                                       <Component id="jLabel72" min="-2" max="-2" attributes="0"/>
@@ -2023,7 +2023,7 @@
             <Property name="text" type="java.lang.String" value="COp"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JPanel" name="AcPanel2">
+        <Container class="javax.swing.JPanel" name="AccPanel">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2040,21 +2040,21 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="AcBit7jLabel2" min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="AccBit7jLabel" min="-2" pref="15" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="AcBit6jLabel2" min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="AccBit6jLabel" min="-2" pref="15" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="AcBit5jLabel2" min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="AccBit5jLabel" min="-2" pref="15" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="AcBit4jLabel2" min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="AccBit4jLabel" min="-2" pref="15" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="AcBit3jLabel2" min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="AccBit3jLabel" min="-2" pref="15" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="AcBit2jLabel2" min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="AccBit2jLabel" min="-2" pref="15" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="AcBit1jLabel2" min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="AccBit1jLabel" min="-2" pref="15" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="AcBit0jLabel6" min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="AccBit0jLabel" min="-2" pref="15" max="-2" attributes="0"/>
                       <EmptySpace pref="18" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -2064,14 +2064,14 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="AcBit2jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AcBit5jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AcBit6jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AcBit7jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AcBit1jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AcBit4jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AcBit3jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AcBit0jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="AccBit2jLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="AccBit5jLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="AccBit6jLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="AccBit7jLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="AccBit1jLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="AccBit4jLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="AccBit3jLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="AccBit0jLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="23" max="32767" attributes="0"/>
                   </Group>
@@ -2079,7 +2079,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="AcBit7jLabel2">
+            <Component class="javax.swing.JLabel" name="AccBit7jLabel">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="0"/>
@@ -2090,7 +2090,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="AcBit6jLabel2">
+            <Component class="javax.swing.JLabel" name="AccBit6jLabel">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="0"/>
@@ -2101,7 +2101,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="AcBit5jLabel2">
+            <Component class="javax.swing.JLabel" name="AccBit5jLabel">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="0"/>
@@ -2112,7 +2112,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="AcBit4jLabel2">
+            <Component class="javax.swing.JLabel" name="AccBit4jLabel">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="0"/>
@@ -2123,7 +2123,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="AcBit3jLabel2">
+            <Component class="javax.swing.JLabel" name="AccBit3jLabel">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="0"/>
@@ -2134,7 +2134,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="AcBit2jLabel2">
+            <Component class="javax.swing.JLabel" name="AccBit2jLabel">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="0"/>
@@ -2145,7 +2145,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="AcBit1jLabel2">
+            <Component class="javax.swing.JLabel" name="AccBit1jLabel">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="0"/>
@@ -2156,7 +2156,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="AcBit0jLabel6">
+            <Component class="javax.swing.JLabel" name="AccBit0jLabel">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="0"/>
