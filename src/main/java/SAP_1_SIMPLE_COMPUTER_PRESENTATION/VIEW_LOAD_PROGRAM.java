@@ -1320,7 +1320,7 @@ public class VIEW_LOAD_PROGRAM extends javax.swing.JFrame {
         char validar = evt.getKeyChar();
         if (Character.isLetter(validar)){
             evt.consume();
-            JOptionPane.showMessageDialog(DatoPanel, "Ingresar solo un número entre 0 y 128");
+            JOptionPane.showMessageDialog(DatoPanel, "Ingresar solo un número entre 0 y 255");
         }
     }//GEN-LAST:event_DatoTextFieldKeyTyped
 
