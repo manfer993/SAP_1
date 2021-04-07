@@ -166,13 +166,9 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
         jLabel91 = new javax.swing.JLabel();
         AccPanel = new javax.swing.JPanel();
         AccBit7jLabel = new javax.swing.JLabel();
-        AccBit6jLabel = new javax.swing.JLabel();
-        AccBit5jLabel = new javax.swing.JLabel();
-        AccBit4jLabel = new javax.swing.JLabel();
-        AccBit3jLabel = new javax.swing.JLabel();
-        AccBit2jLabel = new javax.swing.JLabel();
-        AccBit1jLabel = new javax.swing.JLabel();
         AccBit0jLabel = new javax.swing.JLabel();
+        jLabel93 = new javax.swing.JLabel();
+        jLabel94 = new javax.swing.JLabel();
         jLabel92 = new javax.swing.JLabel();
         AcABusJL1 = new javax.swing.JLabel();
 
@@ -958,74 +954,46 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
         AccBit7jLabel.setText("0");
         AccBit7jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        AccBit6jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AccBit6jLabel.setText("0");
-        AccBit6jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        AccBit5jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AccBit5jLabel.setText("0");
-        AccBit5jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        AccBit4jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AccBit4jLabel.setText("0");
-        AccBit4jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        AccBit3jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AccBit3jLabel.setText("0");
-        AccBit3jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        AccBit2jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AccBit2jLabel.setText("0");
-        AccBit2jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        AccBit1jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AccBit1jLabel.setText("0");
-        AccBit1jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
         AccBit0jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         AccBit0jLabel.setText("0");
         AccBit0jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel93.setText("CF");
+
+        jLabel94.setText("ZF");
 
         javax.swing.GroupLayout AccPanelLayout = new javax.swing.GroupLayout(AccPanel);
         AccPanel.setLayout(AccPanelLayout);
         AccPanelLayout.setHorizontalGroup(
             AccPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AccPanelLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(AccBit7jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(AccBit6jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(AccBit5jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(AccBit4jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(AccBit3jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(AccBit2jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(AccBit1jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(AccBit0jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addGap(78, 78, 78)
+                .addGroup(AccPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(AccPanelLayout.createSequentialGroup()
+                        .addComponent(AccBit7jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(AccBit0jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(AccPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel94)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel93)))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
         AccPanelLayout.setVerticalGroup(
             AccPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AccPanelLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(AccPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(AccBit2jLabel)
-                    .addComponent(AccBit5jLabel)
-                    .addComponent(AccBit6jLabel)
-                    .addComponent(AccBit7jLabel)
-                    .addComponent(AccBit1jLabel)
-                    .addComponent(AccBit4jLabel)
-                    .addComponent(AccBit3jLabel)
-                    .addComponent(AccBit0jLabel))
-                .addContainerGap(23, Short.MAX_VALUE))
+                    .addComponent(AccBit0jLabel)
+                    .addComponent(AccBit7jLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(AccPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel94)
+                    .addComponent(jLabel93))
+                .addContainerGap())
         );
 
-        jLabel92.setText("ACARREO");
+        jLabel92.setText("FLAGS");
 
         AcABusJL1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         AcABusJL1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1284,7 +1252,7 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
                                         .addComponent(IrABusJL)))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
         label1.getAccessibleContext().setAccessibleName("label1");
@@ -1404,12 +1372,6 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
     private javax.swing.JPanel AcPanel;
     private javax.swing.JPanel AcPanel1;
     private javax.swing.JLabel AccBit0jLabel;
-    private javax.swing.JLabel AccBit1jLabel;
-    private javax.swing.JLabel AccBit2jLabel;
-    private javax.swing.JLabel AccBit3jLabel;
-    private javax.swing.JLabel AccBit4jLabel;
-    private javax.swing.JLabel AccBit5jLabel;
-    private javax.swing.JLabel AccBit6jLabel;
     private javax.swing.JLabel AccBit7jLabel;
     private javax.swing.JPanel AccPanel;
     private javax.swing.JLabel AluABusJL;
@@ -1517,6 +1479,8 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
