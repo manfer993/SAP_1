@@ -967,29 +967,27 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
         AccPanelLayout.setHorizontalGroup(
             AccPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AccPanelLayout.createSequentialGroup()
-                .addGap(78, 78, 78)
-                .addGroup(AccPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(AccPanelLayout.createSequentialGroup()
-                        .addComponent(AccBit7jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(AccBit0jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(AccPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel94)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel93)))
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addGap(64, 64, 64)
+                .addGroup(AccPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(AccBit7jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel94))
+                .addGap(39, 39, 39)
+                .addGroup(AccPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel93)
+                    .addComponent(AccBit0jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         AccPanelLayout.setVerticalGroup(
             AccPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AccPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(AccPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(AccBit0jLabel)
-                    .addComponent(AccBit7jLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addGroup(AccPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel94)
                     .addComponent(jLabel93))
+                .addGap(5, 5, 5)
+                .addGroup(AccPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AccBit7jLabel)
+                    .addComponent(AccBit0jLabel))
                 .addContainerGap())
         );
 
@@ -1252,7 +1250,7 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
                                         .addComponent(IrABusJL)))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         label1.getAccessibleContext().setAccessibleName("label1");
