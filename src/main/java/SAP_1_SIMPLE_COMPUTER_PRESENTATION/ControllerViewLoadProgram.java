@@ -7,7 +7,6 @@ package SAP_1_SIMPLE_COMPUTER_PRESENTATION;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
 
 public class ControllerViewLoadProgram implements ActionListener{
     

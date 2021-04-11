@@ -1,18 +1,19 @@
 
 package SAP_1_SIMPLE_COMPUTER_PRESENTATION;
 
-import java.awt.Point;
+import SAP_1_SIMPLE_COMPUTER_LOGIC.MemoryRegister;
+import SAP_1_SIMPLE_COMPUTER_LOGIC.System;
 import java.io.File;
-import java.util.Vector;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import SAP_1_SIMPLE_COMPUTER_LOGIC.System;
+
 
 public class Model {
     
     private View_initial ventana;
     private View_load_program viewLoadProgram;
     private System system;
+    private MemoryRegister ram;
 
     public View_initial getVentana() {
         if(ventana == null){
@@ -72,10 +73,19 @@ public class Model {
             JOptionPane.showMessageDialog(getViewLoadProgram(), "Nombre de archivo incorrecto!", "Error", JOptionPane.ERROR_MESSAGE);
         }
         try {
-            getSystem().openFile(archivo);
+            ram = getSystem().openFile(archivo);
+            dibujarLoadProgram();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(getViewLoadProgram(), ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
 
+    }
+    
+    public void dibujarLoadProgram()
+    {
+        for(int i = 0; i < 16; i++ )
+        {
+            viewLoadProgram.paintMem( i, ram.getPosition(i).getBinaryRepresentation() );
+        }
     }
 }

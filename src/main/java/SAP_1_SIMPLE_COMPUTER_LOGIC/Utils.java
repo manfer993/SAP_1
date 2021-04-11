@@ -9,7 +9,7 @@ public class Utils {
     private static String[] instructionsB = {"NOP","LDA","ADD","SUB","STA","LDI","JMP","JC","JZ","","","","","","OUT","HTL"};
 
     public static void setInstructionsA() {
-        instructionsA = new HashMap<>();
+        instructionsA = new HashMap<String, String>();
         instructionsA.put("NOP", "0000");
         instructionsA.put("LDA", "0001");
         instructionsA.put("ADD", "0010");

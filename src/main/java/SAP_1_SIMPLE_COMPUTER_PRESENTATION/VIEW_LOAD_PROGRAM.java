@@ -5,6 +5,7 @@
  */
 package SAP_1_SIMPLE_COMPUTER_PRESENTATION;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 
@@ -67,9 +68,9 @@ public class View_load_program extends javax.swing.JFrame {
         M13 = new javax.swing.JButton();
         M14 = new javax.swing.JButton();
         M15 = new javax.swing.JButton();
-        javax.swing.JLabel Pos0 = new javax.swing.JLabel();
-        Pos1 = new javax.swing.JLabel();
-        Pos2 = new javax.swing.JLabel();
+        javax.swing.JLabel pos0 = new javax.swing.JLabel();
+        pos1 = new javax.swing.JLabel();
+        pos2 = new javax.swing.JLabel();
         pos3 = new javax.swing.JLabel();
         pos4 = new javax.swing.JLabel();
         pos5 = new javax.swing.JLabel();
@@ -154,17 +155,18 @@ public class View_load_program extends javax.swing.JFrame {
 
         M15.setText("15");
 
-        Pos0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Pos0.setText("00000000");
-        Pos0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pos0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pos0.setText("00000000");
+        pos0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        Pos1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Pos1.setText("00000000");
-        Pos1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pos1.setBackground(new java.awt.Color(255, 255, 0));
+        pos1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pos1.setText("00000000");
+        pos1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        Pos2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Pos2.setText("00000000");
-        Pos2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pos2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pos2.setText("00000000");
+        pos2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         pos3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         pos3.setText("00000000");
@@ -369,7 +371,7 @@ public class View_load_program extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addContainerGap(170, Short.MAX_VALUE))
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleName("Informacion");
@@ -424,12 +426,12 @@ public class View_load_program extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(Pos1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(Pos0, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(pos1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(pos0, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                     .addGap(4, 4, 4)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(Pos2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(pos2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(pos3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(pos4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(pos5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -465,15 +467,15 @@ public class View_load_program extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(M0)
-                            .addComponent(Pos0, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(pos0, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(M1)
-                            .addComponent(Pos1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pos1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(M1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(M2)
-                            .addComponent(Pos2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(pos2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(M3)
@@ -597,8 +599,6 @@ public class View_load_program extends javax.swing.JFrame {
     private javax.swing.JButton M7;
     private javax.swing.JButton M8;
     private javax.swing.JButton M9;
-    private javax.swing.JLabel Pos1;
-    private javax.swing.JLabel Pos2;
     private javax.swing.JTextField PosicionRamTextField;
     private javax.swing.JButton ProgramaDefectoBtn;
     private javax.swing.JTextPane ResumenDatoInstruccionTextPane;
@@ -609,12 +609,14 @@ public class View_load_program extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    public javax.swing.JLabel pos1;
     private javax.swing.JLabel pos10;
     private javax.swing.JLabel pos11;
     private javax.swing.JLabel pos12;
     private javax.swing.JLabel pos13;
     private javax.swing.JLabel pos14;
     private javax.swing.JLabel pos15;
+    private javax.swing.JLabel pos2;
     private javax.swing.JLabel pos3;
     private javax.swing.JLabel pos4;
     private javax.swing.JLabel pos5;
@@ -623,4 +625,91 @@ public class View_load_program extends javax.swing.JFrame {
     private javax.swing.JLabel pos8;
     private javax.swing.JLabel pos9;
     // End of variables declaration//GEN-END:variables
+
+    void paintMem(int i, String binaryRepresentation) {
+        switch (i)
+        {
+            case 0:
+            break;
+            case 1:
+                pos1.setText(binaryRepresentation);
+                pos1.setBackground(Color.yellow);
+                pos1.setForeground(Color.red);
+            break;
+            case 2:
+                pos2.setText(binaryRepresentation);
+                pos2.setBackground(Color.yellow);
+                pos2.setForeground(Color.red);
+            break;
+            case 3:
+                pos3.setText(binaryRepresentation);
+                pos3.setBackground(Color.yellow);
+                pos3.setForeground(Color.red);
+            break;
+            case 4:
+                pos4.setText(binaryRepresentation);
+                pos4.setBackground(Color.yellow);
+                pos4.setForeground(Color.red);
+            break;
+            case 5:
+                pos5.setText(binaryRepresentation);
+                pos5.setBackground(Color.yellow);
+                pos5.setForeground(Color.red);
+            break;
+            case 6:
+                pos6.setText(binaryRepresentation);
+                pos6.setBackground(Color.yellow);
+                pos6.setForeground(Color.red);
+            break;
+            case 7:
+                pos7.setText(binaryRepresentation);
+                pos7.setBackground(Color.yellow);
+                pos7.setForeground(Color.red);
+            break;
+            case 8:
+                pos8.setText(binaryRepresentation);
+                pos8.setBackground(Color.yellow);
+                pos8.setForeground(Color.red);
+            break;
+            case 9:
+                pos9.setText(binaryRepresentation);
+                pos9.setBackground(Color.yellow);
+                pos9.setForeground(Color.red);
+            break;
+            case 10:
+                pos10.setText(binaryRepresentation);
+                pos10.setBackground(Color.yellow);
+                pos10.setForeground(Color.red);
+            break;
+            case 11:
+                pos11.setText(binaryRepresentation);
+                pos11.setBackground(Color.yellow);
+                pos11.setForeground(Color.red);
+            break;
+            case 12:
+                pos12.setText(binaryRepresentation);
+                pos12.setBackground(Color.yellow);
+                pos12.setForeground(Color.red);
+            break;
+            case 13:
+                pos13.setText(binaryRepresentation);
+                pos13.setBackground(Color.yellow);
+                pos13.setForeground(Color.red);
+            break;
+            case 14:
+                pos14.setText(binaryRepresentation);
+                pos14.setBackground(Color.yellow);
+                pos14.setForeground(Color.red);
+            break;
+            case 15:
+                pos15.setText(binaryRepresentation);
+                pos15.setBackground(Color.yellow);
+                pos15.setForeground(Color.red);
+            break;
+            default:
+                System.out.println("Error out of memory range ");
+            break;
+                    
+        }
+    }
 }

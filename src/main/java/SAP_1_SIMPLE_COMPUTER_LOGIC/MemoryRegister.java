@@ -23,14 +23,15 @@ public class MemoryRegister {
 
     public void setPosition(int ramPosition, String instruction, int position, int data) {
         String binary;
-        if (instruction != null) {
+        if (instruction != "null") {
+            java.lang.System.out.println("setPosition: "+ instruction);
             binary = Utils.getInstructionBit(instruction)
                     + Utils.getBinary(position, 4);
             this.ram.set(ramPosition,
                     new MemoryPositionModel(instruction, position, data, binary));
         } else {
             binary = Utils.getBinary(data, 8);
-            this.ram.set(ramPosition, new MemoryPositionModel(instruction, position, data, binary));
+            this.ram.set(ramPosition, new MemoryPositionModel(null, position, data, binary));
         }
     }
 
