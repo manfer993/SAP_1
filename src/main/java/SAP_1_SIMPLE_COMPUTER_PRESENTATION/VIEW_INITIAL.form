@@ -31,6 +31,8 @@
                       <Component id="btnReiniciar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnPlayPause" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnStop" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="btnCargar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -55,6 +57,7 @@
                       <Component id="btnReiniciar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnPlayPause" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnCargar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnStop" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -83,8 +86,8 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnPlayPause">
       <Properties>
-        <Property name="text" type="java.lang.String" value="PLAY/PAUSE"/>
-        <Property name="actionCommand" type="java.lang.String" value="iniciarPausar"/>
+        <Property name="text" type="java.lang.String" value="PLAY"/>
+        <Property name="actionCommand" type="java.lang.String" value="iniciarSimulacion"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnCargar">
@@ -1481,5 +1484,11 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="btnStop">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="STOP"/>
+        <Property name="actionCommand" type="java.lang.String" value="detenerSimulacion"/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>

@@ -5,11 +5,11 @@ import java.io.File;
 import javax.swing.JOptionPane;
 
 
-public class System {
+public class Systems {
     
     private Datos datos;
     
-    public System()
+    public Systems()
     {
     }
     

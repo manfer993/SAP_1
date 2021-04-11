@@ -1,19 +1,31 @@
 
 package SAP_1_SIMPLE_COMPUTER_PRESENTATION;
 
-import SAP_1_SIMPLE_COMPUTER_LOGIC.MemoryRegister;
-import SAP_1_SIMPLE_COMPUTER_LOGIC.System;
+import SAP_1_SIMPLE_COMPUTER_LOGIC.*;
 import java.io.File;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 
-public class Model {
+public class Model implements Runnable{
+    
+    private static ProgramCounterRegister pc;
+    private static ClockCycle clock;
+    private static MemoryRegister ram;
+    private static MarRegister mar;
+    private static InstructionRegister ir;
+    private static ControllerRegister uc;
+    private static AccumulatorARegister ac;
+    private static BRegister b;
+    private static AluRegister alu;
+    private static OutputRegister out;
+    private static DisplayRegister display;
+    private static MemoryPositionModel ramMemory;
     
     private View_initial ventana;
     private View_load_program viewLoadProgram;
-    private System system;
-    private MemoryRegister ram;
+    private Systems system;
+    private Thread hiloDibujo;
 
     public View_initial getVentana() {
         if(ventana == null){
@@ -30,11 +42,11 @@ public class Model {
         return viewLoadProgram;
     }
     
-    public System getSystem()
+    public Systems getSystem()
     {
         if(system == null)
         {
-            system = new System();
+            system = new Systems();
         }
         return system;
     }
@@ -49,10 +61,23 @@ public class Model {
         getViewLoadProgram();
         getViewLoadProgram().setVisible(true);
     }
-    public void iniciarPausar()
-    {
-        /*aun no programado*/
-    }
+    
+    public void iniciarSimulacion() {
+            //setVelocidad(110 - getVentana().getSliVelocidad().getValue());
+            getVentana().getBtnIniciar().setEnabled(false);
+            getVentana().getBtnDetener().setEnabled(true);
+            hiloDibujo = new Thread( this );
+            hiloDibujo.start();
+      }
+
+      public void detenerSimulacion() {
+            getVentana().getBtnIniciar().setEnabled(true);
+            getVentana().getBtnDetener().setEnabled(false);
+            //animando = false;
+            hiloDibujo = null;
+            java.lang.System.gc();
+      }
+    
     public void reiniciar()
     {
         /*aun no programado*/
@@ -88,4 +113,254 @@ public class Model {
             viewLoadProgram.paintMem( i, ram.getPosition(i).getBinaryRepresentation() );
         }
     }
+    
+    /*lanzador del hilo*/
+    
+    public void run() {
+            try {
+                  simular();
+            } catch (Exception ex) {
+                  JOptionPane.showMessageDialog(getVentana(), ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            getVentana().getBtnIniciar().setEnabled(true);
+            getVentana().getBtnDetener().setEnabled(false);
+      }
+
+    public void simular() {
+        Utils.setInstructionsA();
+        
+        initializeRegisters();
+
+        while (pc.getPC() < 16) {
+            clkSpecific(clkCommon());
+        }
+    }
+    
+    private static void initializeRegisters() {
+        pc = new ProgramCounterRegister();
+        clock = new ClockCycle();
+        mar = new MarRegister();
+        ir = new InstructionRegister();
+        uc = new ControllerRegister();
+        ac = new AccumulatorARegister();
+        b = new BRegister();
+        out = new OutputRegister();
+        display = new DisplayRegister();
+        alu = new AluRegister();
+    }
+    
+    private static int clkCommon() {
+        System.out.print("CLK: " + clock.getCLK());
+        System.out.print(" PC: " + pc.getBinaryPC());
+        mar.setMar(pc.getBinaryPC());
+        System.out.println(" MAR: " + mar.getMar());
+        clock.netx();
+
+        System.out.print("CLK: " + clock.getCLK());
+        pc.netx();
+        System.out.print(" PC: " + pc.getBinaryPC());
+        ramMemory = ram.getPosition(Utils.getDecimal(mar.getMar()));
+        System.out.print(" RAM: " + ramMemory.getBinaryRepresentation());
+        ir.setIR(ramMemory.getBinaryRepresentation());
+        System.out.println(" IR: " + ir.getIR());
+        clock.netx();
+        return Utils.getDecimal(ir.getInstruction());
+    }
+    
+    private static void clkSpecific(int instruction) {
+        switch (instruction) {
+            case 0://NOP
+                System.out.println("NOP ");
+                break;
+            case 1://LDA
+                System.out.print("CLK: " + clock.getCLK());
+                uc.setUC(ir.getInstruction());
+                System.out.print(" UC: " + uc.getUC());
+                System.out.print(" UC: " + uc.getGraficSequencer());
+                mar.setMar(ir.getPosition());
+                System.out.println(" MAR: " + mar.getMar());
+                clock.netx();
+
+                System.out.print("CLK: " + clock.getCLK());
+                ramMemory = ram.getPosition(Utils.getDecimal(mar.getMar()));
+                System.out.print(" RAM: " + ramMemory.getBinaryRepresentation());
+                ac.setAC(ramMemory.getBinaryRepresentation());
+                System.out.println(" AC: " + ac.getAC());
+                clock.netx();
+
+                System.out.println("CLK: " + clock.getCLK());
+                clock.netx();
+                break;
+            case 2://ADD
+                System.out.print("CLK: " + clock.getCLK());
+                uc.setUC(ir.getInstruction());
+                System.out.print(" UC: " + uc.getUC());
+                System.out.print(" UC: " + uc.getGraficSequencer());
+                mar.setMar(ir.getPosition());
+                System.out.println(" MAR: " + mar.getMar());
+                clock.netx();
+
+                System.out.print("CLK: " + clock.getCLK());
+                ramMemory = ram.getPosition(Utils.getDecimal(mar.getMar()));
+                System.out.print(" RAM: " + ramMemory.getBinaryRepresentation());
+                b.setB(ramMemory.getBinaryRepresentation());
+                System.out.println(" B: " + b.getB());
+                clock.netx();
+
+                System.out.print("CLK: " + clock.getCLK());
+                alu.setALU(ac.getAC(), b.getB());
+                System.out.print(" ALU: "
+                        + alu.getALU().get("operatorA")
+                        + alu.getALU().get("operation")
+                        + alu.getALU().get("operatorB")
+                        + "="
+                        + alu.getALU().get("result"));
+                ac.setAC(alu.getResult());
+                System.out.println(" AC: " + ac.getAC());
+                clock.netx();
+                break;
+            case 3://SUB
+                System.out.print("CLK: " + clock.getCLK());
+                uc.setUC(ir.getInstruction());
+                System.out.print(" UC: " + uc.getUC());
+                System.out.print(" UC: " + uc.getGraficSequencer());
+                mar.setMar(ir.getPosition());
+                System.out.println(" MAR: " + mar.getMar());
+                clock.netx();
+
+                System.out.print("CLK: " + clock.getCLK());
+                ramMemory = ram.getPosition(Utils.getDecimal(mar.getMar()));
+                System.out.print(" RAM: " + ramMemory.getBinaryRepresentation());
+                b.setB(ramMemory.getBinaryRepresentation());
+                System.out.println(" B: " + b.getB());
+                clock.netx();
+
+                System.out.print("CLK: " + clock.getCLK());
+                alu.setALU(ac.getAC(), b.getB(), true);
+                System.out.print(" ALU: "
+                        + alu.getALU().get("operatorA")
+                        + alu.getALU().get("operation")
+                        + alu.getALU().get("operatorB")
+                        + "="
+                        + alu.getALU().get("result"));
+                ac.setAC(alu.getResult());
+                System.out.println(" AC: " + ac.getAC());
+                clock.netx();
+                break;
+            case 4://STA
+                System.out.print("CLK: " + clock.getCLK());
+                uc.setUC(ir.getInstruction());
+                System.out.print(" UC: " + uc.getUC());
+                System.out.print(" UC: " + uc.getGraficSequencer());
+                mar.setMar(ir.getPosition());
+                System.out.println(" MAR: " + mar.getMar());
+                clock.netx();
+
+                System.out.print("CLK: " + clock.getCLK());
+                ram.setPosition(Utils.getDecimal(mar.getMar()), null, 0, Utils.getDecimal(ac.getAC()));
+                System.out.print(" AC: " + ac.getAC());
+                ramMemory = ram.getPosition(Utils.getDecimal(mar.getMar()));
+                System.out.println(" RAM: " + ramMemory.getBinaryRepresentation());
+                clock.netx();
+
+                System.out.println("CLK: " + clock.getCLK());
+                clock.netx();
+                break;
+            case 5://LDI
+                System.out.print("CLK: " + clock.getCLK());
+                uc.setUC(ir.getInstruction());
+                System.out.print(" UC: " + uc.getUC());
+                System.out.print(" UC: " + uc.getGraficSequencer());
+                ac.setAC(ir.getPosition());
+                System.out.println(" AC: " + ac.getAC());
+                clock.netx();
+
+                System.out.println("CLK: " + clock.getCLK());
+                clock.netx();
+
+                System.out.println("CLK: " + clock.getCLK());
+                clock.netx();
+                break;
+            case 6://JMP
+                System.out.print("CLK: " + clock.getCLK());
+                uc.setUC(ir.getInstruction());
+                System.out.print(" UC: " + uc.getUC());
+                System.out.print(" UC: " + uc.getGraficSequencer());
+                pc.setPC(Utils.getDecimal(ir.getPosition()));
+                System.out.println(" PC: " + pc.getBinaryPC());
+                clock.netx();
+
+                System.out.println("CLK: " + clock.getCLK());
+                clock.netx();
+
+                System.out.println("CLK: " + clock.getCLK());
+                clock.netx();
+                break;
+            case 7://JC                
+                if (FlagsRegister.isCF()) {
+                    System.out.print("CLK: " + clock.getCLK());
+                    uc.setUC(ir.getInstruction());
+                    System.out.print(" UC: " + uc.getUC());
+                    System.out.print(" UC: " + uc.getGraficSequencer());
+                    pc.setPC(Utils.getDecimal(ir.getPosition()));
+                    System.out.print(" JC: " + FlagsRegister.isCF());
+                    System.out.println(" PC: " + pc.getBinaryPC());
+                } else {
+                    System.out.println("CLK: " + clock.getCLK());
+                }
+                clock.netx();
+
+                System.out.println("CLK: " + clock.getCLK());
+                clock.netx();
+
+                System.out.println("CLK: " + clock.getCLK());
+                clock.netx();
+                break;
+            case 8://JZ
+                if (FlagsRegister.isZF()) {
+                    System.out.print("CLK: " + clock.getCLK());
+                    uc.setUC(ir.getInstruction());
+                    System.out.print(" UC: " + uc.getUC());
+                    System.out.print(" UC: " + uc.getGraficSequencer());
+                    pc.setPC(Utils.getDecimal(ir.getPosition()));
+                    System.out.print(" JZ: " + FlagsRegister.isZF());
+                    System.out.println(" PC: " + pc.getBinaryPC());
+                } else {
+                    System.out.println("CLK: " + clock.getCLK());
+                }
+                clock.netx();
+
+                System.out.println("CLK: " + clock.getCLK());
+                clock.netx();
+
+                System.out.println("CLK: " + clock.getCLK());
+                clock.netx();
+                break;
+            case 14://OUT
+                System.out.print("CLK: " + clock.getCLK());
+                uc.setUC(ir.getInstruction());
+                System.out.print(" UC: " + uc.getUC());
+                System.out.print(" UC: " + uc.getGraficSequencer());
+                out.setOUT(ac.getAC());
+                System.out.print(" OUT: " + out.getOUT());
+                display.setDecimalPrint(out.getOUT());
+                System.out.println(" PRINT: " + display.getDisplay());
+                clock.netx();
+
+                System.out.println("CLK: " + clock.getCLK());
+                clock.netx();
+
+                System.out.println("CLK: " + clock.getCLK());
+                clock.netx();
+                break;
+            case 15://HTL
+                System.out.print("CLK: " + clock.getCLK());
+                uc.setUC(ir.getInstruction());
+                System.out.print(" UC: " + uc.getUC());
+                System.out.print(" UC: " + uc.getGraficSequencer());
+                System.exit(0);
+                break;
+        }
+    }
+    
 }

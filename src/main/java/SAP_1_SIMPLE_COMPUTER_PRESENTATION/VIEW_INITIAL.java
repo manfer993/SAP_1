@@ -1,5 +1,7 @@
 package SAP_1_SIMPLE_COMPUTER_PRESENTATION;
 
+import javax.swing.JButton;
+
 public class View_initial extends javax.swing.JFrame {
 
     private Model myModel;
@@ -11,6 +13,8 @@ public class View_initial extends javax.swing.JFrame {
     public View_initial(Model aThis) {
         myModel = aThis;
         initComponents();
+        getBtnDetener().setEnabled(false);
+        getBtnIniciar().setEnabled(false);
         capture_events();
     }
 
@@ -24,10 +28,19 @@ public class View_initial extends javax.swing.JFrame {
     public Model getModel() {
         return myModel;
     }
+    
+    public JButton getBtnDetener() {
+        return btnStop;
+    }
+
+    public JButton getBtnIniciar() {
+        return btnPlayPause;
+    }
 
     public void capture_events() {
         btnCargar.addActionListener(getControl());
         btnPlayPause.addActionListener(getControl());
+        btnStop.addActionListener(getControl());
         btnReiniciar.addActionListener(getControl());
     }
 
@@ -136,6 +149,7 @@ public class View_initial extends javax.swing.JFrame {
         jLabel94 = new javax.swing.JLabel();
         jLabel92 = new javax.swing.JLabel();
         AcABusJL1 = new javax.swing.JLabel();
+        btnStop = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -144,8 +158,8 @@ public class View_initial extends javax.swing.JFrame {
         btnReiniciar.setText("REINICIAR");
         btnReiniciar.setActionCommand("reiniciar");
 
-        btnPlayPause.setText("PLAY/PAUSE");
-        btnPlayPause.setActionCommand("iniciarPausar");
+        btnPlayPause.setText("PLAY");
+        btnPlayPause.setActionCommand("iniciarSimulacion");
 
         btnCargar.setText("CARGAR PROGRAMA");
         btnCargar.setActionCommand("loadProgram");
@@ -888,6 +902,9 @@ public class View_initial extends javax.swing.JFrame {
 
         label1.getAccessibleContext().setAccessibleName("label1");
 
+        btnStop.setText("STOP");
+        btnStop.setActionCommand("detenerSimulacion");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -900,6 +917,8 @@ public class View_initial extends javax.swing.JFrame {
                         .addComponent(btnReiniciar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnPlayPause)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnStop)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnCargar)
                         .addGap(18, 18, 18)
@@ -918,7 +937,8 @@ public class View_initial extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnReiniciar)
                         .addComponent(btnPlayPause)
-                        .addComponent(btnCargar))
+                        .addComponent(btnCargar)
+                        .addComponent(btnStop))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -991,6 +1011,7 @@ public class View_initial extends javax.swing.JFrame {
     private javax.swing.JButton btnCargar;
     private javax.swing.JButton btnPlayPause;
     private javax.swing.JButton btnReiniciar;
+    private javax.swing.JButton btnStop;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel66;
@@ -1028,4 +1049,5 @@ public class View_initial extends javax.swing.JFrame {
     private java.awt.Label label1;
     private java.awt.Label label2;
     // End of variables declaration//GEN-END:variables
+
 }
