@@ -1,4 +1,4 @@
-package com.mycompany.mavenproject1;
+package SAP_1_SIMPLE_COMPUTER_LOGIC;
 
 import java.util.HashMap;
 import java.util.Map;
