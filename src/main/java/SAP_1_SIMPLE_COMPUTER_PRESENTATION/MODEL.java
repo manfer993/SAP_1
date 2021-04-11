@@ -3,6 +3,7 @@ package SAP_1_SIMPLE_COMPUTER_PRESENTATION;
 
 import SAP_1_SIMPLE_COMPUTER_LOGIC.*;
 import java.io.File;
+import java.util.ArrayList;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
@@ -106,11 +107,39 @@ public class Model implements Runnable{
 
     }
     
+    public void eraseMemory() {
+        ram = null;
+    }
+    
+    public MemoryRegister getRam()
+    {
+        if(ram == null )
+        {
+            ram = new MemoryRegister();
+        }
+        return ram;
+    }
+    
+    public void cargarInst()
+    {
+        getRam().setPosition(viewLoadProgram.getIndexOfMemory(), (String) viewLoadProgram.getInstruccionComboBox().getSelectedItem(), Integer.parseInt( viewLoadProgram.getPosicionRamTextField().getText() ), 0);
+        dibujarLoadProgram();
+    }
+    
+    public void cargarDato()
+    {
+        getRam().setPosition(viewLoadProgram.getIndexOfMemory(), null, 0, Integer.parseInt(viewLoadProgram.getTextfieldDato().getText()) );
+        dibujarLoadProgram();
+    }
+    
     public void dibujarLoadProgram()
     {
         for(int i = 0; i < 16; i++ )
         {
-            viewLoadProgram.paintMem( i, ram.getPosition(i).getBinaryRepresentation() );
+            if( ram.getPosition(i).getInstruction() != "NOP" )
+            {
+                viewLoadProgram.paintMem( i, ram.getPosition(i).getBinaryRepresentation() );
+            }
         }
     }
     
