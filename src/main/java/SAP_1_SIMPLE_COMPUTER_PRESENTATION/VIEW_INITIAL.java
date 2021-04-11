@@ -48,65 +48,24 @@ public class View_initial extends javax.swing.JFrame {
         jInternalFrame1 = new javax.swing.JInternalFrame();
         PcPanel = new javax.swing.JPanel();
         PcBit3jLabel = new javax.swing.JLabel();
-        PcBit2jLabel = new javax.swing.JLabel();
-        PcBit1jLabel = new javax.swing.JLabel();
-        PcBit0jLabel = new javax.swing.JLabel();
         MarPanel = new javax.swing.JPanel();
         MarBit3jLabel = new javax.swing.JLabel();
-        MarBit2jLabel = new javax.swing.JLabel();
-        MarBit1jLabel = new javax.swing.JLabel();
-        MarBit0jLabel = new javax.swing.JLabel();
         IrPanel = new javax.swing.JPanel();
         IrBit7jLabel = new javax.swing.JLabel();
-        IrBit6jLabel = new javax.swing.JLabel();
-        IrBit5jLabel = new javax.swing.JLabel();
-        IrBit4jLabel = new javax.swing.JLabel();
-        IrBit3jLabel = new javax.swing.JLabel();
-        IrBit2jLabel = new javax.swing.JLabel();
-        IrBit1jLabel = new javax.swing.JLabel();
-        IrBit0jLabel = new javax.swing.JLabel();
         RamPanel = new javax.swing.JPanel();
         RamBit7jLabel = new javax.swing.JLabel();
-        RamBit6jLabel = new javax.swing.JLabel();
-        RamBit5jLabel = new javax.swing.JLabel();
-        RamBit4jLabel = new javax.swing.JLabel();
-        RamBit3jLabel = new javax.swing.JLabel();
-        RamBit2jLabel = new javax.swing.JLabel();
-        RamBit1jLabel = new javax.swing.JLabel();
-        RamBit0jLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         AluTextPane = new javax.swing.JTextPane();
         BPanel = new javax.swing.JPanel();
         BBit7jLabel = new javax.swing.JLabel();
-        BBit6jLabel = new javax.swing.JLabel();
-        BBit5jLabel = new javax.swing.JLabel();
-        BBit4jLabel = new javax.swing.JLabel();
-        BBit3jLabel = new javax.swing.JLabel();
-        BBit2jLabel = new javax.swing.JLabel();
-        BBit1jLabel = new javax.swing.JLabel();
-        BBit0jLabel = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         UcTextPane = new javax.swing.JTextPane();
         jScrollPane3 = new javax.swing.JScrollPane();
         ResultadoTextPane = new javax.swing.JTextPane();
         OutPanel = new javax.swing.JPanel();
         OutBit7jLabel = new javax.swing.JLabel();
-        OutBit6jLabel = new javax.swing.JLabel();
-        OutBit5jLabel = new javax.swing.JLabel();
-        OutBit4jLabel = new javax.swing.JLabel();
-        OutBit3jLabel = new javax.swing.JLabel();
-        OutBit2jLabel = new javax.swing.JLabel();
-        OutBit1jLabel = new javax.swing.JLabel();
-        OutBit0jLabel = new javax.swing.JLabel();
         AcPanel = new javax.swing.JPanel();
         AcBit7jLabel = new javax.swing.JLabel();
-        AcBit6jLabel = new javax.swing.JLabel();
-        AcBit5jLabel = new javax.swing.JLabel();
-        AcBit4jLabel = new javax.swing.JLabel();
-        AcBit3jLabel = new javax.swing.JLabel();
-        AcBit2jLabel = new javax.swing.JLabel();
-        AcBit1jLabel = new javax.swing.JLabel();
-        AcBit0jLabel = new javax.swing.JLabel();
         jLabel66 = new javax.swing.JLabel();
         jLabel67 = new javax.swing.JLabel();
         jLabel68 = new javax.swing.JLabel();
@@ -125,8 +84,6 @@ public class View_initial extends javax.swing.JFrame {
         RamBit4jLabel1 = new javax.swing.JLabel();
         RamBit5jLabel1 = new javax.swing.JLabel();
         jLabel77 = new javax.swing.JLabel();
-        jLabel78 = new javax.swing.JLabel();
-        RamBit7jLabel2 = new javax.swing.JLabel();
         label2 = new java.awt.Label();
         BusBit5jLabel = new javax.swing.JLabel();
         BusBit7jLabel = new javax.swing.JLabel();
@@ -199,91 +156,47 @@ public class View_initial extends javax.swing.JFrame {
         PcPanel.setPreferredSize(new java.awt.Dimension(200, 60));
 
         PcBit3jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        PcBit3jLabel.setText("0");
+        PcBit3jLabel.setText("0000");
         PcBit3jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        PcBit2jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        PcBit2jLabel.setText("0");
-        PcBit2jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        PcBit1jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        PcBit1jLabel.setText("0");
-        PcBit1jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        PcBit0jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        PcBit0jLabel.setText("0");
-        PcBit0jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout PcPanelLayout = new javax.swing.GroupLayout(PcPanel);
         PcPanel.setLayout(PcPanelLayout);
         PcPanelLayout.setHorizontalGroup(
             PcPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PcPanelLayout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
-                .addComponent(PcBit3jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(PcBit2jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(PcBit1jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(PcBit0jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42))
+                .addContainerGap()
+                .addComponent(PcBit3jLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                .addContainerGap())
         );
         PcPanelLayout.setVerticalGroup(
             PcPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PcPanelLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(PcPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PcBit3jLabel)
-                    .addComponent(PcBit0jLabel)
-                    .addComponent(PcBit1jLabel)
-                    .addComponent(PcBit2jLabel))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addGap(19, 19, 19)
+                .addComponent(PcBit3jLabel)
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         MarPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         MarPanel.setPreferredSize(new java.awt.Dimension(200, 60));
 
         MarBit3jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MarBit3jLabel.setText("0");
+        MarBit3jLabel.setText("0000");
         MarBit3jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        MarBit2jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MarBit2jLabel.setText("0");
-        MarBit2jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        MarBit1jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MarBit1jLabel.setText("0");
-        MarBit1jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        MarBit0jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MarBit0jLabel.setText("0");
-        MarBit0jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout MarPanelLayout = new javax.swing.GroupLayout(MarPanel);
         MarPanel.setLayout(MarPanelLayout);
         MarPanelLayout.setHorizontalGroup(
             MarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MarPanelLayout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
-                .addComponent(MarBit3jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(MarBit2jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(MarBit1jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(MarBit0jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42))
+                .addContainerGap()
+                .addComponent(MarBit3jLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                .addContainerGap())
         );
         MarPanelLayout.setVerticalGroup(
             MarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MarPanelLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addGroup(MarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(MarBit3jLabel)
-                    .addComponent(MarBit0jLabel)
-                    .addComponent(MarBit1jLabel)
-                    .addComponent(MarBit2jLabel))
+                .addComponent(MarBit3jLabel)
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -291,146 +204,46 @@ public class View_initial extends javax.swing.JFrame {
         IrPanel.setPreferredSize(new java.awt.Dimension(200, 60));
 
         IrBit7jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        IrBit7jLabel.setText("0");
+        IrBit7jLabel.setText("00000000");
         IrBit7jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        IrBit6jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        IrBit6jLabel.setText("0");
-        IrBit6jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        IrBit5jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        IrBit5jLabel.setText("0");
-        IrBit5jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        IrBit4jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        IrBit4jLabel.setText("0");
-        IrBit4jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        IrBit3jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        IrBit3jLabel.setText("0");
-        IrBit3jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        IrBit2jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        IrBit2jLabel.setText("0");
-        IrBit2jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        IrBit1jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        IrBit1jLabel.setText("0");
-        IrBit1jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        IrBit0jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        IrBit0jLabel.setText("0");
-        IrBit0jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout IrPanelLayout = new javax.swing.GroupLayout(IrPanel);
         IrPanel.setLayout(IrPanelLayout);
         IrPanelLayout.setHorizontalGroup(
             IrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(IrPanelLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(IrBit7jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(IrBit6jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(IrBit5jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(IrBit4jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(IrBit3jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(IrBit2jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(IrBit1jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(IrBit0jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IrPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(IrBit7jLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                .addContainerGap())
         );
         IrPanelLayout.setVerticalGroup(
             IrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(IrPanelLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addGroup(IrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(IrBit2jLabel)
-                    .addComponent(IrBit5jLabel)
-                    .addComponent(IrBit6jLabel)
-                    .addComponent(IrBit7jLabel)
-                    .addComponent(IrBit1jLabel)
-                    .addComponent(IrBit4jLabel)
-                    .addComponent(IrBit3jLabel)
-                    .addComponent(IrBit0jLabel))
+                .addComponent(IrBit7jLabel)
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
         RamPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         RamBit7jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RamBit7jLabel.setText("0");
+        RamBit7jLabel.setText("00000000");
         RamBit7jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        RamBit6jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RamBit6jLabel.setText("0");
-        RamBit6jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        RamBit5jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RamBit5jLabel.setText("0");
-        RamBit5jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        RamBit4jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RamBit4jLabel.setText("0");
-        RamBit4jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        RamBit3jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RamBit3jLabel.setText("0");
-        RamBit3jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        RamBit2jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RamBit2jLabel.setText("0");
-        RamBit2jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        RamBit1jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RamBit1jLabel.setText("0");
-        RamBit1jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        RamBit0jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RamBit0jLabel.setText("0");
-        RamBit0jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout RamPanelLayout = new javax.swing.GroupLayout(RamPanel);
         RamPanel.setLayout(RamPanelLayout);
         RamPanelLayout.setHorizontalGroup(
             RamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RamPanelLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(RamBit7jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(RamBit6jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(RamBit5jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(RamBit4jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(RamBit3jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(RamBit2jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(RamBit1jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(RamBit0jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(RamBit7jLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                .addContainerGap())
         );
         RamPanelLayout.setVerticalGroup(
             RamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RamPanelLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(RamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RamBit2jLabel)
-                    .addComponent(RamBit5jLabel)
-                    .addComponent(RamBit6jLabel)
-                    .addComponent(RamBit7jLabel)
-                    .addComponent(RamBit1jLabel)
-                    .addComponent(RamBit4jLabel)
-                    .addComponent(RamBit3jLabel)
-                    .addComponent(RamBit0jLabel))
+                .addComponent(RamBit7jLabel)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -441,73 +254,23 @@ public class View_initial extends javax.swing.JFrame {
         BPanel.setPreferredSize(new java.awt.Dimension(200, 60));
 
         BBit7jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BBit7jLabel.setText("0");
+        BBit7jLabel.setText("00000000");
         BBit7jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        BBit6jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BBit6jLabel.setText("0");
-        BBit6jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        BBit5jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BBit5jLabel.setText("0");
-        BBit5jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        BBit4jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BBit4jLabel.setText("0");
-        BBit4jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        BBit3jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BBit3jLabel.setText("0");
-        BBit3jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        BBit2jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BBit2jLabel.setText("0");
-        BBit2jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        BBit1jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BBit1jLabel.setText("0");
-        BBit1jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        BBit0jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BBit0jLabel.setText("0");
-        BBit0jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout BPanelLayout = new javax.swing.GroupLayout(BPanel);
         BPanel.setLayout(BPanelLayout);
         BPanelLayout.setHorizontalGroup(
             BPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BPanelLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(BBit7jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BBit6jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BBit5jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BBit4jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BBit3jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BBit2jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BBit1jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BBit0jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(BBit7jLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                .addContainerGap())
         );
         BPanelLayout.setVerticalGroup(
             BPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BPanelLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(BPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BBit2jLabel)
-                    .addComponent(BBit5jLabel)
-                    .addComponent(BBit6jLabel)
-                    .addComponent(BBit7jLabel)
-                    .addComponent(BBit1jLabel)
-                    .addComponent(BBit4jLabel)
-                    .addComponent(BBit3jLabel)
-                    .addComponent(BBit0jLabel))
+                .addComponent(BBit7jLabel)
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
@@ -521,73 +284,23 @@ public class View_initial extends javax.swing.JFrame {
         OutPanel.setPreferredSize(new java.awt.Dimension(200, 60));
 
         OutBit7jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        OutBit7jLabel.setText("0");
+        OutBit7jLabel.setText("00000000");
         OutBit7jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        OutBit6jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        OutBit6jLabel.setText("0");
-        OutBit6jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        OutBit5jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        OutBit5jLabel.setText("0");
-        OutBit5jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        OutBit4jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        OutBit4jLabel.setText("0");
-        OutBit4jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        OutBit3jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        OutBit3jLabel.setText("0");
-        OutBit3jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        OutBit2jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        OutBit2jLabel.setText("0");
-        OutBit2jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        OutBit1jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        OutBit1jLabel.setText("0");
-        OutBit1jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        OutBit0jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        OutBit0jLabel.setText("0");
-        OutBit0jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout OutPanelLayout = new javax.swing.GroupLayout(OutPanel);
         OutPanel.setLayout(OutPanelLayout);
         OutPanelLayout.setHorizontalGroup(
             OutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OutPanelLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(OutBit7jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(OutBit6jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(OutBit5jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(OutBit4jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(OutBit3jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(OutBit2jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(OutBit1jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(OutBit0jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(OutBit7jLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                .addContainerGap())
         );
         OutPanelLayout.setVerticalGroup(
             OutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OutPanelLayout.createSequentialGroup()
                 .addContainerGap(23, Short.MAX_VALUE)
-                .addGroup(OutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(OutBit2jLabel)
-                    .addComponent(OutBit5jLabel)
-                    .addComponent(OutBit6jLabel)
-                    .addComponent(OutBit7jLabel)
-                    .addComponent(OutBit1jLabel)
-                    .addComponent(OutBit4jLabel)
-                    .addComponent(OutBit3jLabel)
-                    .addComponent(OutBit0jLabel))
+                .addComponent(OutBit7jLabel)
                 .addGap(19, 19, 19))
         );
 
@@ -595,73 +308,23 @@ public class View_initial extends javax.swing.JFrame {
         AcPanel.setPreferredSize(new java.awt.Dimension(200, 60));
 
         AcBit7jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AcBit7jLabel.setText("0");
+        AcBit7jLabel.setText("00000000");
         AcBit7jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        AcBit6jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AcBit6jLabel.setText("0");
-        AcBit6jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        AcBit5jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AcBit5jLabel.setText("0");
-        AcBit5jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        AcBit4jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AcBit4jLabel.setText("0");
-        AcBit4jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        AcBit3jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AcBit3jLabel.setText("0");
-        AcBit3jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        AcBit2jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AcBit2jLabel.setText("0");
-        AcBit2jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        AcBit1jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AcBit1jLabel.setText("0");
-        AcBit1jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        AcBit0jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AcBit0jLabel.setText("0");
-        AcBit0jLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout AcPanelLayout = new javax.swing.GroupLayout(AcPanel);
         AcPanel.setLayout(AcPanelLayout);
         AcPanelLayout.setHorizontalGroup(
             AcPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AcPanelLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(AcBit7jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(AcBit6jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(AcBit5jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(AcBit4jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(AcBit3jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(AcBit2jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(AcBit1jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(AcBit0jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AcPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(AcBit7jLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                .addContainerGap())
         );
         AcPanelLayout.setVerticalGroup(
             AcPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AcPanelLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(AcPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(AcBit2jLabel)
-                    .addComponent(AcBit5jLabel)
-                    .addComponent(AcBit6jLabel)
-                    .addComponent(AcBit7jLabel)
-                    .addComponent(AcBit1jLabel)
-                    .addComponent(AcBit4jLabel)
-                    .addComponent(AcBit3jLabel)
-                    .addComponent(AcBit0jLabel))
+                .addComponent(AcBit7jLabel)
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
@@ -710,12 +373,6 @@ public class View_initial extends javax.swing.JFrame {
         RamBit5jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel77.setText("CICLO");
-
-        jLabel78.setText("CLK");
-
-        RamBit7jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RamBit7jLabel2.setText(" ");
-        RamBit7jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         label2.setText("Palabra de control");
 
@@ -996,85 +653,64 @@ public class View_initial extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel67)
-                                .addComponent(jLabel68)
-                                .addComponent(jLabel66, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(RamBit7jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel78))
-                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel67)
+                            .addComponent(jLabel68)
+                            .addComponent(jLabel66, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                                .addGap(41, 41, 41)
-                                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel77)
+                                .addGap(1, 1, 1)
+                                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                                        .addComponent(RamBit7jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(RamBit6jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(RamBit5jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(RamBit4jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(RamBit3jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(136, 136, 136)
-                                .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                                        .addGap(1, 1, 1)
                                         .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                                                 .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                     .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                                                        .addComponent(PcPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGap(3, 3, 3)
+                                                        .addComponent(PcABusJL, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(jInternalFrame1Layout.createSequentialGroup()
                                                         .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                            .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                                                                .addComponent(PcPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addGap(3, 3, 3)
-                                                                .addComponent(PcABusJL, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                            .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                                                                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                    .addComponent(RamPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                    .addComponent(MarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                    .addComponent(MarABusJL, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                    .addComponent(RamABusJL, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                                        .addGap(5, 5, 5)
-                                                        .addComponent(BusBit7jLabel)
+                                                            .addComponent(RamPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addComponent(MarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(BusBit6jLabel)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(BusBit5jLabel)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(BusBit4jLabel)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(BusBit3jLabel)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(BusBit2jLabel))
-                                                    .addComponent(jLabel76))
+                                                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(MarABusJL, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addComponent(RamABusJL, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                .addGap(5, 5, 5)
+                                                .addComponent(BusBit7jLabel)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(BusBit1jLabel)
+                                                .addComponent(BusBit6jLabel)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(BusBit0jLabel))
-                                            .addComponent(BusjLabel1)))
-                                    .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                                        .addGap(64, 64, 64)
-                                        .addComponent(label1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(BusjLabel)))
-                                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                                                .addComponent(BusBit5jLabel)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(BusBit4jLabel)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(BusBit3jLabel)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(BusBit2jLabel))
+                                            .addComponent(jLabel76))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(OutABusJL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(BABusJL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(AcABusJL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(AluABusJL, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addComponent(AcABusJL1, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))))))
+                                        .addComponent(BusBit1jLabel)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(BusBit0jLabel))
+                                    .addComponent(BusjLabel1)))
+                            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                                .addGap(57, 57, 57)
+                                .addComponent(label1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(BusjLabel)))
+                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(OutABusJL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(BABusJL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(AcABusJL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(AluABusJL, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(AcABusJL1, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE))))
                     .addGroup(jInternalFrame1Layout.createSequentialGroup()
                         .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel70)
@@ -1087,7 +723,22 @@ public class View_initial extends javax.swing.JFrame {
                                     .addComponent(IrPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel91))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(IrABusJL, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(IrABusJL, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel77)
+                            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                                .addComponent(RamBit7jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(RamBit6jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(RamBit5jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(RamBit4jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(RamBit3jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(199, 199, 199)
+                        .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jInternalFrame1Layout.createSequentialGroup()
@@ -1104,6 +755,7 @@ public class View_initial extends javax.swing.JFrame {
                         .addComponent(AccPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel92))
+                    .addComponent(AcPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jInternalFrame1Layout.createSequentialGroup()
                         .addComponent(AcPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1111,16 +763,15 @@ public class View_initial extends javax.swing.JFrame {
                     .addGroup(jInternalFrame1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel72))
-                    .addComponent(AcPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(31, Short.MAX_VALUE))
+                        .addComponent(jLabel72)))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         jInternalFrame1Layout.setVerticalGroup(
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
                         .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                                 .addComponent(jLabel77)
@@ -1131,49 +782,46 @@ public class View_initial extends javax.swing.JFrame {
                                     .addComponent(RamBit7jLabel1)
                                     .addComponent(RamBit4jLabel1)
                                     .addComponent(RamBit3jLabel1)))
-                            .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                                .addComponent(jLabel78)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(RamBit7jLabel2))
                             .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel76))
-                    .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(AcPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                                .addGap(62, 62, 62)
-                                .addComponent(AcABusJL)
-                                .addGap(75, 75, 75)
-                                .addComponent(AcABusJL1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(AluABusJL)
-                                .addGap(82, 82, 82)
-                                .addComponent(BABusJL)
-                                .addGap(82, 82, 82)
-                                .addComponent(OutABusJL)
-                                .addGap(114, 114, 114))
-                            .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(AcPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                            .addGap(62, 62, 62)
+                            .addComponent(AcABusJL)
+                            .addGap(84, 84, 84)
+                            .addComponent(AcABusJL1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(AluABusJL)
+                            .addGap(73, 73, 73)
+                            .addComponent(BABusJL)
+                            .addGap(82, 82, 82)
+                            .addComponent(OutABusJL)
+                            .addGap(114, 114, 114))
+                        .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                                    .addComponent(BusjLabel1)
+                                    .addGap(3, 3, 3)
+                                    .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(BusBit7jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(BusBit5jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(BusBit6jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(BusBit4jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(BusBit3jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(BusBit2jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(BusBit1jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(BusBit0jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel71)
                                     .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                                        .addComponent(BusjLabel1)
-                                        .addGap(3, 3, 3)
-                                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(BusBit7jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BusBit5jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BusBit6jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BusBit4jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BusBit3jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BusBit2jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BusBit1jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BusBit0jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                                        .addComponent(AcPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
                                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(23, 23, 23)
+                                        .addGap(14, 14, 14)
                                         .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(BPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel73))
@@ -1184,38 +832,32 @@ public class View_initial extends javax.swing.JFrame {
                                         .addGap(24, 24, 24)
                                         .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel75)
-                                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addComponent(BusjLabel))
+                                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                     .addGroup(jInternalFrame1Layout.createSequentialGroup()
                         .addGap(41, 41, 41)
                         .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                                    .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(PcPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel66))
-                                    .addGap(42, 42, 42)
-                                    .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(MarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel67))
-                                    .addGap(28, 28, 28)
-                                    .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(RamPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel68)))
-                                .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                                    .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(AcPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel71))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel92)
-                                        .addComponent(AccPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(19, 19, 19)
-                                    .addComponent(jLabel72)
-                                    .addGap(82, 82, 82)))
                             .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                                .addGap(30, 30, 30)
+                                .addComponent(jLabel92)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(PcPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel66))
+                                        .addGap(42, 42, 42)
+                                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(MarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel67))
+                                        .addGap(28, 28, 28)
+                                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(RamPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel68)))
+                                    .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                                        .addComponent(jLabel72)
+                                        .addGap(82, 82, 82))))
+                            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                                .addGap(51, 51, 51)
                                 .addComponent(PcABusJL)
                                 .addGap(103, 103, 103)
                                 .addComponent(MarABusJL)
@@ -1236,10 +878,12 @@ public class View_initial extends javax.swing.JFrame {
                                                     .addComponent(jLabel70)))))
                                     .addGroup(jInternalFrame1Layout.createSequentialGroup()
                                         .addGap(94, 94, 94)
-                                        .addComponent(IrABusJL)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(15, Short.MAX_VALUE))
+                                        .addComponent(IrABusJL))))
+                            .addComponent(AccPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(4, 4, 4)))
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BusjLabel)))
         );
 
         label1.getAccessibleContext().setAccessibleName("label1");
@@ -1268,8 +912,8 @@ public class View_initial extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jInternalFrame1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnReiniciar)
@@ -1289,23 +933,16 @@ public class View_initial extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AcABusJL;
     private javax.swing.JLabel AcABusJL1;
-    private javax.swing.JLabel AcBit0jLabel;
     private javax.swing.JLabel AcBit0jLabel1;
     private javax.swing.JLabel AcBit0jLabel2;
     private javax.swing.JLabel AcBit0jLabel3;
     private javax.swing.JLabel AcBit0jLabel4;
     private javax.swing.JLabel AcBit0jLabel5;
-    private javax.swing.JLabel AcBit1jLabel;
     private javax.swing.JLabel AcBit1jLabel1;
-    private javax.swing.JLabel AcBit2jLabel;
     private javax.swing.JLabel AcBit2jLabel1;
-    private javax.swing.JLabel AcBit3jLabel;
     private javax.swing.JLabel AcBit3jLabel1;
-    private javax.swing.JLabel AcBit4jLabel;
     private javax.swing.JLabel AcBit4jLabel1;
-    private javax.swing.JLabel AcBit5jLabel;
     private javax.swing.JLabel AcBit5jLabel1;
-    private javax.swing.JLabel AcBit6jLabel;
     private javax.swing.JLabel AcBit6jLabel1;
     private javax.swing.JLabel AcBit7jLabel;
     private javax.swing.JLabel AcBit7jLabel1;
@@ -1317,13 +954,6 @@ public class View_initial extends javax.swing.JFrame {
     private javax.swing.JLabel AluABusJL;
     private javax.swing.JTextPane AluTextPane;
     private javax.swing.JLabel BABusJL;
-    private javax.swing.JLabel BBit0jLabel;
-    private javax.swing.JLabel BBit1jLabel;
-    private javax.swing.JLabel BBit2jLabel;
-    private javax.swing.JLabel BBit3jLabel;
-    private javax.swing.JLabel BBit4jLabel;
-    private javax.swing.JLabel BBit5jLabel;
-    private javax.swing.JLabel BBit6jLabel;
     private javax.swing.JLabel BBit7jLabel;
     private javax.swing.JPanel BPanel;
     private javax.swing.JLabel BusBit0jLabel;
@@ -1337,52 +967,24 @@ public class View_initial extends javax.swing.JFrame {
     private javax.swing.JLabel BusjLabel;
     private javax.swing.JLabel BusjLabel1;
     private javax.swing.JLabel IrABusJL;
-    private javax.swing.JLabel IrBit0jLabel;
-    private javax.swing.JLabel IrBit1jLabel;
-    private javax.swing.JLabel IrBit2jLabel;
-    private javax.swing.JLabel IrBit3jLabel;
-    private javax.swing.JLabel IrBit4jLabel;
-    private javax.swing.JLabel IrBit5jLabel;
-    private javax.swing.JLabel IrBit6jLabel;
     private javax.swing.JLabel IrBit7jLabel;
     private javax.swing.JPanel IrPanel;
     private javax.swing.JLabel MarABusJL;
-    private javax.swing.JLabel MarBit0jLabel;
-    private javax.swing.JLabel MarBit1jLabel;
-    private javax.swing.JLabel MarBit2jLabel;
     private javax.swing.JLabel MarBit3jLabel;
     private javax.swing.JPanel MarPanel;
     private javax.swing.JLabel OutABusJL;
-    private javax.swing.JLabel OutBit0jLabel;
-    private javax.swing.JLabel OutBit1jLabel;
-    private javax.swing.JLabel OutBit2jLabel;
-    private javax.swing.JLabel OutBit3jLabel;
-    private javax.swing.JLabel OutBit4jLabel;
-    private javax.swing.JLabel OutBit5jLabel;
-    private javax.swing.JLabel OutBit6jLabel;
     private javax.swing.JLabel OutBit7jLabel;
     private javax.swing.JPanel OutPanel;
     private javax.swing.JLabel PcABusJL;
-    private javax.swing.JLabel PcBit0jLabel;
-    private javax.swing.JLabel PcBit1jLabel;
-    private javax.swing.JLabel PcBit2jLabel;
     private javax.swing.JLabel PcBit3jLabel;
     private javax.swing.JPanel PcPanel;
     private javax.swing.JLabel RamABusJL;
-    private javax.swing.JLabel RamBit0jLabel;
-    private javax.swing.JLabel RamBit1jLabel;
-    private javax.swing.JLabel RamBit2jLabel;
-    private javax.swing.JLabel RamBit3jLabel;
     private javax.swing.JLabel RamBit3jLabel1;
-    private javax.swing.JLabel RamBit4jLabel;
     private javax.swing.JLabel RamBit4jLabel1;
-    private javax.swing.JLabel RamBit5jLabel;
     private javax.swing.JLabel RamBit5jLabel1;
-    private javax.swing.JLabel RamBit6jLabel;
     private javax.swing.JLabel RamBit6jLabel1;
     private javax.swing.JLabel RamBit7jLabel;
     private javax.swing.JLabel RamBit7jLabel1;
-    private javax.swing.JLabel RamBit7jLabel2;
     private javax.swing.JPanel RamPanel;
     private javax.swing.JTextPane ResultadoTextPane;
     private javax.swing.JTextPane UcTextPane;
@@ -1403,7 +1005,6 @@ public class View_initial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
-    private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
