@@ -216,33 +216,16 @@
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="M10" alignment="0" max="32767" attributes="0"/>
-                          <Component id="M11" alignment="0" max="32767" attributes="0"/>
-                          <Component id="M12" alignment="0" max="32767" attributes="0"/>
-                          <Component id="M13" alignment="0" max="32767" attributes="0"/>
-                          <Component id="M9" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="L99" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L102" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L101" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L98" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L100" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L96" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L103" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L97" min="-2" pref="25" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="M10" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="M11" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="M12" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="M13" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="M9" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="L72" min="-2" pref="25" max="-2" attributes="0"/>
@@ -312,60 +295,79 @@
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="L94" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="BorrarProgramaBtn" max="32767" attributes="0"/>
-                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                      <Component id="GuardarProgramaBtn" min="-2" pref="144" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="L99" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L102" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L101" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L98" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L100" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L96" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L103" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L97" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="interno_f" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="ProgramaDefectoBtn" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="M15" min="-2" max="-2" attributes="0"/>
+                                  <Component id="M14" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="L118" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L116" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L115" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L117" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L119" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L113" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L114" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L112" min="-2" pref="25" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="L124" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L126" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L121" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L122" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L127" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L123" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L120" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="L125" min="-2" pref="25" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="M15" min="-2" max="-2" attributes="0"/>
-                          <Component id="M14" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="L118" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L116" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L115" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L117" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L119" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L113" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L114" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L112" min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="BorrarProgramaBtn" min="-2" pref="211" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="GuardarProgramaBtn" min="-2" pref="144" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="L124" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L126" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L121" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L122" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L127" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L123" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L120" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L125" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="ProgramaDefectoBtn" alignment="1" max="32767" attributes="0"/>
+                              <Component id="interno_f" alignment="1" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -379,6 +381,18 @@
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Component id="interno_f" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="ProgramaDefectoBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="BorrarProgramaBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="GuardarProgramaBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="M0" min="-2" max="-2" attributes="0"/>
@@ -556,42 +570,35 @@
                           </Group>
                           <Component id="M13" min="-2" max="-2" attributes="0"/>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                      <Component id="interno_f" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="L118" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="L116" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="L115" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="L117" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="L119" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="L113" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="L114" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="L112" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="M14" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="L124" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="L126" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="L121" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="L122" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="L127" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="L123" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="L120" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="L125" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="M15" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="L118" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                  <Component id="L116" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                  <Component id="L115" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                  <Component id="L117" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                  <Component id="L119" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                  <Component id="L113" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                  <Component id="L114" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                  <Component id="L112" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                  <Component id="M14" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="ProgramaDefectoBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                      <Component id="L124" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="L126" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="L121" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="L122" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="L127" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="L123" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="L120" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="L125" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="BorrarProgramaBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="GuardarProgramaBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="M15" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -1451,10 +1458,12 @@
     <Component class="javax.swing.JButton" name="BorrarProgramaBtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Limpiar Memoria"/>
+        <Property name="actionCommand" type="java.lang.String" value="eraseMemory"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="GuardarProgramaBtn">
       <Properties>
+        <Property name="actionCommand" type="java.lang.String" value="saveMemory"/>
         <Property name="label" type="java.lang.String" value="Guardar Memoria"/>
       </Properties>
       <Events>
@@ -1464,6 +1473,7 @@
     <Component class="javax.swing.JButton" name="ProgramaDefectoBtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cargar Programa Estandar"/>
+        <Property name="actionCommand" type="java.lang.String" value="loadProgramDefault"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JInternalFrame" name="interno_f">
@@ -1484,7 +1494,7 @@
                   <Component id="jScrollPane1" min="-2" pref="81" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jTabbedPane1" min="-2" pref="190" max="-2" attributes="0"/>
-                  <EmptySpace pref="63" max="32767" attributes="0"/>
+                  <EmptySpace pref="135" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1529,7 +1539,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="CancelarInstBtn" min="-2" pref="125" max="-2" attributes="0"/>
-                                  <EmptySpace pref="73" max="32767" attributes="0"/>
+                                  <EmptySpace pref="91" max="32767" attributes="0"/>
                                   <Component id="CargarInstBtn" min="-2" pref="125" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -1615,18 +1625,16 @@
                 <Component class="javax.swing.JButton" name="CargarInstBtn">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cargar"/>
-                    <Property name="actionCommand" type="java.lang.String" value="AceptarInstBtn"/>
+                    <Property name="actionCommand" type="java.lang.String" value="cargarInst"/>
                   </Properties>
                   <AccessibilityProperties>
                     <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Aceptar"/>
                   </AccessibilityProperties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CargarInstBtnActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="CancelarInstBtn">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cancelar"/>
+                    <Property name="actionCommand" type="java.lang.String" value="cancelarInst"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CancelarInstBtnActionPerformed"/>
@@ -1656,7 +1664,7 @@
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jLabel3" min="-2" pref="156" max="-2" attributes="0"/>
-                                  <EmptySpace pref="60" max="32767" attributes="0"/>
+                                  <EmptySpace pref="78" max="32767" attributes="0"/>
                                   <Component id="DatoTextField" min="-2" pref="107" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -1691,11 +1699,13 @@
                 <Component class="javax.swing.JButton" name="CargarDatoBtn">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cargar"/>
+                    <Property name="actionCommand" type="java.lang.String" value="cargarDato"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="CancelarDatoBtn">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cancelar"/>
+                    <Property name="actionCommand" type="java.lang.String" value="cancelarDato"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CancelarDatoBtnActionPerformed"/>

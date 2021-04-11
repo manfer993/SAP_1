@@ -1,18 +1,18 @@
 
 package SAP_1_SIMPLE_COMPUTER.MAIN;
 
-import SAP_1_SIMPLE_COMPUTER_PRESENTATION.MODEL;
+import SAP_1_SIMPLE_COMPUTER_PRESENTATION.Model;
 
 
 public class Launcher {
 
-    private MODEL myApp;
+    private Model myApp;
     public static void main(String[] args) {
         new Launcher();
     }
     
     public Launcher() {
-        myApp = new MODEL();
+        myApp = new Model();
         myApp.iniciar();
     }
     

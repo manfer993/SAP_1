@@ -1,26 +1,40 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package SAP_1_SIMPLE_COMPUTER_PRESENTATION;
 
-/**
- *
- * @author AndresVargasPC_GAMER
- */
-public class VIEW_INITIAL extends javax.swing.JFrame {
+public class View_initial extends javax.swing.JFrame {
+    
+    private Model myModel;
+    private ControllerViewInital myControl;
 
     /**
      * Creates new form VIEW_INITIAL
      */
-    public VIEW_INITIAL() {
+    public View_initial(Model aThis) {
+        myModel = aThis;
         initComponents();
+        capture_events();
+    }
+    
+    public ControllerViewInital getControl()
+    {
+        if(myControl == null){
+            myControl = new ControllerViewInital(this);
+        }
+        return myControl;
+    }
+    
+    public Model getModel()
+    {
+        return myModel;
+    }
+    
+    public void capture_events()
+    {
+        btnCargar.addActionListener(getControl());
+        btnPlayPause.addActionListener(getControl());
+        btnReiniciar.addActionListener(getControl());
     }
 
-    VIEW_INITIAL(MODEL aThis) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -33,9 +47,9 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
 
         jSlider1 = new javax.swing.JSlider();
         jLabel1 = new javax.swing.JLabel();
-        REINICIAR = new javax.swing.JButton();
-        PLAY_PAUSE = new javax.swing.JButton();
-        CARGAR = new javax.swing.JButton();
+        btnReiniciar = new javax.swing.JButton();
+        btnPlayPause = new javax.swing.JButton();
+        btnCargar = new javax.swing.JButton();
         jInternalFrame1 = new javax.swing.JInternalFrame();
         PcPanel = new javax.swing.JPanel();
         PcBit3jLabel = new javax.swing.JLabel();
@@ -115,7 +129,6 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
         RamBit3jLabel1 = new javax.swing.JLabel();
         RamBit4jLabel1 = new javax.swing.JLabel();
         RamBit5jLabel1 = new javax.swing.JLabel();
-        RamBit2jLabel1 = new javax.swing.JLabel();
         jLabel77 = new javax.swing.JLabel();
         jLabel78 = new javax.swing.JLabel();
         RamBit7jLabel2 = new javax.swing.JLabel();
@@ -176,26 +189,14 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
 
         jLabel1.setText("VELOCIDAD DE LA ANIMACIÓN");
 
-        REINICIAR.setText("REINICIAR");
-        REINICIAR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                REINICIARActionPerformed(evt);
-            }
-        });
+        btnReiniciar.setText("REINICIAR");
+        btnReiniciar.setActionCommand("reiniciar");
 
-        PLAY_PAUSE.setText("PLAY/PAUSE");
-        PLAY_PAUSE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PLAY_PAUSEActionPerformed(evt);
-            }
-        });
+        btnPlayPause.setText("PLAY/PAUSE");
+        btnPlayPause.setActionCommand("iniciarPausar");
 
-        CARGAR.setText("CARGAR PROGRAMA");
-        CARGAR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CARGARActionPerformed(evt);
-            }
-        });
+        btnCargar.setText("CARGAR PROGRAMA");
+        btnCargar.setActionCommand("loadProgram");
 
         jInternalFrame1.setVisible(true);
 
@@ -713,10 +714,6 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
         RamBit5jLabel1.setText("3");
         RamBit5jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        RamBit2jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RamBit2jLabel1.setText("6");
-        RamBit2jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
         jLabel77.setText("CICLO");
 
         jLabel78.setText("CLK");
@@ -1025,10 +1022,8 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(RamBit4jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(RamBit3jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(RamBit2jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(115, 115, 115)
+                                        .addComponent(RamBit3jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(136, 136, 136)
                                 .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                                 .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -1136,7 +1131,6 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
                                 .addComponent(jLabel77)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(RamBit2jLabel1)
                                     .addComponent(RamBit5jLabel1)
                                     .addComponent(RamBit6jLabel1)
                                     .addComponent(RamBit7jLabel1)
@@ -1250,7 +1244,7 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
                                         .addComponent(IrABusJL)))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         label1.getAccessibleContext().setAccessibleName("label1");
@@ -1264,11 +1258,11 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jInternalFrame1)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(REINICIAR)
+                        .addComponent(btnReiniciar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(PLAY_PAUSE)
+                        .addComponent(btnPlayPause)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CARGAR)
+                        .addComponent(btnCargar)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jSlider1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1283,9 +1277,9 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(REINICIAR)
-                        .addComponent(PLAY_PAUSE)
-                        .addComponent(CARGAR))
+                        .addComponent(btnReiniciar)
+                        .addComponent(btnPlayPause)
+                        .addComponent(btnCargar))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1296,53 +1290,6 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void REINICIARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REINICIARActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REINICIARActionPerformed
-
-    private void CARGARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CARGARActionPerformed
-        VIEW_LOAD_PROGRAM load = new VIEW_LOAD_PROGRAM();
-        load.show();
-    }//GEN-LAST:event_CARGARActionPerformed
-
-    private void PLAY_PAUSEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PLAY_PAUSEActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PLAY_PAUSEActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VIEW_INITIAL.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VIEW_INITIAL.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VIEW_INITIAL.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VIEW_INITIAL.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VIEW_INITIAL().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AcABusJL;
@@ -1394,7 +1341,6 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
     private javax.swing.JLabel BusBit7jLabel;
     private javax.swing.JLabel BusjLabel;
     private javax.swing.JLabel BusjLabel1;
-    private javax.swing.JButton CARGAR;
     private javax.swing.JLabel IrABusJL;
     private javax.swing.JLabel IrBit0jLabel;
     private javax.swing.JLabel IrBit1jLabel;
@@ -1421,19 +1367,16 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
     private javax.swing.JLabel OutBit6jLabel;
     private javax.swing.JLabel OutBit7jLabel;
     private javax.swing.JPanel OutPanel;
-    private javax.swing.JButton PLAY_PAUSE;
     private javax.swing.JLabel PcABusJL;
     private javax.swing.JLabel PcBit0jLabel;
     private javax.swing.JLabel PcBit1jLabel;
     private javax.swing.JLabel PcBit2jLabel;
     private javax.swing.JLabel PcBit3jLabel;
     private javax.swing.JPanel PcPanel;
-    private javax.swing.JButton REINICIAR;
     private javax.swing.JLabel RamABusJL;
     private javax.swing.JLabel RamBit0jLabel;
     private javax.swing.JLabel RamBit1jLabel;
     private javax.swing.JLabel RamBit2jLabel;
-    private javax.swing.JLabel RamBit2jLabel1;
     private javax.swing.JLabel RamBit3jLabel;
     private javax.swing.JLabel RamBit3jLabel1;
     private javax.swing.JLabel RamBit4jLabel;
@@ -1448,6 +1391,9 @@ public class VIEW_INITIAL extends javax.swing.JFrame {
     private javax.swing.JPanel RamPanel;
     private javax.swing.JTextPane ResultadoTextPane;
     private javax.swing.JTextPane UcTextPane;
+    private javax.swing.JButton btnCargar;
+    private javax.swing.JButton btnPlayPause;
+    private javax.swing.JButton btnReiniciar;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel66;

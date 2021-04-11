@@ -28,11 +28,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jInternalFrame1" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="REINICIAR" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnReiniciar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="PLAY_PAUSE" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnPlayPause" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="CARGAR" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnCargar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jSlider1" max="32767" attributes="0"/>
@@ -52,9 +52,9 @@
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="REINICIAR" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="PLAY_PAUSE" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="CARGAR" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnReiniciar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnPlayPause" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnCargar" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -75,29 +75,23 @@
         <Property name="text" type="java.lang.String" value="VELOCIDAD DE LA ANIMACI&#xd3;N"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="REINICIAR">
+    <Component class="javax.swing.JButton" name="btnReiniciar">
       <Properties>
         <Property name="text" type="java.lang.String" value="REINICIAR"/>
+        <Property name="actionCommand" type="java.lang.String" value="reiniciar"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="REINICIARActionPerformed"/>
-      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="PLAY_PAUSE">
+    <Component class="javax.swing.JButton" name="btnPlayPause">
       <Properties>
         <Property name="text" type="java.lang.String" value="PLAY/PAUSE"/>
+        <Property name="actionCommand" type="java.lang.String" value="iniciarPausar"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PLAY_PAUSEActionPerformed"/>
-      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="CARGAR">
+    <Component class="javax.swing.JButton" name="btnCargar">
       <Properties>
         <Property name="text" type="java.lang.String" value="CARGAR PROGRAMA"/>
+        <Property name="actionCommand" type="java.lang.String" value="loadProgram"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CARGARActionPerformed"/>
-      </Events>
     </Component>
     <Container class="javax.swing.JInternalFrame" name="jInternalFrame1">
       <Properties>
@@ -135,11 +129,9 @@
                                           <Component id="RamBit4jLabel1" min="-2" pref="15" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="RamBit3jLabel1" min="-2" pref="15" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="RamBit2jLabel1" min="-2" pref="15" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
                                   <Component id="label2" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -282,7 +274,6 @@
                                   <Component id="jLabel77" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="RamBit2jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="RamBit5jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="RamBit6jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="RamBit7jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -432,7 +423,7 @@
                           <Component id="label1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="15" max="32767" attributes="0"/>
+                  <EmptySpace pref="67" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1498,17 +1489,6 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="3"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                <LineBorder/>
-              </Border>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="RamBit2jLabel1">
-          <Properties>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="6"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder/>
