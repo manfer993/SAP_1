@@ -93,6 +93,8 @@ public class Model implements Runnable {
         }
         try {
             ram = getSystem().openFile(archivo);
+            //System.out.println("loadProgramDefault instruccion: "+ram.getPosition(11).getInstruction());
+            //System.out.println("default program antes entrando a dibujar");
             dibujarLoadProgram();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(getViewLoadProgram(), ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
@@ -110,11 +112,12 @@ public class Model implements Runnable {
 
     public void eraseMemory() {
         ram = null;
+        dibujarEraseLoadProgram();
     }
 
     public MemoryRegister getRam() {
+        Utils.setInstructionsA();
         if (ram == null) {
-            Utils.setInstructionsA();
             ram = new MemoryRegister();
         }
         return ram;
@@ -135,7 +138,7 @@ public class Model implements Runnable {
         if (Integer.parseInt(viewLoadProgram.getTextfieldDato().getText()) < 256
                 && Integer.parseInt(viewLoadProgram.getTextfieldDato().getText()) >= 0) {
             getViewLoadProgram().loadData();
-            getRam().setPosition(viewLoadProgram.getIndexOfMemory(), "null", 0, Integer.parseInt(viewLoadProgram.getTextfieldDato().getText()));
+            getRam().setPosition(viewLoadProgram.getIndexOfMemory(), "vacio", 0, Integer.parseInt(viewLoadProgram.getTextfieldDato().getText()));
             dibujarLoadProgram();
         } else {
             JOptionPane.showMessageDialog(viewLoadProgram, "Numeros permitidos entre 0 y 255", "Error", JOptionPane.ERROR_MESSAGE);
@@ -144,10 +147,14 @@ public class Model implements Runnable {
 
     public void dibujarLoadProgram() {
         for (int i = 0; i < 16; i++) {
-            if (!ram.getPosition(i).getInstruction().equals("NOP")) {
+            if ( ram.getPosition(i).getInstruction()!= "NOP" ) {
                 viewLoadProgram.paintMem(i, ram.getPosition(i).getBinaryRepresentation());
             }
         }
+    }
+    
+    public void dibujarEraseLoadProgram() {
+            viewLoadProgram.paintMemErase();
     }
 
     /*lanzador del hilo*/

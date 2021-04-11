@@ -827,6 +827,73 @@ public class View_load_program extends javax.swing.JFrame {
     private javax.swing.JTextField textfieldDato;
     // End of variables declaration//GEN-END:variables
 
+    void paintMemErase() {
+        pos0.setText("00000000");
+        pos0.setBackground(Color.yellow);
+        pos0.setForeground(Color.black);
+        
+        pos1.setText("00000000");
+        pos1.setBackground(Color.yellow);
+        pos1.setForeground(Color.black);
+        
+        pos2.setText("00000000");
+        pos2.setBackground(Color.yellow);
+        pos2.setForeground(Color.black);
+        
+        pos3.setText("00000000");
+        pos3.setBackground(Color.yellow);
+        pos3.setForeground(Color.black);
+        
+        pos4.setText("00000000");
+        pos4.setBackground(Color.yellow);
+        pos4.setForeground(Color.black);
+        
+        pos5.setText("00000000");
+        pos5.setBackground(Color.yellow);
+        pos5.setForeground(Color.black);
+        
+        pos6.setText("00000000");
+        pos6.setBackground(Color.yellow);
+        pos6.setForeground(Color.black);
+        
+        pos7.setText("00000000");
+        pos7.setBackground(Color.yellow);
+        pos7.setForeground(Color.black);
+        
+        pos8.setText("00000000");
+        pos8.setBackground(Color.yellow);
+        pos8.setForeground(Color.black);
+        
+        pos9.setText("00000000");
+        pos9.setBackground(Color.yellow);
+        pos9.setForeground(Color.black);
+        
+        pos10.setText("00000000");
+        pos10.setBackground(Color.yellow);
+        pos10.setForeground(Color.black);
+        
+        pos11.setText("00000000");
+        pos11.setBackground(Color.yellow);
+        pos11.setForeground(Color.black);
+        
+        pos12.setText("00000000");
+        pos12.setBackground(Color.yellow);
+        pos12.setForeground(Color.black);
+        
+        pos13.setText("00000000");
+        pos13.setBackground(Color.yellow);
+        pos13.setForeground(Color.black);
+        
+        pos14.setText("00000000");
+        pos14.setBackground(Color.yellow);
+        pos14.setForeground(Color.black);
+        
+        pos15.setText("00000000");
+        pos15.setBackground(Color.yellow);
+        pos15.setForeground(Color.black);
+
+    }
+    
     void paintMem(int i, String binaryRepresentation) {
         switch (i) {
             case 0:
