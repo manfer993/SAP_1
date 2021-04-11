@@ -21,11 +21,7 @@ public class MemoryRegister {
         return emptyMemory;
     }
 
-    public void setPosition(
-            int ramPosition,
-            String instruction,
-            int position,
-            int data) {
+    public void setPosition(int ramPosition, String instruction, int position, int data) {
         String binary;
         if (instruction != null) {
             binary = Utils.getInstructionBit(instruction)
@@ -34,8 +30,7 @@ public class MemoryRegister {
                     new MemoryPositionModel(instruction, position, data, binary));
         } else {
             binary = Utils.getBinary(data, 8);
-            this.ram.set(ramPosition,
-                    new MemoryPositionModel(instruction, position, data, binary));
+            this.ram.set(ramPosition, new MemoryPositionModel(instruction, position, data, binary));
         }
     }
 
