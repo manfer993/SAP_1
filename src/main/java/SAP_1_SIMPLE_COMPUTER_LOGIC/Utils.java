@@ -1,4 +1,4 @@
-package SAP_1_SIMPLE_COMPUTER_LOGIC;
+package com.mycompany.mavenproject1;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -32,18 +32,7 @@ public class Utils {
     }
 
     public static String getBinary(int number, int bit) {
-        int exponent = 0;
-        int digit = 0;
-        double binary = 0;
-
-        while (number != 0) {
-            digit = number % 2;
-            binary = binary + digit * Math.pow(10, exponent);
-            exponent++;
-            number = number / 2;
-        }
-
-        String binaryString = Integer.toString((int) binary);
+        String binaryString = Integer.toBinaryString(number);
         int binaryBits = binaryString.length();
 
         if (binaryBits < bit) {
@@ -55,17 +44,6 @@ public class Utils {
     }
 
     public static int getDecimal(String binaryNumber) {
-        int number = Integer.parseInt(binaryNumber);
-        int exponent = 0;
-        int decimal = 0;
-        int digit = 0;
-
-        while (number != 0) {
-            digit = number % 10;
-            decimal = decimal + digit * (int) Math.pow(2, exponent);
-            exponent++;
-            number = number / 10;
-        }
-        return decimal;
+        return Integer.parseInt(binaryNumber,2);
     }
 }

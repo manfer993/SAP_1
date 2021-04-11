@@ -1,8 +1,7 @@
-
 package SAP_1_SIMPLE_COMPUTER_PRESENTATION;
 
 public class View_initial extends javax.swing.JFrame {
-    
+
     private Model myModel;
     private ControllerViewInital myControl;
 
@@ -14,27 +13,23 @@ public class View_initial extends javax.swing.JFrame {
         initComponents();
         capture_events();
     }
-    
-    public ControllerViewInital getControl()
-    {
-        if(myControl == null){
+
+    public ControllerViewInital getControl() {
+        if (myControl == null) {
             myControl = new ControllerViewInital(this);
         }
         return myControl;
     }
-    
-    public Model getModel()
-    {
+
+    public Model getModel() {
         return myModel;
     }
-    
-    public void capture_events()
-    {
+
+    public void capture_events() {
         btnCargar.addActionListener(getControl());
         btnPlayPause.addActionListener(getControl());
         btnReiniciar.addActionListener(getControl());
     }
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -1244,7 +1239,7 @@ public class View_initial extends javax.swing.JFrame {
                                         .addComponent(IrABusJL)))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         label1.getAccessibleContext().setAccessibleName("label1");
