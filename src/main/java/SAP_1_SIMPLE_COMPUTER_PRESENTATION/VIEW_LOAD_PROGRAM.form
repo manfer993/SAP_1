@@ -1494,7 +1494,7 @@
                   <Component id="jScrollPane1" min="-2" pref="81" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jTabbedPane1" min="-2" pref="190" max="-2" attributes="0"/>
-                  <EmptySpace pref="139" max="32767" attributes="0"/>
+                  <EmptySpace pref="147" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1585,17 +1585,18 @@
                 <Component class="javax.swing.JComboBox" name="InstruccionComboBox">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="10">
-                        <StringItem index="0" value="LDA"/>
-                        <StringItem index="1" value="ADD"/>
-                        <StringItem index="2" value="SUB"/>
-                        <StringItem index="3" value="STA"/>
-                        <StringItem index="4" value="LDI"/>
-                        <StringItem index="5" value="JMP"/>
-                        <StringItem index="6" value="JC"/>
-                        <StringItem index="7" value="JZ"/>
-                        <StringItem index="8" value="OUT"/>
-                        <StringItem index="9" value="HLT"/>
+                      <StringArray count="11">
+                        <StringItem index="0" value="NOP"/>
+                        <StringItem index="1" value="LDA"/>
+                        <StringItem index="2" value="ADD"/>
+                        <StringItem index="3" value="SUB"/>
+                        <StringItem index="4" value="STA"/>
+                        <StringItem index="5" value="LDI"/>
+                        <StringItem index="6" value="JMP"/>
+                        <StringItem index="7" value="JC"/>
+                        <StringItem index="8" value="JZ"/>
+                        <StringItem index="9" value="OUT"/>
+                        <StringItem index="10" value="HLT"/>
                       </StringArray>
                     </Property>
                   </Properties>

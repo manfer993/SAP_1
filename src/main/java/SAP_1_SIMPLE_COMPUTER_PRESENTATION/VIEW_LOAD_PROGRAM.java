@@ -669,7 +669,7 @@ public class View_load_program extends javax.swing.JFrame {
         ResumenDatoInstruccionTextPane.setEnabled(false);
         jScrollPane1.setViewportView(ResumenDatoInstruccionTextPane);
 
-        InstruccionComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "LDA", "ADD", "SUB", "STA", "LDI", "JMP", "JC", "JZ", "OUT", "HLT" }));
+        InstruccionComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOP", "LDA", "ADD", "SUB", "STA", "LDI", "JMP", "JC", "JZ", "OUT", "HLT" }));
 
         jLabel1.setText("Ingrese la posicion de memoria");
 
@@ -805,7 +805,7 @@ public class View_load_program extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(139, Short.MAX_VALUE))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleName("Informacion");
