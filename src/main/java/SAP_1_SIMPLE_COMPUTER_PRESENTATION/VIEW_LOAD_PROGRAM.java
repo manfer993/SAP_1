@@ -10,13 +10,12 @@ import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-
 public class View_load_program extends javax.swing.JFrame {
-    
-    
+
     private Model myModel;
     private ControllerViewLoadProgram myControl;
     private int indexOfMemory;
+
     /**
      * Creates new form VIEW_LOAD_PROGRAM
      */
@@ -26,46 +25,54 @@ public class View_load_program extends javax.swing.JFrame {
         interno_f.setVisible(false);
         capture_events();
     }
-    
-    public ControllerViewLoadProgram getControl()
-    {
-        if(myControl == null){
+
+    public ControllerViewLoadProgram getControl() {
+        if (myControl == null) {
             myControl = new ControllerViewLoadProgram(this);
         }
         return myControl;
     }
-    
-    public Model getModel(){
+
+    public Model getModel() {
         return myModel;
     }
-    
-    public int getIndexOfMemory()
-    {
+
+    public int getIndexOfMemory() {
         return indexOfMemory;
     }
     
-    public JComboBox<String> getInstruccionComboBox()
-    {
+    public void saveMemory(){
+        this.dispose();
+    }
+    
+    public void loadInst(){
+        this.interno_f.setVisible(false);        
+    }
+    
+    public void loadData(){
+        this.interno_f.setVisible(false);
+    }
+
+    public JComboBox<String> getInstruccionComboBox() {
         return InstruccionComboBox;
     }
-    
-    public JTextField getTextfieldDato()
-    {
+
+    public JTextField getTextfieldDato() {
         return textfieldDato;
     }
-    
-    public JTextField getPosicionRamTextField()
-    {
+
+    public JTextField getPosicionRamTextField() {
         return PosicionRamTextField;
     }
-    
-    public void capture_events()
-    {
+
+    public void capture_events() {
         CargarDatoBtn.addActionListener(getControl());
         ProgramaDefectoBtn.addActionListener(getControl());
         BorrarProgramaBtn.addActionListener(getControl());
         CargarInstBtn.addActionListener(getControl());
         CargarDatoBtn.addActionListener(getControl());
+        GuardarProgramaBtn.addActionListener(getControl());
+
     }
 
     /**
@@ -94,7 +101,6 @@ public class View_load_program extends javax.swing.JFrame {
         M13 = new javax.swing.JButton();
         M14 = new javax.swing.JButton();
         M15 = new javax.swing.JButton();
-        javax.swing.JLabel pos0 = new javax.swing.JLabel();
         pos1 = new javax.swing.JLabel();
         pos2 = new javax.swing.JLabel();
         pos3 = new javax.swing.JLabel();
@@ -129,6 +135,7 @@ public class View_load_program extends javax.swing.JFrame {
         CancelarDatoBtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         pos8 = new javax.swing.JLabel();
+        pos0 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -255,10 +262,6 @@ public class View_load_program extends javax.swing.JFrame {
                 M15ActionPerformed(evt);
             }
         });
-
-        pos0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        pos0.setText("00000000");
-        pos0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         pos1.setBackground(new java.awt.Color(255, 255, 0));
         pos1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -472,7 +475,7 @@ public class View_load_program extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(178, Short.MAX_VALUE))
+                .addContainerGap(194, Short.MAX_VALUE))
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleName("Informacion");
@@ -480,6 +483,11 @@ public class View_load_program extends javax.swing.JFrame {
         pos8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         pos8.setText("00000000");
         pos8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        pos0.setBackground(new java.awt.Color(255, 255, 0));
+        pos0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pos0.setText("00000000");
+        pos0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -524,11 +532,6 @@ public class View_load_program extends javax.swing.JFrame {
                             .addComponent(M8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(pos1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(pos0, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                     .addGap(4, 4, 4)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -537,7 +540,12 @@ public class View_load_program extends javax.swing.JFrame {
                                         .addComponent(pos4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(pos5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(pos6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(pos7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(pos7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(pos0, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(pos1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(pos8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
@@ -659,7 +667,7 @@ public class View_load_program extends javax.swing.JFrame {
 
     private void textfieldDatoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textfieldDatoKeyTyped
         char validar = evt.getKeyChar();
-        if (Character.isLetter(validar)){
+        if (Character.isLetter(validar)) {
             evt.consume();
             JOptionPane.showMessageDialog(DatoPanel, "Ingresar solo un número entre 0 y 255");
         }
@@ -667,7 +675,7 @@ public class View_load_program extends javax.swing.JFrame {
 
     private void PosicionRamTextFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PosicionRamTextFieldKeyTyped
         char validar = evt.getKeyChar();
-        if (Character.isLetter(validar)){
+        if (Character.isLetter(validar)) {
             evt.consume();
             JOptionPane.showMessageDialog(InstruccionPanel, "Ingresar la posicion de memoria entre 0 y 15");
         }
@@ -763,7 +771,7 @@ public class View_load_program extends javax.swing.JFrame {
         this.interno_f.setVisible(true);
     }//GEN-LAST:event_M15ActionPerformed
 
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BorrarProgramaBtn;
     private javax.swing.JButton CancelarDatoBtn;
@@ -800,6 +808,7 @@ public class View_load_program extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    public javax.swing.JLabel pos0;
     public javax.swing.JLabel pos1;
     private javax.swing.JLabel pos10;
     private javax.swing.JLabel pos11;
@@ -819,89 +828,91 @@ public class View_load_program extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     void paintMem(int i, String binaryRepresentation) {
-        switch (i)
-        {
+        switch (i) {
             case 0:
-            break;
+                pos0.setText(binaryRepresentation);
+                pos0.setBackground(Color.yellow);
+                pos0.setForeground(Color.red);
+                break;
             case 1:
                 pos1.setText(binaryRepresentation);
                 pos1.setBackground(Color.yellow);
                 pos1.setForeground(Color.red);
-            break;
+                break;
             case 2:
                 pos2.setText(binaryRepresentation);
                 pos2.setBackground(Color.yellow);
                 pos2.setForeground(Color.red);
-            break;
+                break;
             case 3:
                 pos3.setText(binaryRepresentation);
                 pos3.setBackground(Color.yellow);
                 pos3.setForeground(Color.red);
-            break;
+                break;
             case 4:
                 pos4.setText(binaryRepresentation);
                 pos4.setBackground(Color.yellow);
                 pos4.setForeground(Color.red);
-            break;
+                break;
             case 5:
                 pos5.setText(binaryRepresentation);
                 pos5.setBackground(Color.yellow);
                 pos5.setForeground(Color.red);
-            break;
+                break;
             case 6:
                 pos6.setText(binaryRepresentation);
                 pos6.setBackground(Color.yellow);
                 pos6.setForeground(Color.red);
-            break;
+                break;
             case 7:
                 pos7.setText(binaryRepresentation);
                 pos7.setBackground(Color.yellow);
                 pos7.setForeground(Color.red);
-            break;
+                break;
             case 8:
                 pos8.setText(binaryRepresentation);
                 pos8.setBackground(Color.yellow);
                 pos8.setForeground(Color.red);
-            break;
+                break;
             case 9:
                 pos9.setText(binaryRepresentation);
                 pos9.setBackground(Color.yellow);
                 pos9.setForeground(Color.red);
-            break;
+                break;
             case 10:
                 pos10.setText(binaryRepresentation);
                 pos10.setBackground(Color.yellow);
                 pos10.setForeground(Color.red);
-            break;
+                break;
             case 11:
                 pos11.setText(binaryRepresentation);
                 pos11.setBackground(Color.yellow);
                 pos11.setForeground(Color.red);
-            break;
+                break;
             case 12:
                 pos12.setText(binaryRepresentation);
                 pos12.setBackground(Color.yellow);
                 pos12.setForeground(Color.red);
-            break;
+                break;
             case 13:
                 pos13.setText(binaryRepresentation);
                 pos13.setBackground(Color.yellow);
                 pos13.setForeground(Color.red);
-            break;
+                break;
             case 14:
                 pos14.setText(binaryRepresentation);
                 pos14.setBackground(Color.yellow);
                 pos14.setForeground(Color.red);
-            break;
+                break;
             case 15:
                 pos15.setText(binaryRepresentation);
                 pos15.setBackground(Color.yellow);
                 pos15.setForeground(Color.red);
-            break;
+                break;
             default:
                 System.out.println("Error out of memory range ");
-            break;
-                    
+                break;
+
         }
     }
 }

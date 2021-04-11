@@ -1,15 +1,12 @@
-
 package SAP_1_SIMPLE_COMPUTER_PRESENTATION;
 
 import SAP_1_SIMPLE_COMPUTER_LOGIC.*;
 import java.io.File;
-import java.util.ArrayList;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
+public class Model implements Runnable {
 
-public class Model implements Runnable{
-    
     private static ProgramCounterRegister pc;
     private static ClockCycle clock;
     private static MemoryRegister ram;
@@ -22,68 +19,64 @@ public class Model implements Runnable{
     private static OutputRegister out;
     private static DisplayRegister display;
     private static MemoryPositionModel ramMemory;
-    
+
     private View_initial ventana;
     private View_load_program viewLoadProgram;
     private Systems system;
     private Thread hiloDibujo;
 
     public View_initial getVentana() {
-        if(ventana == null){
+        if (ventana == null) {
             ventana = new View_initial(this);
         }
         return ventana;
     }
-    
-    public View_load_program getViewLoadProgram()
-    {
-        if(viewLoadProgram == null){
+
+    public View_load_program getViewLoadProgram() {
+        if (viewLoadProgram == null) {
             viewLoadProgram = new View_load_program(this);
         }
         return viewLoadProgram;
     }
-    
-    public Systems getSystem()
-    {
-        if(system == null)
-        {
+
+    public Systems getSystem() {
+        if (system == null) {
             system = new Systems();
         }
         return system;
     }
-    
+
     // funcionalidad del sistema   
-    public void iniciar(){
+    public void iniciar() {
         getVentana();
         getVentana().setVisible(true);
     }
-    public void loadProgram()
-    {
+
+    public void loadProgram() {
         getViewLoadProgram();
         getViewLoadProgram().setVisible(true);
     }
-    
-    public void iniciarSimulacion() {
-            //setVelocidad(110 - getVentana().getSliVelocidad().getValue());
-            getVentana().getBtnIniciar().setEnabled(false);
-            getVentana().getBtnDetener().setEnabled(true);
-            hiloDibujo = new Thread( this );
-            hiloDibujo.start();
-      }
 
-      public void detenerSimulacion() {
-            getVentana().getBtnIniciar().setEnabled(true);
-            getVentana().getBtnDetener().setEnabled(false);
-            //animando = false;
-            hiloDibujo = null;
-            java.lang.System.gc();
-      }
-    
-    public void reiniciar()
-    {
+    public void iniciarSimulacion() {
+        //setVelocidad(110 - getVentana().getSliVelocidad().getValue());
+        getVentana().getBtnIniciar().setEnabled(false);
+        getVentana().getBtnDetener().setEnabled(true);
+        hiloDibujo = new Thread(this);
+        hiloDibujo.start();
+    }
+
+    public void detenerSimulacion() {
+        getVentana().getBtnIniciar().setEnabled(true);
+        getVentana().getBtnDetener().setEnabled(false);
+        //animando = false;
+        hiloDibujo = null;
+        java.lang.System.gc();
+    }
+
+    public void reiniciar() {
         /*aun no programado*/
     }
-    
+
     public void loadProgramDefault() {
         JFileChooser selectorArchivo = new JFileChooser();
         selectorArchivo.setFileSelectionMode(JFileChooser.FILES_ONLY);
@@ -106,54 +99,67 @@ public class Model implements Runnable{
         }
 
     }
-    
+
+    public void saveMemory() {
+        getViewLoadProgram().saveMemory();
+        if (ram != null) {
+            getVentana().getBtnIniciar().setEnabled(true);
+            getVentana().getBtnDetener().setEnabled(false);
+        }
+    }
+
     public void eraseMemory() {
         ram = null;
     }
-    
-    public MemoryRegister getRam()
-    {
-        if(ram == null )
-        {
+
+    public MemoryRegister getRam() {
+        if (ram == null) {
+            Utils.setInstructionsA();
             ram = new MemoryRegister();
         }
         return ram;
     }
-    
-    public void cargarInst()
-    {
-        getRam().setPosition(viewLoadProgram.getIndexOfMemory(), (String) viewLoadProgram.getInstruccionComboBox().getSelectedItem(), Integer.parseInt( viewLoadProgram.getPosicionRamTextField().getText() ), 0);
-        dibujarLoadProgram();
+
+    public void cargarInst() {
+        if (Integer.parseInt(viewLoadProgram.getPosicionRamTextField().getText()) < 16
+                && Integer.parseInt(viewLoadProgram.getPosicionRamTextField().getText()) >= 0) {
+            getViewLoadProgram().loadInst();
+            getRam().setPosition(viewLoadProgram.getIndexOfMemory(), (String) viewLoadProgram.getInstruccionComboBox().getSelectedItem(), Integer.parseInt(viewLoadProgram.getPosicionRamTextField().getText()), 0);
+            dibujarLoadProgram();
+        } else {
+            JOptionPane.showMessageDialog(viewLoadProgram, "Numeros permitidos entre 0 y 15", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
-    
-    public void cargarDato()
-    {
-        getRam().setPosition(viewLoadProgram.getIndexOfMemory(), null, 0, Integer.parseInt(viewLoadProgram.getTextfieldDato().getText()) );
-        dibujarLoadProgram();
+
+    public void cargarDato() {
+        if (Integer.parseInt(viewLoadProgram.getTextfieldDato().getText()) < 256
+                && Integer.parseInt(viewLoadProgram.getTextfieldDato().getText()) >= 0) {
+            getViewLoadProgram().loadData();
+            getRam().setPosition(viewLoadProgram.getIndexOfMemory(), "null", 0, Integer.parseInt(viewLoadProgram.getTextfieldDato().getText()));
+            dibujarLoadProgram();
+        } else {
+            JOptionPane.showMessageDialog(viewLoadProgram, "Numeros permitidos entre 0 y 255", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
-    
-    public void dibujarLoadProgram()
-    {
-        for(int i = 0; i < 16; i++ )
-        {
-            if( ram.getPosition(i).getInstruction() != "NOP" )
-            {
-                viewLoadProgram.paintMem( i, ram.getPosition(i).getBinaryRepresentation() );
+
+    public void dibujarLoadProgram() {
+        for (int i = 0; i < 16; i++) {
+            if (!ram.getPosition(i).getInstruction().equals("NOP")) {
+                viewLoadProgram.paintMem(i, ram.getPosition(i).getBinaryRepresentation());
             }
         }
     }
-    
+
     /*lanzador del hilo*/
-    
     public void run() {
-            try {
-                  simular();
-            } catch (Exception ex) {
-                  JOptionPane.showMessageDialog(getVentana(), ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-            }
-            getVentana().getBtnIniciar().setEnabled(true);
-            getVentana().getBtnDetener().setEnabled(false);
-      }
+        try {
+            simular();
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(getVentana(), ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        getVentana().getBtnIniciar().setEnabled(true);
+        getVentana().getBtnDetener().setEnabled(false);
+    }
 
     public void simular() {
         Utils.setInstructionsA();
@@ -164,7 +170,7 @@ public class Model implements Runnable{
             clkSpecific(clkCommon());
         }
     }
-    
+
     private static void loadMemory() {
         ram = new MemoryRegister();
 
@@ -179,9 +185,9 @@ public class Model implements Runnable{
         ram.setPosition(8, "JMP", 0, 0);
         ram.setPosition(13, null, 0, 5);
         ram.setPosition(14, null, 0, 10);
-        ram.setPosition(15, null, 0, 15);        
+        ram.setPosition(15, null, 0, 15);
     }
-    
+
     private static void initializeRegisters() {
         pc = new ProgramCounterRegister();
         clock = new ClockCycle();
@@ -194,7 +200,7 @@ public class Model implements Runnable{
         display = new DisplayRegister();
         alu = new AluRegister();
     }
-    
+
     private static int clkCommon() {
         System.out.print("CLK: " + clock.getCLK());
         System.out.print(" PC: " + pc.getBinaryPC());
@@ -212,7 +218,7 @@ public class Model implements Runnable{
         clock.netx();
         return Utils.getDecimal(ir.getInstruction());
     }
-    
+
     private static void clkSpecific(int instruction) {
         switch (instruction) {
             case 0://NOP
@@ -408,5 +414,5 @@ public class Model implements Runnable{
                 break;
         }
     }
-    
+
 }
