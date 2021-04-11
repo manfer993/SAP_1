@@ -246,76 +246,121 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="1"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M2">
       <Properties>
         <Property name="text" type="java.lang.String" value="2"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M3">
       <Properties>
         <Property name="text" type="java.lang.String" value="3"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M3ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M4">
       <Properties>
         <Property name="text" type="java.lang.String" value="4"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M4ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M5">
       <Properties>
         <Property name="text" type="java.lang.String" value="5"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M5ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M6">
       <Properties>
         <Property name="text" type="java.lang.String" value="6"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M6ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M7">
       <Properties>
         <Property name="text" type="java.lang.String" value="7"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M7ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M8">
       <Properties>
         <Property name="text" type="java.lang.String" value="8"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M8ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M9">
       <Properties>
         <Property name="text" type="java.lang.String" value="9"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M9ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M10">
       <Properties>
         <Property name="text" type="java.lang.String" value="10"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M10ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M11">
       <Properties>
         <Property name="text" type="java.lang.String" value="11"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M11ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M12">
       <Properties>
         <Property name="text" type="java.lang.String" value="12"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M12ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M13">
       <Properties>
         <Property name="text" type="java.lang.String" value="13"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M13ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M14">
       <Properties>
         <Property name="text" type="java.lang.String" value="14"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M14ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M15">
       <Properties>
         <Property name="text" type="java.lang.String" value="15"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M15ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="pos0">
       <Properties>
@@ -531,7 +576,7 @@
                   <Component id="jScrollPane1" min="-2" pref="81" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jTabbedPane1" min="-2" pref="190" max="-2" attributes="0"/>
-                  <EmptySpace pref="170" max="32767" attributes="0"/>
+                  <EmptySpace pref="174" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

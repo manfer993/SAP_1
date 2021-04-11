@@ -126,34 +126,109 @@ public class View_load_program extends javax.swing.JFrame {
         });
 
         M1.setText("1");
+        M1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M1ActionPerformed(evt);
+            }
+        });
 
         M2.setText("2");
+        M2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M2ActionPerformed(evt);
+            }
+        });
 
         M3.setText("3");
+        M3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M3ActionPerformed(evt);
+            }
+        });
 
         M4.setText("4");
+        M4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M4ActionPerformed(evt);
+            }
+        });
 
         M5.setText("5");
+        M5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M5ActionPerformed(evt);
+            }
+        });
 
         M6.setText("6");
+        M6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M6ActionPerformed(evt);
+            }
+        });
 
         M7.setText("7");
+        M7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M7ActionPerformed(evt);
+            }
+        });
 
         M8.setText("8");
+        M8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M8ActionPerformed(evt);
+            }
+        });
 
         M9.setText("9");
+        M9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M9ActionPerformed(evt);
+            }
+        });
 
         M10.setText("10");
+        M10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M10ActionPerformed(evt);
+            }
+        });
 
         M11.setText("11");
+        M11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M11ActionPerformed(evt);
+            }
+        });
 
         M12.setText("12");
+        M12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M12ActionPerformed(evt);
+            }
+        });
 
         M13.setText("13");
+        M13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M13ActionPerformed(evt);
+            }
+        });
 
         M14.setText("14");
+        M14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M14ActionPerformed(evt);
+            }
+        });
 
         M15.setText("15");
+        M15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M15ActionPerformed(evt);
+            }
+        });
 
         pos0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         pos0.setText("00000000");
@@ -371,7 +446,7 @@ public class View_load_program extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(174, Short.MAX_VALUE))
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleName("Informacion");
@@ -570,6 +645,81 @@ public class View_load_program extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(InstruccionPanel, "Ingresar la posicion de memoria entre 0 y 15");
         }
     }//GEN-LAST:event_PosicionRamTextFieldKeyTyped
+
+    private void M1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M1ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 1 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M1ActionPerformed
+
+    private void M2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M2ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 2 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M2ActionPerformed
+
+    private void M3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M3ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 3 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M3ActionPerformed
+
+    private void M4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M4ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 4 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M4ActionPerformed
+
+    private void M5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M5ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 5 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M5ActionPerformed
+
+    private void M6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M6ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 6 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M6ActionPerformed
+
+    private void M7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M7ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 7 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M7ActionPerformed
+
+    private void M8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M8ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 8 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M8ActionPerformed
+
+    private void M9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M9ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 9 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M9ActionPerformed
+
+    private void M10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M10ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 10 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M10ActionPerformed
+
+    private void M11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M11ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 11 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M11ActionPerformed
+
+    private void M12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M12ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 12 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M12ActionPerformed
+
+    private void M13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M13ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 13 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M13ActionPerformed
+
+    private void M14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M14ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 14 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M14ActionPerformed
+
+    private void M15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M15ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 15 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M15ActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -128,12 +128,29 @@ public class Model implements Runnable{
 
     public void simular() {
         Utils.setInstructionsA();
-        
+        //loadMemory();
         initializeRegisters();
 
         while (pc.getPC() < 16) {
             clkSpecific(clkCommon());
         }
+    }
+    
+    private static void loadMemory() {
+        ram = new MemoryRegister();
+
+        ram.setPosition(0, "LDA", 13, 0);
+        ram.setPosition(1, "ADD", 14, 0);
+        ram.setPosition(2, "SUB", 15, 0);
+        ram.setPosition(3, "JZ", 6, 0);
+        ram.setPosition(4, "OUT", 0, 0);
+        ram.setPosition(5, "HTL", 0, 0);
+        ram.setPosition(6, "LDI", 5, 0);
+        ram.setPosition(7, "STA", 15, 0);
+        ram.setPosition(8, "JMP", 0, 0);
+        ram.setPosition(13, null, 0, 5);
+        ram.setPosition(14, null, 0, 10);
+        ram.setPosition(15, null, 0, 15);        
     }
     
     private static void initializeRegisters() {
