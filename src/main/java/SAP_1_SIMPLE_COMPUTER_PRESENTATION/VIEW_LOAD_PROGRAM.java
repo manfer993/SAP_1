@@ -5,7 +5,10 @@
  */
 package SAP_1_SIMPLE_COMPUTER_PRESENTATION;
 
+import java.awt.Color;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 
 public class View_load_program extends javax.swing.JFrame {
@@ -13,6 +16,7 @@ public class View_load_program extends javax.swing.JFrame {
     
     private Model myModel;
     private ControllerViewLoadProgram myControl;
+    private int indexOfMemory;
     /**
      * Creates new form VIEW_LOAD_PROGRAM
      */
@@ -35,10 +39,33 @@ public class View_load_program extends javax.swing.JFrame {
         return myModel;
     }
     
+    public int getIndexOfMemory()
+    {
+        return indexOfMemory;
+    }
+    
+    public JComboBox<String> getInstruccionComboBox()
+    {
+        return InstruccionComboBox;
+    }
+    
+    public JTextField getTextfieldDato()
+    {
+        return textfieldDato;
+    }
+    
+    public JTextField getPosicionRamTextField()
+    {
+        return PosicionRamTextField;
+    }
+    
     public void capture_events()
     {
         CargarDatoBtn.addActionListener(getControl());
         ProgramaDefectoBtn.addActionListener(getControl());
+        BorrarProgramaBtn.addActionListener(getControl());
+        CargarInstBtn.addActionListener(getControl());
+        CargarDatoBtn.addActionListener(getControl());
     }
 
     /**
@@ -67,9 +94,9 @@ public class View_load_program extends javax.swing.JFrame {
         M13 = new javax.swing.JButton();
         M14 = new javax.swing.JButton();
         M15 = new javax.swing.JButton();
-        javax.swing.JLabel Pos0 = new javax.swing.JLabel();
-        Pos1 = new javax.swing.JLabel();
-        Pos2 = new javax.swing.JLabel();
+        javax.swing.JLabel pos0 = new javax.swing.JLabel();
+        pos1 = new javax.swing.JLabel();
+        pos2 = new javax.swing.JLabel();
         pos3 = new javax.swing.JLabel();
         pos4 = new javax.swing.JLabel();
         pos5 = new javax.swing.JLabel();
@@ -97,7 +124,7 @@ public class View_load_program extends javax.swing.JFrame {
         CargarInstBtn = new javax.swing.JButton();
         CancelarInstBtn = new javax.swing.JButton();
         DatoPanel = new javax.swing.JPanel();
-        DatoTextField = new javax.swing.JTextField();
+        textfieldDato = new javax.swing.JTextField();
         CargarDatoBtn = new javax.swing.JButton();
         CancelarDatoBtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
@@ -125,46 +152,122 @@ public class View_load_program extends javax.swing.JFrame {
         });
 
         M1.setText("1");
+        M1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M1ActionPerformed(evt);
+            }
+        });
 
         M2.setText("2");
+        M2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M2ActionPerformed(evt);
+            }
+        });
 
         M3.setText("3");
+        M3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M3ActionPerformed(evt);
+            }
+        });
 
         M4.setText("4");
+        M4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M4ActionPerformed(evt);
+            }
+        });
 
         M5.setText("5");
+        M5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M5ActionPerformed(evt);
+            }
+        });
 
         M6.setText("6");
+        M6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M6ActionPerformed(evt);
+            }
+        });
 
         M7.setText("7");
+        M7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M7ActionPerformed(evt);
+            }
+        });
 
         M8.setText("8");
+        M8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M8ActionPerformed(evt);
+            }
+        });
 
         M9.setText("9");
+        M9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M9ActionPerformed(evt);
+            }
+        });
 
         M10.setText("10");
+        M10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M10ActionPerformed(evt);
+            }
+        });
 
         M11.setText("11");
+        M11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M11ActionPerformed(evt);
+            }
+        });
 
         M12.setText("12");
+        M12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M12ActionPerformed(evt);
+            }
+        });
 
         M13.setText("13");
+        M13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M13ActionPerformed(evt);
+            }
+        });
 
         M14.setText("14");
+        M14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M14ActionPerformed(evt);
+            }
+        });
 
         M15.setText("15");
+        M15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M15ActionPerformed(evt);
+            }
+        });
 
-        Pos0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Pos0.setText("00000000");
-        Pos0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pos0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pos0.setText("00000000");
+        pos0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        Pos1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Pos1.setText("00000000");
-        Pos1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pos1.setBackground(new java.awt.Color(255, 255, 0));
+        pos1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pos1.setText("00000000");
+        pos1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        Pos2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Pos2.setText("00000000");
-        Pos2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pos2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pos2.setText("00000000");
+        pos2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         pos3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         pos3.setText("00000000");
@@ -304,9 +407,9 @@ public class View_load_program extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("      Instrucción      ", null, InstruccionPanel, "");
 
-        DatoTextField.addKeyListener(new java.awt.event.KeyAdapter() {
+        textfieldDato.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                DatoTextFieldKeyTyped(evt);
+                textfieldDatoKeyTyped(evt);
             }
         });
 
@@ -337,7 +440,7 @@ public class View_load_program extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DatoPanelLayout.createSequentialGroup()
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
-                        .addComponent(DatoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(textfieldDato, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         DatoPanelLayout.setVerticalGroup(
@@ -345,7 +448,7 @@ public class View_load_program extends javax.swing.JFrame {
             .addGroup(DatoPanelLayout.createSequentialGroup()
                 .addGap(55, 55, 55)
                 .addGroup(DatoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(DatoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textfieldDato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addGroup(DatoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -369,7 +472,7 @@ public class View_load_program extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addContainerGap(178, Short.MAX_VALUE))
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleName("Informacion");
@@ -424,12 +527,12 @@ public class View_load_program extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(Pos1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(Pos0, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(pos1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(pos0, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                     .addGap(4, 4, 4)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(Pos2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(pos2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(pos3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(pos4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(pos5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -465,15 +568,15 @@ public class View_load_program extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(M0)
-                            .addComponent(Pos0, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(pos0, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(M1)
-                            .addComponent(Pos1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pos1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(M1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(M2)
-                            .addComponent(Pos2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(pos2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(M3)
@@ -534,6 +637,7 @@ public class View_load_program extends javax.swing.JFrame {
 
     private void M0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M0ActionPerformed
         this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 0 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.indexOfMemory = 0;
         this.interno_f.setVisible(true);
     }//GEN-LAST:event_M0ActionPerformed
 
@@ -553,13 +657,13 @@ public class View_load_program extends javax.swing.JFrame {
         this.interno_f.setVisible(false);
     }//GEN-LAST:event_CancelarDatoBtnActionPerformed
 
-    private void DatoTextFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DatoTextFieldKeyTyped
+    private void textfieldDatoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textfieldDatoKeyTyped
         char validar = evt.getKeyChar();
         if (Character.isLetter(validar)){
             evt.consume();
             JOptionPane.showMessageDialog(DatoPanel, "Ingresar solo un número entre 0 y 255");
         }
-    }//GEN-LAST:event_DatoTextFieldKeyTyped
+    }//GEN-LAST:event_textfieldDatoKeyTyped
 
     private void PosicionRamTextFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PosicionRamTextFieldKeyTyped
         char validar = evt.getKeyChar();
@@ -569,6 +673,96 @@ public class View_load_program extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_PosicionRamTextFieldKeyTyped
 
+    private void M1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M1ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 1 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.indexOfMemory = 1;
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M1ActionPerformed
+
+    private void M2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M2ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 2 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.indexOfMemory = 2;
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M2ActionPerformed
+
+    private void M3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M3ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 3 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.indexOfMemory = 3;
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M3ActionPerformed
+
+    private void M4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M4ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 4 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.indexOfMemory = 4;
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M4ActionPerformed
+
+    private void M5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M5ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 5 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.indexOfMemory = 5;
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M5ActionPerformed
+
+    private void M6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M6ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 6 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.indexOfMemory = 6;
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M6ActionPerformed
+
+    private void M7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M7ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 7 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.indexOfMemory = 7;
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M7ActionPerformed
+
+    private void M8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M8ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 8 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.indexOfMemory = 8;
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M8ActionPerformed
+
+    private void M9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M9ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 9 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.indexOfMemory = 9;
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M9ActionPerformed
+
+    private void M10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M10ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 10 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.indexOfMemory = 10;
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M10ActionPerformed
+
+    private void M11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M11ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 11 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.indexOfMemory = 11;
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M11ActionPerformed
+
+    private void M12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M12ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 12 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.indexOfMemory = 12;
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M12ActionPerformed
+
+    private void M13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M13ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 13 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.indexOfMemory = 13;
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M13ActionPerformed
+
+    private void M14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M14ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 14 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.indexOfMemory = 14;
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M14ActionPerformed
+
+    private void M15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M15ActionPerformed
+        this.ResumenDatoInstruccionTextPane.setText("Dirección de memoria seleccionada: 15 \nInstrucción: LDA 0 \nPara modificar esta dirección de memoria,\n pulsa el boton correespondiente.");
+        this.indexOfMemory = 15;
+        this.interno_f.setVisible(true);
+    }//GEN-LAST:event_M15ActionPerformed
+
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BorrarProgramaBtn;
@@ -577,7 +771,6 @@ public class View_load_program extends javax.swing.JFrame {
     private javax.swing.JButton CargarDatoBtn;
     private javax.swing.JButton CargarInstBtn;
     private javax.swing.JPanel DatoPanel;
-    private javax.swing.JTextField DatoTextField;
     private javax.swing.JButton GuardarProgramaBtn;
     private javax.swing.JComboBox<String> InstruccionComboBox;
     private javax.swing.JPanel InstruccionPanel;
@@ -597,8 +790,6 @@ public class View_load_program extends javax.swing.JFrame {
     private javax.swing.JButton M7;
     private javax.swing.JButton M8;
     private javax.swing.JButton M9;
-    private javax.swing.JLabel Pos1;
-    private javax.swing.JLabel Pos2;
     private javax.swing.JTextField PosicionRamTextField;
     private javax.swing.JButton ProgramaDefectoBtn;
     private javax.swing.JTextPane ResumenDatoInstruccionTextPane;
@@ -609,12 +800,14 @@ public class View_load_program extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    public javax.swing.JLabel pos1;
     private javax.swing.JLabel pos10;
     private javax.swing.JLabel pos11;
     private javax.swing.JLabel pos12;
     private javax.swing.JLabel pos13;
     private javax.swing.JLabel pos14;
     private javax.swing.JLabel pos15;
+    private javax.swing.JLabel pos2;
     private javax.swing.JLabel pos3;
     private javax.swing.JLabel pos4;
     private javax.swing.JLabel pos5;
@@ -622,5 +815,93 @@ public class View_load_program extends javax.swing.JFrame {
     private javax.swing.JLabel pos7;
     private javax.swing.JLabel pos8;
     private javax.swing.JLabel pos9;
+    private javax.swing.JTextField textfieldDato;
     // End of variables declaration//GEN-END:variables
+
+    void paintMem(int i, String binaryRepresentation) {
+        switch (i)
+        {
+            case 0:
+            break;
+            case 1:
+                pos1.setText(binaryRepresentation);
+                pos1.setBackground(Color.yellow);
+                pos1.setForeground(Color.red);
+            break;
+            case 2:
+                pos2.setText(binaryRepresentation);
+                pos2.setBackground(Color.yellow);
+                pos2.setForeground(Color.red);
+            break;
+            case 3:
+                pos3.setText(binaryRepresentation);
+                pos3.setBackground(Color.yellow);
+                pos3.setForeground(Color.red);
+            break;
+            case 4:
+                pos4.setText(binaryRepresentation);
+                pos4.setBackground(Color.yellow);
+                pos4.setForeground(Color.red);
+            break;
+            case 5:
+                pos5.setText(binaryRepresentation);
+                pos5.setBackground(Color.yellow);
+                pos5.setForeground(Color.red);
+            break;
+            case 6:
+                pos6.setText(binaryRepresentation);
+                pos6.setBackground(Color.yellow);
+                pos6.setForeground(Color.red);
+            break;
+            case 7:
+                pos7.setText(binaryRepresentation);
+                pos7.setBackground(Color.yellow);
+                pos7.setForeground(Color.red);
+            break;
+            case 8:
+                pos8.setText(binaryRepresentation);
+                pos8.setBackground(Color.yellow);
+                pos8.setForeground(Color.red);
+            break;
+            case 9:
+                pos9.setText(binaryRepresentation);
+                pos9.setBackground(Color.yellow);
+                pos9.setForeground(Color.red);
+            break;
+            case 10:
+                pos10.setText(binaryRepresentation);
+                pos10.setBackground(Color.yellow);
+                pos10.setForeground(Color.red);
+            break;
+            case 11:
+                pos11.setText(binaryRepresentation);
+                pos11.setBackground(Color.yellow);
+                pos11.setForeground(Color.red);
+            break;
+            case 12:
+                pos12.setText(binaryRepresentation);
+                pos12.setBackground(Color.yellow);
+                pos12.setForeground(Color.red);
+            break;
+            case 13:
+                pos13.setText(binaryRepresentation);
+                pos13.setBackground(Color.yellow);
+                pos13.setForeground(Color.red);
+            break;
+            case 14:
+                pos14.setText(binaryRepresentation);
+                pos14.setBackground(Color.yellow);
+                pos14.setForeground(Color.red);
+            break;
+            case 15:
+                pos15.setText(binaryRepresentation);
+                pos15.setBackground(Color.yellow);
+                pos15.setForeground(Color.red);
+            break;
+            default:
+                System.out.println("Error out of memory range ");
+            break;
+                    
+        }
+    }
 }

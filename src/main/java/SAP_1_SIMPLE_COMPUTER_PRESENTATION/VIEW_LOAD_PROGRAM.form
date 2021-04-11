@@ -93,14 +93,14 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="Pos1" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
-                                      <Component id="Pos0" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="pos1" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="pos0" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="Pos2" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="pos2" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
                                       <Component id="pos3" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
                                       <Component id="pos4" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
                                       <Component id="pos5" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
@@ -149,17 +149,17 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="M0" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Pos0" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="pos0" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="M1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Pos1" alignment="1" min="-2" pref="19" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="pos1" alignment="1" min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="M1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="M2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Pos2" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="pos2" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -246,78 +246,123 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="1"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M2">
       <Properties>
         <Property name="text" type="java.lang.String" value="2"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M3">
       <Properties>
         <Property name="text" type="java.lang.String" value="3"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M3ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M4">
       <Properties>
         <Property name="text" type="java.lang.String" value="4"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M4ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M5">
       <Properties>
         <Property name="text" type="java.lang.String" value="5"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M5ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M6">
       <Properties>
         <Property name="text" type="java.lang.String" value="6"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M6ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M7">
       <Properties>
         <Property name="text" type="java.lang.String" value="7"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M7ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M8">
       <Properties>
         <Property name="text" type="java.lang.String" value="8"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M8ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M9">
       <Properties>
         <Property name="text" type="java.lang.String" value="9"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M9ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M10">
       <Properties>
         <Property name="text" type="java.lang.String" value="10"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M10ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M11">
       <Properties>
         <Property name="text" type="java.lang.String" value="11"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M11ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M12">
       <Properties>
         <Property name="text" type="java.lang.String" value="12"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M12ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M13">
       <Properties>
         <Property name="text" type="java.lang.String" value="13"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M13ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M14">
       <Properties>
         <Property name="text" type="java.lang.String" value="14"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M14ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="M15">
       <Properties>
         <Property name="text" type="java.lang.String" value="15"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="M15ActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="Pos0">
+    <Component class="javax.swing.JLabel" name="pos0">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="00000000"/>
@@ -332,8 +377,11 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="Pos1">
+    <Component class="javax.swing.JLabel" name="pos1">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="00000000"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -342,8 +390,11 @@
           </Border>
         </Property>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="Pos2">
+    <Component class="javax.swing.JLabel" name="pos2">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="00000000"/>
@@ -525,7 +576,7 @@
                   <Component id="jScrollPane1" min="-2" pref="81" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jTabbedPane1" min="-2" pref="190" max="-2" attributes="0"/>
-                  <EmptySpace pref="154" max="32767" attributes="0"/>
+                  <EmptySpace pref="178" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -697,7 +748,7 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jLabel3" min="-2" pref="156" max="-2" attributes="0"/>
                                   <EmptySpace pref="78" max="32767" attributes="0"/>
-                                  <Component id="DatoTextField" min="-2" pref="107" max="-2" attributes="0"/>
+                                  <Component id="textfieldDato" min="-2" pref="107" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -709,7 +760,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="DatoTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="textfieldDato" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel3" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
@@ -723,9 +774,9 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="DatoTextField">
+                <Component class="javax.swing.JTextField" name="textfieldDato">
                   <Events>
-                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="DatoTextFieldKeyTyped"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textfieldDatoKeyTyped"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="CargarDatoBtn">

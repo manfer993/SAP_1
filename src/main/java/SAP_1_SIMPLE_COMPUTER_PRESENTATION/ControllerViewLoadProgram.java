@@ -19,7 +19,27 @@ public class ControllerViewLoadProgram implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        viewload.getModel().loadProgramDefault();
+        
+        switch( e.getActionCommand() )
+        {
+            case "loadProgramDefault":
+                viewload.getModel().loadProgramDefault();
+            break;
+            case "eraseMemory":
+                viewload.getModel().eraseMemory();
+            break;
+            case "cargarInst":
+                viewload.getModel().cargarInst();
+            break;
+            case "cargarDato":
+                viewload.getModel().cargarDato();
+            break;
+            default:
+                JOptionPane.showMessageDialog(viewload, "Function not supported");
+            break;
+        }
+        
+        
     }
     
 }

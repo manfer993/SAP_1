@@ -2,6 +2,7 @@ package SAP_1_SIMPLE_COMPUTER_LOGIC;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import lombok.Getter;
 
 public class MemoryRegister {
@@ -20,22 +21,19 @@ public class MemoryRegister {
         }
         return emptyMemory;
     }
+    
 
-    public void setPosition(
-            int ramPosition,
-            String instruction,
-            int position,
-            int data) {
+    public void setPosition(int ramPosition, String instruction, int position, int data) {
+        //JOptionPane.showMessageDialog(null, "PM: "+ ramPosition + " inst: " + instruction + " POS: " + position + " DATO: " + data);
         String binary;
-        if (instruction != null) {
+        if (instruction != "null") {
             binary = Utils.getInstructionBit(instruction)
                     + Utils.getBinary(position, 4);
             this.ram.set(ramPosition,
                     new MemoryPositionModel(instruction, position, data, binary));
         } else {
             binary = Utils.getBinary(data, 8);
-            this.ram.set(ramPosition,
-                    new MemoryPositionModel(instruction, position, data, binary));
+            this.ram.set(ramPosition, new MemoryPositionModel(null, position, data, binary));
         }
     }
 
