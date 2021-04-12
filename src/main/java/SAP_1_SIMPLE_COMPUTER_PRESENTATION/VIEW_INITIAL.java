@@ -2,9 +2,7 @@ package SAP_1_SIMPLE_COMPUTER_PRESENTATION;
 
 import java.awt.Color;
 import javax.swing.JButton;
-import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
-import javax.swing.event.ChangeListener;
 
 public class View_initial extends javax.swing.JFrame {
 
@@ -56,7 +54,7 @@ public class View_initial extends javax.swing.JFrame {
         RamABusJL.setBorder(new LineBorder(Color.black));
         MarBit3jLabel.setForeground(Color.black);
         MarABusJL.setBorder(new LineBorder(Color.black));
-        IrBit7jLabel.setForeground(Color.black);;
+        IrBit7jLabel.setForeground(Color.black);
         IrABusJL.setBorder(new LineBorder(Color.black));
         UcTextPane.setText("");
         UcTextPane.setForeground(Color.black);
@@ -68,7 +66,7 @@ public class View_initial extends javax.swing.JFrame {
         OutBit7jLabel.setForeground(Color.black);
         OutABusJL.setBorder(new LineBorder(Color.black));
         ResultadoTextPane.setForeground(Color.black);
-        ResultadoTextPane.setText("");
+        //ResultadoTextPane.setText("");
         OutPanel.setBorder(new LineBorder(Color.black));
         AccBit0jLabel.setForeground(Color.black);
         AccBit0jLabel.setText(Integer.toString(0));
@@ -80,6 +78,35 @@ public class View_initial extends javax.swing.JFrame {
         AluABusJL.setBorder(new LineBorder(Color.black));
         AcPanel.setBorder(new LineBorder(Color.black));
         BPanel.setBorder(new LineBorder(Color.black));
+        BusBit0jLabel.setBorder(new LineBorder(Color.black));
+        BusBit1jLabel.setBorder(new LineBorder(Color.black));
+        BusBit2jLabel.setBorder(new LineBorder(Color.black));
+        BusBit3jLabel.setBorder(new LineBorder(Color.black));
+        BusBit4jLabel.setBorder(new LineBorder(Color.black));
+        BusBit5jLabel.setBorder(new LineBorder(Color.black));
+        BusBit6jLabel.setBorder(new LineBorder(Color.black));
+        BusBit7jLabel.setBorder(new LineBorder(Color.black));
+        BusjLabel.setText("00000000");
+    }
+
+    public void dibujarBus(String repBin) {
+        if (repBin.length() == 8) {
+            BusBit0jLabel.setBorder(new LineBorder(Color.red));
+            BusBit1jLabel.setBorder(new LineBorder(Color.red));
+            BusBit2jLabel.setBorder(new LineBorder(Color.red));
+            BusBit3jLabel.setBorder(new LineBorder(Color.red));
+            BusBit4jLabel.setBorder(new LineBorder(Color.red));
+            BusBit5jLabel.setBorder(new LineBorder(Color.red));
+            BusBit6jLabel.setBorder(new LineBorder(Color.red));
+            BusBit7jLabel.setBorder(new LineBorder(Color.red));
+        } else {
+            BusBit0jLabel.setBorder(new LineBorder(Color.red));
+            BusBit1jLabel.setBorder(new LineBorder(Color.red));
+            BusBit2jLabel.setBorder(new LineBorder(Color.red));
+            BusBit3jLabel.setBorder(new LineBorder(Color.red));
+        }
+
+        BusjLabel.setText(repBin);
     }
 
     public void dibujar(String pal, int val, String repBin) {
@@ -110,16 +137,19 @@ public class View_initial extends javax.swing.JFrame {
                 OutBit7jLabel.setForeground(Color.red);
                 OutBit7jLabel.setText(repBin);
                 OutABusJL.setBorder(new LineBorder(Color.red));
+                dibujarBus(repBin);
                 break;
             case "B":
                 BBit7jLabel.setForeground(Color.red);
                 BBit7jLabel.setText(repBin);
                 BABusJL.setBorder(new LineBorder(Color.red));
+                dibujarBus(repBin);
                 break;
             case "AC":
                 AcBit7jLabel.setForeground(Color.red);
                 AcBit7jLabel.setText(repBin);
                 AcABusJL1.setBorder(new LineBorder(Color.red));
+                dibujarBus(repBin);
                 break;
             case "UC":
                 UcTextPane.setForeground(Color.red);
@@ -130,31 +160,37 @@ public class View_initial extends javax.swing.JFrame {
                 IrBit7jLabel.setForeground(Color.red);
                 IrBit7jLabel.setText(repBin);
                 IrABusJL.setBorder(new LineBorder(Color.red));
+                dibujarBus(repBin);
                 break;
             case "RAM":
                 RamBit7jLabel.setForeground(Color.red);
                 RamBit7jLabel.setText(repBin);
                 RamABusJL.setBorder(new LineBorder(Color.red));
+                dibujarBus(repBin);
                 break;
             case "MAR":
                 MarBit3jLabel.setForeground(Color.red);
                 MarBit3jLabel.setText(repBin);
                 MarABusJL.setBorder(new LineBorder(Color.red));
+                dibujarBus(repBin);
                 break;
             case "PC+":
                 PcBit3jLabel.setForeground(Color.red);
                 PcBit3jLabel.setText(repBin);
-                //PcABusJL.setBorder(new LineBorder(Color.red));
                 break;
             case "PC":
                 PcBit3jLabel.setForeground(Color.red);
                 PcBit3jLabel.setText(repBin);
                 PcABusJL.setBorder(new LineBorder(Color.red));
+                dibujarBus(repBin);
                 break;
             case "CLK":
                 switch (val) {
                     case 1:
                         this.clk1.setForeground(Color.red);
+                        this.clk2.setForeground(Color.black);
+                        this.clk3.setForeground(Color.black);
+                        this.clk4.setForeground(Color.black);
                         this.clk5.setForeground(Color.black);
                         break;
                     case 2:

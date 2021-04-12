@@ -19,8 +19,6 @@ public class ControllerViewInital implements ActionListener{
         viewInitial = aThis;
     }
     
-
-    
     @Override
     public void actionPerformed(ActionEvent e) {
             switch (e.getActionCommand()) {

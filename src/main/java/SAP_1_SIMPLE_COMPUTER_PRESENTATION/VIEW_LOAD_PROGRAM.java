@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package SAP_1_SIMPLE_COMPUTER_PRESENTATION;
 
 import java.awt.Color;
@@ -358,6 +353,11 @@ public class View_load_program extends javax.swing.JFrame {
 
         CargarInstBtn.setText("Cargar");
         CargarInstBtn.setActionCommand("cargarInst");
+        CargarInstBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CargarInstBtnActionPerformed(evt);
+            }
+        });
 
         CancelarInstBtn.setText("Cancelar");
         CancelarInstBtn.setActionCommand("cancelarInst");
@@ -475,7 +475,7 @@ public class View_load_program extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(194, Short.MAX_VALUE))
+                .addContainerGap(210, Short.MAX_VALUE))
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleName("Informacion");
@@ -770,6 +770,10 @@ public class View_load_program extends javax.swing.JFrame {
         this.indexOfMemory = 15;
         this.interno_f.setVisible(true);
     }//GEN-LAST:event_M15ActionPerformed
+
+    private void CargarInstBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargarInstBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CargarInstBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

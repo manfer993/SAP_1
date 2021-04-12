@@ -25,6 +25,7 @@ public class Model implements Runnable {
     private Systems system;
     private boolean simulando;
     private Thread hiloDibujo;
+    private final int sleepTime = 3000;
 
     public View_initial getVentana() {
         if (ventana == null) {
@@ -124,11 +125,11 @@ public class Model implements Runnable {
         }
         return ram;
     }
-    
+
     public void setVelocidad(int i) {
         getSystem().setVelocidad(i);
     }
-    
+
     public void esperar(int tiempo) // tiempo en milisegundos
     {
         try {
@@ -137,7 +138,7 @@ public class Model implements Runnable {
         }
         getVentana().dibujarN();
     }
-    
+
     public void cargarInst() {
         if (Integer.parseInt(viewLoadProgram.getPosicionRamTextField().getText()) < 16
                 && Integer.parseInt(viewLoadProgram.getPosicionRamTextField().getText()) >= 0) {
@@ -162,17 +163,18 @@ public class Model implements Runnable {
 
     public void dibujarLoadProgram() {
         for (int i = 0; i < 16; i++) {
-            if ( ram.getPosition(i).getInstruction()!= "NOP" ) {
+            if (ram.getPosition(i).getInstruction() != "NOP") {
                 viewLoadProgram.paintMem(i, ram.getPosition(i).getBinaryRepresentation());
             }
         }
     }
-    
+
     public void dibujarEraseLoadProgram() {
-            viewLoadProgram.paintMemErase();
+        viewLoadProgram.paintMemErase();
     }
 
     /*lanzador del hilo*/
+    @Override
     public void run() {
         try {
             simular();
@@ -187,9 +189,9 @@ public class Model implements Runnable {
         Utils.setInstructionsA();
         //loadMemory();
         initializeRegisters();
-        simulando=true;
+        simulando = true;
         while (pc.getPC() < 16) {
-            System.out.println("pc get: " + pc.getPC() );
+            System.out.println("pc get: " + pc.getPC());
             clkSpecific(clkCommon());
         }
     }
@@ -226,30 +228,27 @@ public class Model implements Runnable {
 
     private int clkCommon() {
         System.out.print("CLK: " + clock.getCLK());
-        
-        getVentana().dibujar("CLK",clock.getCLK(),"0000");
-        
+        getVentana().dibujar("CLK", clock.getCLK(), "0000");
         System.out.print(" PC: " + pc.getBinaryPC());
-        getVentana().dibujar("PC",0,pc.getBinaryPC());
+        getVentana().dibujar("PC", 0, pc.getBinaryPC());
         mar.setMar(pc.getBinaryPC());
         System.out.println(" MAR: " + mar.getMar());
-        getVentana().dibujar("MAR",0,mar.getMar());
+        getVentana().dibujar("MAR", 0, mar.getMar());
         clock.netx();
-        esperar(3000);
+        esperar(sleepTime);
         System.out.print("CLK: " + clock.getCLK());
-        getVentana().dibujar("CLK",clock.getCLK(),"0000");
+        getVentana().dibujar("CLK", clock.getCLK(), "0000");
         pc.netx();
         System.out.print(" PC: " + pc.getBinaryPC());
-        getVentana().dibujar("PC+",0,pc.getBinaryPC());
+        getVentana().dibujar("PC+", 0, pc.getBinaryPC());
         ramMemory = ram.getPosition(Utils.getDecimal(mar.getMar()));
-        getVentana().dibujar("RAM",0,ramMemory.getBinaryRepresentation());
         System.out.print(" RAM: " + ramMemory.getBinaryRepresentation());
+        getVentana().dibujar("RAM", 0, ramMemory.getBinaryRepresentation());
         ir.setIR(ramMemory.getBinaryRepresentation());
         System.out.println(" IR: " + ir.getIR());
-        getVentana().dibujar("IR",0,ir.getIR());
+        getVentana().dibujar("IR", 0, ir.getIR());
         clock.netx();
-        esperar(3000);
-        System.out.println("");
+        esperar(sleepTime);
         return Utils.getDecimal(ir.getInstruction());
     }
 
@@ -260,61 +259,61 @@ public class Model implements Runnable {
                 break;
             case 1://LDA
                 System.out.print("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 uc.setUC(ir.getInstruction());
                 System.out.print(" UC: " + uc.getUC());
                 System.out.print(" UC: " + uc.getGraficSequencer());
-                getVentana().dibujar("UC",0,uc.getGraficSequencer());
+                getVentana().dibujar("UC", 0, uc.getGraficSequencer());
                 mar.setMar(ir.getPosition());
                 System.out.println(" MAR: " + mar.getMar());
-                getVentana().dibujar("MAR",0,mar.getMar());
+                getVentana().dibujar("MAR", 0, mar.getMar());
                 clock.netx();
-                esperar(3000);
-                
+                esperar(sleepTime);
+
                 System.out.print("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 ramMemory = ram.getPosition(Utils.getDecimal(mar.getMar()));
                 System.out.print(" RAM: " + ramMemory.getBinaryRepresentation());
-                getVentana().dibujar("RAM",0,ramMemory.getBinaryRepresentation());
+                getVentana().dibujar("RAM", 0, ramMemory.getBinaryRepresentation());
                 ac.setAC(ramMemory.getBinaryRepresentation());
                 System.out.println(" AC: " + ac.getAC());
-                getVentana().dibujar("AC",0,ac.getAC());
+                getVentana().dibujar("AC", 0, ac.getAC());
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.println("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
                 break;
             case 2://ADD
                 System.out.print("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 uc.setUC(ir.getInstruction());
                 System.out.print(" UC: " + uc.getUC());
                 System.out.print(" UC: " + uc.getGraficSequencer());
-                getVentana().dibujar("UC",0,uc.getGraficSequencer());
+                getVentana().dibujar("UC", 0, uc.getGraficSequencer());
                 mar.setMar(ir.getPosition());
                 System.out.println(" MAR: " + mar.getMar());
-                getVentana().dibujar("MAR",0,mar.getMar());
+                getVentana().dibujar("MAR", 0, mar.getMar());
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.print("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 ramMemory = ram.getPosition(Utils.getDecimal(mar.getMar()));
                 System.out.print(" RAM: " + ramMemory.getBinaryRepresentation());
-                getVentana().dibujar("RAM",0,ramMemory.getBinaryRepresentation());
+                getVentana().dibujar("RAM", 0, ramMemory.getBinaryRepresentation());
                 b.setB(ramMemory.getBinaryRepresentation());
                 System.out.println(" B: " + b.getB());
-                getVentana().dibujar("B",0,b.getB());
+                getVentana().dibujar("B", 0, b.getB());
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.print("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 alu.setALU(ac.getAC(), b.getB());
-                String respAlu = alu.getALU().get("operatorA")+"+"+alu.getALU().get("operatorB")
+                String respAlu = alu.getALU().get("operatorA") + "+" + alu.getALU().get("operatorB")
                         + "="
                         + alu.getALU().get("result");
                 System.out.print(" ALU: "
@@ -323,232 +322,230 @@ public class Model implements Runnable {
                         + alu.getALU().get("operatorB")
                         + "="
                         + alu.getALU().get("result"));
-                getVentana().dibujar("AC",0,ac.getAC());
-                getVentana().dibujar("B",0,b.getB());
-                getVentana().dibujar("ALU",0,respAlu);
+                getVentana().dibujar("AC", 0, ac.getAC());
+                getVentana().dibujar("B", 0, b.getB());
+                getVentana().dibujar("ALU", 0, respAlu);
                 ac.setAC(alu.getResult());
                 System.out.println(" AC: " + ac.getAC());
-                getVentana().dibujar("AC",0,ac.getAC());
+                getVentana().dibujar("AC", 0, ac.getAC());
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
                 break;
             case 3://SUB
                 System.out.print("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 uc.setUC(ir.getInstruction());
                 System.out.print(" UC: " + uc.getUC());
                 System.out.print(" UC: " + uc.getGraficSequencer());
-                getVentana().dibujar("UC",0,uc.getGraficSequencer());
-                mar.setMar(ir.getPosition());
-                getVentana().dibujar("MAR",0,mar.getMar());
+                getVentana().dibujar("UC", 0, uc.getGraficSequencer());
+                mar.setMar(ir.getPosition());                
                 System.out.println(" MAR: " + mar.getMar());
+                getVentana().dibujar("MAR", 0, mar.getMar());
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.print("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 ramMemory = ram.getPosition(Utils.getDecimal(mar.getMar()));
                 System.out.print(" RAM: " + ramMemory.getBinaryRepresentation());
-                getVentana().dibujar("RAM",0,ramMemory.getBinaryRepresentation());
+                getVentana().dibujar("RAM", 0, ramMemory.getBinaryRepresentation());
                 b.setB(ramMemory.getBinaryRepresentation());
-                getVentana().dibujar("B",0,b.getB());
-                System.out.println(" B: " + b.getB());
+                System.out.println(" B: " + b.getB());                
+                getVentana().dibujar("B", 0, b.getB());
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.print("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 alu.setALU(ac.getAC(), b.getB(), true);
-                
+                String respAlu2 = alu.getALU().get("operatorA") + "-" + alu.getALU().get("operatorB")
+                        + "="
+                        + alu.getALU().get("result");
                 System.out.print(" ALU: "
                         + alu.getALU().get("operatorA")
                         + alu.getALU().get("operation")
                         + alu.getALU().get("operatorB")
                         + "="
-                        + alu.getALU().get("result"));
-                
-                String respAlu2 = alu.getALU().get("operatorA")+"-"+alu.getALU().get("operatorB")
-                        + "="
-                        + alu.getALU().get("result");
-                getVentana().dibujar("AC",0,ac.getAC());
-                getVentana().dibujar("B",0,b.getB());
-                getVentana().dibujar("ALU",0,respAlu2);
+                        + alu.getALU().get("result"));                
+                getVentana().dibujar("AC", 0, ac.getAC());
+                getVentana().dibujar("B", 0, b.getB());
+                getVentana().dibujar("ALU", 0, respAlu2);
                 ac.setAC(alu.getResult());
                 System.out.println(" AC: " + ac.getAC());
-                getVentana().dibujar("AC",0,ac.getAC());
-                
+                getVentana().dibujar("AC", 0, ac.getAC());
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
                 break;
             case 4://STA
                 System.out.print("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 uc.setUC(ir.getInstruction());
                 System.out.print(" UC: " + uc.getUC());
                 System.out.print(" UC: " + uc.getGraficSequencer());
-                getVentana().dibujar("UC",0,uc.getGraficSequencer());
+                getVentana().dibujar("UC", 0, uc.getGraficSequencer());
                 mar.setMar(ir.getPosition());
-                getVentana().dibujar("MAR",0,mar.getMar());
                 System.out.println(" MAR: " + mar.getMar());
+                getVentana().dibujar("MAR", 0, mar.getMar());
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.print("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
-                ram.setPosition(Utils.getDecimal(mar.getMar()), null, 0, Utils.getDecimal(ac.getAC()));
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
+                ram.setPosition(Utils.getDecimal(mar.getMar()), "vacio", 0, Utils.getDecimal(ac.getAC()));
                 System.out.print(" AC: " + ac.getAC());
-                getVentana().dibujar("AC",0,ac.getAC());
+                getVentana().dibujar("AC", 0, ac.getAC());
                 ramMemory = ram.getPosition(Utils.getDecimal(mar.getMar()));
                 System.out.println(" RAM: " + ramMemory.getBinaryRepresentation());
-                getVentana().dibujar("RAM",0,ramMemory.getBinaryRepresentation());
+                getVentana().dibujar("RAM", 0, ramMemory.getBinaryRepresentation());
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.println("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
                 break;
             case 5://LDI
                 System.out.print("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 uc.setUC(ir.getInstruction());
                 System.out.print(" UC: " + uc.getUC());
                 System.out.print(" UC: " + uc.getGraficSequencer());
-                getVentana().dibujar("UC",0,uc.getGraficSequencer());
+                getVentana().dibujar("UC", 0, uc.getGraficSequencer());
                 ac.setAC(ir.getPosition());
                 System.out.println(" AC: " + ac.getAC());
-                getVentana().dibujar("AC",0,ac.getAC());
+                getVentana().dibujar("AC", 0, ac.getAC());
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.println("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.println("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
                 break;
             case 6://JMP
                 System.out.print("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 uc.setUC(ir.getInstruction());
                 System.out.print(" UC: " + uc.getUC());
                 System.out.print(" UC: " + uc.getGraficSequencer());
-                getVentana().dibujar("UC",0,uc.getGraficSequencer());
+                getVentana().dibujar("UC", 0, uc.getGraficSequencer());
                 pc.setPC(Utils.getDecimal(ir.getPosition()));
                 System.out.println(" PC: " + pc.getBinaryPC());
+                getVentana().dibujar("PC", 0, pc.getBinaryPC());
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.println("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.println("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
                 break;
-            case 7://JC                
+            case 7://JC
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 if (FlagsRegister.isCF()) {
                     System.out.print("CLK: " + clock.getCLK());
                     uc.setUC(ir.getInstruction());
                     System.out.print(" UC: " + uc.getUC());
                     System.out.print(" UC: " + uc.getGraficSequencer());
-                    getVentana().dibujar("UC",0,uc.getGraficSequencer());
+                    getVentana().dibujar("UC", 0, uc.getGraficSequencer());
                     pc.setPC(Utils.getDecimal(ir.getPosition()));
                     System.out.print(" JC: " + FlagsRegister.isCF());
-                    getVentana().dibujar("JC",1,"0000");
+                    getVentana().dibujar("JC", 1, "0000");
                     System.out.println(" PC: " + pc.getBinaryPC());
+                    getVentana().dibujar("PC", 0, pc.getBinaryPC());
                 } else {
                     System.out.println("CLK: " + clock.getCLK());
                 }
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.println("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.println("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
                 break;
             case 8://JZ
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 if (FlagsRegister.isZF()) {
                     System.out.print("CLK: " + clock.getCLK());
                     uc.setUC(ir.getInstruction());
                     System.out.print(" UC: " + uc.getUC());
                     System.out.print(" UC: " + uc.getGraficSequencer());
-                    getVentana().dibujar("UC",0,uc.getGraficSequencer());
+                    getVentana().dibujar("UC", 0, uc.getGraficSequencer());
                     pc.setPC(Utils.getDecimal(ir.getPosition()));
                     System.out.print(" JZ: " + FlagsRegister.isZF());
-                    getVentana().dibujar("JZ",1,"0000");
+                    getVentana().dibujar("JZ", 1, "0000");
                     System.out.println(" PC: " + pc.getBinaryPC());
+                    getVentana().dibujar("PC", 0, pc.getBinaryPC());
                 } else {
                     System.out.println("CLK: " + clock.getCLK());
-                }
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                }                
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.println("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.println("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
                 break;
             case 14://OUT
                 System.out.print("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 uc.setUC(ir.getInstruction());
                 System.out.print(" UC: " + uc.getUC());
                 System.out.print(" UC: " + uc.getGraficSequencer());
-                getVentana().dibujar("UC",0,uc.getGraficSequencer());
-                out.setOUT(ac.getAC());
-                getVentana().dibujar("AC",0,ac.getAC());
+                getVentana().dibujar("UC", 0, uc.getGraficSequencer());
+                out.setOUT(ac.getAC());                
                 System.out.print(" OUT: " + out.getOUT());
-                getVentana().dibujar("OUT",0,out.getOUT());
+                getVentana().dibujar("AC", 0, ac.getAC());
+                getVentana().dibujar("OUT", 0, out.getOUT());
                 display.setDecimalPrint(out.getOUT());
                 System.out.println(" PRINT: " + display.getDisplay());
-                getVentana().dibujar("PRINT",display.getDisplay(),"0000");
+                getVentana().dibujar("PRINT", display.getDisplay(), "0000");
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.println("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
 
                 System.out.println("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(3000);
+                esperar(sleepTime);
                 break;
             case 15://HTL
                 System.out.print("CLK: " + clock.getCLK());
-                getVentana().dibujar("CLK",clock.getCLK(),"0000");
+                getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 uc.setUC(ir.getInstruction());
                 System.out.print(" UC: " + uc.getUC());
                 System.out.print(" UC: " + uc.getGraficSequencer());
-                getVentana().dibujar("UC",0,uc.getGraficSequencer());
-                esperar(3000);
+                getVentana().dibujar("UC", 0, uc.getGraficSequencer());
+                esperar(sleepTime);
                 detenerSimulacion();
-                //System.exit(0);
                 break;
         }
     }
-
 }

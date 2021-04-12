@@ -561,7 +561,7 @@
                   <Component id="jScrollPane1" min="-2" pref="81" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jTabbedPane1" min="-2" pref="190" max="-2" attributes="0"/>
-                  <EmptySpace pref="202" max="32767" attributes="0"/>
+                  <EmptySpace pref="210" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -698,6 +698,9 @@
                   <AccessibilityProperties>
                     <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Aceptar"/>
                   </AccessibilityProperties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CargarInstBtnActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="CancelarInstBtn">
                   <Properties>
