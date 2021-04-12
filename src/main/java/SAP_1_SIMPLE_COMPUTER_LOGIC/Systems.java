@@ -3,12 +3,15 @@ package SAP_1_SIMPLE_COMPUTER_LOGIC;
 import SAP_1_SIMPLE_COMPUTER_PERSISTENCE.Datos;
 import java.io.File;
 import javax.swing.JOptionPane;
+import lombok.Getter;
+import lombok.Setter;
 
 
 public class Systems {
     
     private Datos datos;
-    private int velocidad; //milisegundos
+    @Getter @Setter
+    private int velocidad = 5000;
     
     public Systems()
     {
@@ -27,16 +30,5 @@ public class Systems {
         MemoryRegister ram;
         ram = getDatos().abrirArchivo(nombreArchivo);
         return ram;
-    }
-    
-    public void setVelocidad(int i)
-    {
-        velocidad = i;
-    }
-    
-    public int getVelocidad()
-    {
-        return velocidad;
-    }
-    
+    }    
 }

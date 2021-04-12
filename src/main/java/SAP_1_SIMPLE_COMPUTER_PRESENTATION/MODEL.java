@@ -25,7 +25,6 @@ public class Model implements Runnable {
     private Systems system;
     private boolean simulando;
     private Thread hiloDibujo;
-    private final int sleepTime = 3000;
 
     public View_initial getVentana() {
         if (ventana == null) {
@@ -63,8 +62,19 @@ public class Model implements Runnable {
         //setVelocidad(110 - getVentana().getSliVelocidad().getValue());
         getVentana().getBtnIniciar().setEnabled(false);
         getVentana().getBtnDetener().setEnabled(true);
+        //if (simulando == false) {
+          //  hiloDibujo.resume();
+           // return;
+        //}
         hiloDibujo = new Thread(this);
         hiloDibujo.start();
+    }
+
+    public void terminarSimulacion() {
+        getVentana().getBtnIniciar().setEnabled(true);
+        getVentana().getBtnDetener().setEnabled(false);
+        simulando = false;
+        hiloDibujo.interrupt();
     }
 
     public void detenerSimulacion() {
@@ -126,14 +136,18 @@ public class Model implements Runnable {
         return ram;
     }
 
-    public void setVelocidad(int i) {
-        getSystem().setVelocidad(i);
+    public void setVelocidad(int velocidad) {
+        getSystem().setVelocidad(velocidad);
+    }
+    
+    public void controlarVelocidad(){ 
+        setVelocidad(5000-getVentana().getSlide().getValue());
     }
 
-    public void esperar(int tiempo) // tiempo en milisegundos
+    public void esperar() // tiempo en milisegundos
     {
         try {
-            Thread.sleep(tiempo);
+            Thread.sleep(getSystem().getVelocidad());
         } catch (InterruptedException ex) {
         }
         getVentana().dibujarN();
@@ -177,6 +191,7 @@ public class Model implements Runnable {
     @Override
     public void run() {
         try {
+            getVentana().iniciarCero();
             simular();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(getVentana(), ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
@@ -235,7 +250,7 @@ public class Model implements Runnable {
         System.out.println(" MAR: " + mar.getMar());
         getVentana().dibujar("MAR", 0, mar.getMar());
         clock.netx();
-        esperar(sleepTime);
+        esperar();
         System.out.print("CLK: " + clock.getCLK());
         getVentana().dibujar("CLK", clock.getCLK(), "0000");
         pc.netx();
@@ -248,7 +263,7 @@ public class Model implements Runnable {
         System.out.println(" IR: " + ir.getIR());
         getVentana().dibujar("IR", 0, ir.getIR());
         clock.netx();
-        esperar(sleepTime);
+        esperar();
         return Utils.getDecimal(ir.getInstruction());
     }
 
@@ -268,7 +283,7 @@ public class Model implements Runnable {
                 System.out.println(" MAR: " + mar.getMar());
                 getVentana().dibujar("MAR", 0, mar.getMar());
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.print("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
@@ -279,12 +294,12 @@ public class Model implements Runnable {
                 System.out.println(" AC: " + ac.getAC());
                 getVentana().dibujar("AC", 0, ac.getAC());
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.println("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
                 break;
             case 2://ADD
                 System.out.print("CLK: " + clock.getCLK());
@@ -297,7 +312,7 @@ public class Model implements Runnable {
                 System.out.println(" MAR: " + mar.getMar());
                 getVentana().dibujar("MAR", 0, mar.getMar());
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.print("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
@@ -308,7 +323,7 @@ public class Model implements Runnable {
                 System.out.println(" B: " + b.getB());
                 getVentana().dibujar("B", 0, b.getB());
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.print("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
@@ -329,7 +344,7 @@ public class Model implements Runnable {
                 System.out.println(" AC: " + ac.getAC());
                 getVentana().dibujar("AC", 0, ac.getAC());
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
                 break;
             case 3://SUB
                 System.out.print("CLK: " + clock.getCLK());
@@ -338,11 +353,11 @@ public class Model implements Runnable {
                 System.out.print(" UC: " + uc.getUC());
                 System.out.print(" UC: " + uc.getGraficSequencer());
                 getVentana().dibujar("UC", 0, uc.getGraficSequencer());
-                mar.setMar(ir.getPosition());                
+                mar.setMar(ir.getPosition());
                 System.out.println(" MAR: " + mar.getMar());
                 getVentana().dibujar("MAR", 0, mar.getMar());
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.print("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
@@ -350,10 +365,10 @@ public class Model implements Runnable {
                 System.out.print(" RAM: " + ramMemory.getBinaryRepresentation());
                 getVentana().dibujar("RAM", 0, ramMemory.getBinaryRepresentation());
                 b.setB(ramMemory.getBinaryRepresentation());
-                System.out.println(" B: " + b.getB());                
+                System.out.println(" B: " + b.getB());
                 getVentana().dibujar("B", 0, b.getB());
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.print("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
@@ -366,7 +381,7 @@ public class Model implements Runnable {
                         + alu.getALU().get("operation")
                         + alu.getALU().get("operatorB")
                         + "="
-                        + alu.getALU().get("result"));                
+                        + alu.getALU().get("result"));
                 getVentana().dibujar("AC", 0, ac.getAC());
                 getVentana().dibujar("B", 0, b.getB());
                 getVentana().dibujar("ALU", 0, respAlu2);
@@ -374,7 +389,7 @@ public class Model implements Runnable {
                 System.out.println(" AC: " + ac.getAC());
                 getVentana().dibujar("AC", 0, ac.getAC());
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
                 break;
             case 4://STA
                 System.out.print("CLK: " + clock.getCLK());
@@ -387,7 +402,7 @@ public class Model implements Runnable {
                 System.out.println(" MAR: " + mar.getMar());
                 getVentana().dibujar("MAR", 0, mar.getMar());
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.print("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
@@ -398,12 +413,12 @@ public class Model implements Runnable {
                 System.out.println(" RAM: " + ramMemory.getBinaryRepresentation());
                 getVentana().dibujar("RAM", 0, ramMemory.getBinaryRepresentation());
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.println("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
                 break;
             case 5://LDI
                 System.out.print("CLK: " + clock.getCLK());
@@ -416,17 +431,17 @@ public class Model implements Runnable {
                 System.out.println(" AC: " + ac.getAC());
                 getVentana().dibujar("AC", 0, ac.getAC());
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.println("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.println("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
                 break;
             case 6://JMP
                 System.out.print("CLK: " + clock.getCLK());
@@ -439,17 +454,17 @@ public class Model implements Runnable {
                 System.out.println(" PC: " + pc.getBinaryPC());
                 getVentana().dibujar("PC", 0, pc.getBinaryPC());
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.println("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.println("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
                 break;
             case 7://JC
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
@@ -468,17 +483,17 @@ public class Model implements Runnable {
                     System.out.println("CLK: " + clock.getCLK());
                 }
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.println("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.println("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
                 break;
             case 8://JZ
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
@@ -495,19 +510,19 @@ public class Model implements Runnable {
                     getVentana().dibujar("PC", 0, pc.getBinaryPC());
                 } else {
                     System.out.println("CLK: " + clock.getCLK());
-                }                
+                }
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.println("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.println("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
                 break;
             case 14://OUT
                 System.out.print("CLK: " + clock.getCLK());
@@ -516,7 +531,7 @@ public class Model implements Runnable {
                 System.out.print(" UC: " + uc.getUC());
                 System.out.print(" UC: " + uc.getGraficSequencer());
                 getVentana().dibujar("UC", 0, uc.getGraficSequencer());
-                out.setOUT(ac.getAC());                
+                out.setOUT(ac.getAC());
                 System.out.print(" OUT: " + out.getOUT());
                 getVentana().dibujar("AC", 0, ac.getAC());
                 getVentana().dibujar("OUT", 0, out.getOUT());
@@ -524,17 +539,17 @@ public class Model implements Runnable {
                 System.out.println(" PRINT: " + display.getDisplay());
                 getVentana().dibujar("PRINT", display.getDisplay(), "0000");
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.println("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
 
                 System.out.println("CLK: " + clock.getCLK());
                 getVentana().dibujar("CLK", clock.getCLK(), "0000");
                 clock.netx();
-                esperar(sleepTime);
+                esperar();
                 break;
             case 15://HTL
                 System.out.print("CLK: " + clock.getCLK());
@@ -543,7 +558,7 @@ public class Model implements Runnable {
                 System.out.print(" UC: " + uc.getUC());
                 System.out.print(" UC: " + uc.getGraficSequencer());
                 getVentana().dibujar("UC", 0, uc.getGraficSequencer());
-                esperar(sleepTime);
+                esperar();
                 detenerSimulacion();
                 break;
         }

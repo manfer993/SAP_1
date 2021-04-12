@@ -2,6 +2,7 @@ package SAP_1_SIMPLE_COMPUTER_PRESENTATION;
 
 import java.awt.Color;
 import javax.swing.JButton;
+import javax.swing.JSlider;
 import javax.swing.border.LineBorder;
 
 public class View_initial extends javax.swing.JFrame {
@@ -39,12 +40,31 @@ public class View_initial extends javax.swing.JFrame {
         return btnPlayPause;
     }
 
+    public JSlider getSlide() {
+        return SlideVelocidad;
+    }
+
     public void capture_events() {
         btnCargar.addActionListener(getControl());
         btnPlayPause.addActionListener(getControl());
         btnStop.addActionListener(getControl());
         btnReiniciar.addActionListener(getControl());
-        //SlideVelocidad.addChangeListener(getControl());
+        SlideVelocidad.addChangeListener(getControl());
+    }
+
+    public void iniciarCero() {
+        ResultadoTextPane.setText("");
+        UcTextPane.setText("");
+        AluTextPane.setText("");
+        PcBit3jLabel.setText("0000");
+        MarBit3jLabel.setText("0000");
+        RamBit7jLabel.setText("00000000");
+        IrBit7jLabel.setText("00000000");
+        AcBit7jLabel.setText("00000000");
+        AccBit0jLabel.setText("0");
+        AccBit7jLabel.setText("0");
+        BBit7jLabel.setText("00000000");
+        OutBit7jLabel.setText("00000000");
     }
 
     public void dibujarN() {
@@ -105,7 +125,6 @@ public class View_initial extends javax.swing.JFrame {
             BusBit2jLabel.setBorder(new LineBorder(Color.red));
             BusBit3jLabel.setBorder(new LineBorder(Color.red));
         }
-
         BusjLabel.setText(repBin);
     }
 
@@ -328,6 +347,9 @@ public class View_initial extends javax.swing.JFrame {
         btnStop = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        SlideVelocidad.setMaximum(5000);
+        SlideVelocidad.setValue(0);
 
         jLabel1.setText("VELOCIDAD DE LA ANIMACIÓN");
 

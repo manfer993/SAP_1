@@ -72,6 +72,10 @@
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JSlider" name="SlideVelocidad">
+      <Properties>
+        <Property name="maximum" type="int" value="5000"/>
+        <Property name="value" type="int" value="0"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>

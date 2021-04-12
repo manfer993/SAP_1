@@ -8,10 +8,11 @@ package SAP_1_SIMPLE_COMPUTER_PRESENTATION;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 
-public class ControllerViewInital implements ActionListener{
+public class ControllerViewInital implements ActionListener, ChangeListener{
 
     private final View_initial viewInitial;
     
@@ -39,6 +40,11 @@ public class ControllerViewInital implements ActionListener{
                     break;
             }
 
+    }
+
+    @Override
+    public void stateChanged(ChangeEvent e) {
+        viewInitial.getModel().controlarVelocidad();
     }
 
 }
