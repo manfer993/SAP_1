@@ -1,6 +1,10 @@
 package SAP_1_SIMPLE_COMPUTER_PRESENTATION;
 
+import java.awt.Color;
 import javax.swing.JButton;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
+import javax.swing.event.ChangeListener;
 
 public class View_initial extends javax.swing.JFrame {
 
@@ -28,7 +32,7 @@ public class View_initial extends javax.swing.JFrame {
     public Model getModel() {
         return myModel;
     }
-    
+
     public JButton getBtnDetener() {
         return btnStop;
     }
@@ -42,6 +46,142 @@ public class View_initial extends javax.swing.JFrame {
         btnPlayPause.addActionListener(getControl());
         btnStop.addActionListener(getControl());
         btnReiniciar.addActionListener(getControl());
+        //SlideVelocidad.addChangeListener(getControl());
+    }
+
+    public void dibujarN() {
+        PcBit3jLabel.setForeground(Color.black);
+        PcABusJL.setBorder(new LineBorder(Color.black));
+        RamBit7jLabel.setForeground(Color.black);
+        RamABusJL.setBorder(new LineBorder(Color.black));
+        MarBit3jLabel.setForeground(Color.black);
+        MarABusJL.setBorder(new LineBorder(Color.black));
+        IrBit7jLabel.setForeground(Color.black);;
+        IrABusJL.setBorder(new LineBorder(Color.black));
+        UcTextPane.setText("");
+        UcTextPane.setForeground(Color.black);
+        IrPanel.setBorder(new LineBorder(Color.black));
+        AcBit7jLabel.setForeground(Color.black);
+        AcABusJL1.setBorder(new LineBorder(Color.black));
+        BBit7jLabel.setForeground(Color.black);
+        BABusJL.setBorder(new LineBorder(Color.black));
+        OutBit7jLabel.setForeground(Color.black);
+        OutABusJL.setBorder(new LineBorder(Color.black));
+        ResultadoTextPane.setForeground(Color.black);
+        ResultadoTextPane.setText("");
+        OutPanel.setBorder(new LineBorder(Color.black));
+        AccBit0jLabel.setForeground(Color.black);
+        AccBit0jLabel.setText(Integer.toString(0));
+        AcABusJL.setBorder(new LineBorder(Color.black));
+        AccBit7jLabel.setForeground(Color.black);
+        AccBit7jLabel.setText(Integer.toString(0));
+        AluTextPane.setForeground(Color.black);
+        AluTextPane.setText("");
+        AluABusJL.setBorder(new LineBorder(Color.black));
+        AcPanel.setBorder(new LineBorder(Color.black));
+        BPanel.setBorder(new LineBorder(Color.black));
+    }
+
+    public void dibujar(String pal, int val, String repBin) {
+        switch (pal) {
+            case "ALU":
+                AluTextPane.setForeground(Color.red);
+                AluTextPane.setText(repBin);
+                AluABusJL.setBorder(new LineBorder(Color.red));
+                AcPanel.setBorder(new LineBorder(Color.red));
+                BPanel.setBorder(new LineBorder(Color.red));
+                break;
+            case "JC":
+                AccBit0jLabel.setForeground(Color.red);
+                AccBit0jLabel.setText(Integer.toString(val));
+                AcABusJL.setBorder(new LineBorder(Color.red));
+                break;
+            case "JZ":
+                AccBit7jLabel.setForeground(Color.red);
+                AccBit7jLabel.setText(Integer.toString(val));
+                AcABusJL.setBorder(new LineBorder(Color.red));
+                break;
+            case "PRINT":
+                ResultadoTextPane.setForeground(Color.red);
+                ResultadoTextPane.setText(Integer.toString(val));
+                OutPanel.setBorder(new LineBorder(Color.red));
+                break;
+            case "OUT":
+                OutBit7jLabel.setForeground(Color.red);
+                OutBit7jLabel.setText(repBin);
+                OutABusJL.setBorder(new LineBorder(Color.red));
+                break;
+            case "B":
+                BBit7jLabel.setForeground(Color.red);
+                BBit7jLabel.setText(repBin);
+                BABusJL.setBorder(new LineBorder(Color.red));
+                break;
+            case "AC":
+                AcBit7jLabel.setForeground(Color.red);
+                AcBit7jLabel.setText(repBin);
+                AcABusJL1.setBorder(new LineBorder(Color.red));
+                break;
+            case "UC":
+                UcTextPane.setForeground(Color.red);
+                UcTextPane.setText(repBin);
+                IrPanel.setBorder(new LineBorder(Color.red));
+                break;
+            case "IR":
+                IrBit7jLabel.setForeground(Color.red);
+                IrBit7jLabel.setText(repBin);
+                IrABusJL.setBorder(new LineBorder(Color.red));
+                break;
+            case "RAM":
+                RamBit7jLabel.setForeground(Color.red);
+                RamBit7jLabel.setText(repBin);
+                RamABusJL.setBorder(new LineBorder(Color.red));
+                break;
+            case "MAR":
+                MarBit3jLabel.setForeground(Color.red);
+                MarBit3jLabel.setText(repBin);
+                MarABusJL.setBorder(new LineBorder(Color.red));
+                break;
+            case "PC+":
+                PcBit3jLabel.setForeground(Color.red);
+                PcBit3jLabel.setText(repBin);
+                //PcABusJL.setBorder(new LineBorder(Color.red));
+                break;
+            case "PC":
+                PcBit3jLabel.setForeground(Color.red);
+                PcBit3jLabel.setText(repBin);
+                PcABusJL.setBorder(new LineBorder(Color.red));
+                break;
+            case "CLK":
+                switch (val) {
+                    case 1:
+                        this.clk1.setForeground(Color.red);
+                        this.clk5.setForeground(Color.black);
+                        break;
+                    case 2:
+                        this.clk1.setForeground(Color.black);
+                        this.clk2.setForeground(Color.red);
+                        break;
+                    case 3:
+                        this.clk2.setForeground(Color.black);
+                        this.clk3.setForeground(Color.red);
+                        break;
+                    case 4:
+                        this.clk3.setForeground(Color.black);
+                        this.clk4.setForeground(Color.red);
+                        break;
+                    case 5:
+                        this.clk4.setForeground(Color.black);
+                        this.clk5.setForeground(Color.red);
+                        break;
+                    default:
+                        System.out.println("no soportado " + val);
+                        break;
+                }
+                break;
+            default:
+                System.out.println("no soportado");
+                break;
+        }
     }
 
     /**
@@ -53,7 +193,7 @@ public class View_initial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSlider1 = new javax.swing.JSlider();
+        SlideVelocidad = new javax.swing.JSlider();
         jLabel1 = new javax.swing.JLabel();
         btnReiniciar = new javax.swing.JButton();
         btnPlayPause = new javax.swing.JButton();
@@ -91,11 +231,11 @@ public class View_initial extends javax.swing.JFrame {
         jLabel75 = new javax.swing.JLabel();
         label1 = new java.awt.Label();
         jLabel76 = new javax.swing.JLabel();
-        RamBit6jLabel1 = new javax.swing.JLabel();
-        RamBit7jLabel1 = new javax.swing.JLabel();
-        RamBit3jLabel1 = new javax.swing.JLabel();
-        RamBit4jLabel1 = new javax.swing.JLabel();
-        RamBit5jLabel1 = new javax.swing.JLabel();
+        clk2 = new javax.swing.JLabel();
+        clk1 = new javax.swing.JLabel();
+        clk5 = new javax.swing.JLabel();
+        clk4 = new javax.swing.JLabel();
+        clk3 = new javax.swing.JLabel();
         jLabel77 = new javax.swing.JLabel();
         label2 = new java.awt.Label();
         BusBit5jLabel = new javax.swing.JLabel();
@@ -261,6 +401,7 @@ public class View_initial extends javax.swing.JFrame {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
+        AluTextPane.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         AluTextPane.setEnabled(false);
         jScrollPane1.setViewportView(AluTextPane);
 
@@ -288,10 +429,14 @@ public class View_initial extends javax.swing.JFrame {
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
+        UcTextPane.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         UcTextPane.setEnabled(false);
+        UcTextPane.setMargin(new java.awt.Insets(3, 55, 3, 3));
         jScrollPane2.setViewportView(UcTextPane);
 
+        ResultadoTextPane.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         ResultadoTextPane.setEnabled(false);
+        ResultadoTextPane.setMargin(new java.awt.Insets(3, 55, 3, 3));
         jScrollPane3.setViewportView(ResultadoTextPane);
 
         OutPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -366,27 +511,27 @@ public class View_initial extends javax.swing.JFrame {
 
         jLabel76.setText("BUS");
 
-        RamBit6jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RamBit6jLabel1.setText("2");
-        RamBit6jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        clk2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clk2.setText("2");
+        clk2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        RamBit7jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RamBit7jLabel1.setText("1");
-        RamBit7jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        clk1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clk1.setText("1");
+        clk1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        RamBit3jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RamBit3jLabel1.setText("5");
-        RamBit3jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        clk5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clk5.setText("5");
+        clk5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        RamBit4jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RamBit4jLabel1.setText("4");
-        RamBit4jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        clk4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clk4.setText("4");
+        clk4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        RamBit5jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RamBit5jLabel1.setText("3");
-        RamBit5jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        clk3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clk3.setText("3");
+        clk3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel77.setText("CICLO");
+        jLabel77.setText("CLK");
 
         label2.setText("Palabra de control");
 
@@ -742,15 +887,15 @@ public class View_initial extends javax.swing.JFrame {
                         .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel77)
                             .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                                .addComponent(RamBit7jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(clk1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(RamBit6jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(clk2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(RamBit5jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(clk3, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(RamBit4jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(clk4, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(RamBit3jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(clk5, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(199, 199, 199)
                         .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -791,11 +936,11 @@ public class View_initial extends javax.swing.JFrame {
                                 .addComponent(jLabel77)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(RamBit5jLabel1)
-                                    .addComponent(RamBit6jLabel1)
-                                    .addComponent(RamBit7jLabel1)
-                                    .addComponent(RamBit4jLabel1)
-                                    .addComponent(RamBit3jLabel1)))
+                                    .addComponent(clk3)
+                                    .addComponent(clk2)
+                                    .addComponent(clk1)
+                                    .addComponent(clk4)
+                                    .addComponent(clk5)))
                             .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel76))
@@ -923,7 +1068,7 @@ public class View_initial extends javax.swing.JFrame {
                         .addComponent(btnCargar)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jSlider1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(SlideVelocidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
@@ -942,7 +1087,7 @@ public class View_initial extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(SlideVelocidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -999,19 +1144,20 @@ public class View_initial extends javax.swing.JFrame {
     private javax.swing.JLabel PcBit3jLabel;
     private javax.swing.JPanel PcPanel;
     private javax.swing.JLabel RamABusJL;
-    private javax.swing.JLabel RamBit3jLabel1;
-    private javax.swing.JLabel RamBit4jLabel1;
-    private javax.swing.JLabel RamBit5jLabel1;
-    private javax.swing.JLabel RamBit6jLabel1;
     private javax.swing.JLabel RamBit7jLabel;
-    private javax.swing.JLabel RamBit7jLabel1;
     private javax.swing.JPanel RamPanel;
     private javax.swing.JTextPane ResultadoTextPane;
+    private javax.swing.JSlider SlideVelocidad;
     private javax.swing.JTextPane UcTextPane;
     private javax.swing.JButton btnCargar;
     private javax.swing.JButton btnPlayPause;
     private javax.swing.JButton btnReiniciar;
     private javax.swing.JButton btnStop;
+    private javax.swing.JLabel clk1;
+    private javax.swing.JLabel clk2;
+    private javax.swing.JLabel clk3;
+    private javax.swing.JLabel clk4;
+    private javax.swing.JLabel clk5;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel66;
@@ -1045,7 +1191,6 @@ public class View_initial extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JSlider jSlider1;
     private java.awt.Label label1;
     private java.awt.Label label2;
     // End of variables declaration//GEN-END:variables

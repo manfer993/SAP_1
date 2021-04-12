@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 public class Systems {
     
     private Datos datos;
+    private int velocidad; //milisegundos
     
     public Systems()
     {
@@ -28,5 +29,14 @@ public class Systems {
         return ram;
     }
     
+    public void setVelocidad(int i)
+    {
+        velocidad = i;
+    }
+    
+    public int getVelocidad()
+    {
+        return velocidad;
+    }
     
 }
