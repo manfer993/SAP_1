@@ -147,7 +147,14 @@ public class Model implements Runnable {
     }
 
     public void cargarInst() {
-        if (Integer.parseInt(viewLoadProgram.getPosicionRamTextField().getText()) < 16
+        if ((String) viewLoadProgram.getInstruccionComboBox().getSelectedItem() == "OUT"
+                || (String) viewLoadProgram.getInstruccionComboBox().getSelectedItem() == "HLT") {
+            getViewLoadProgram().loadInst();
+            getRam().setPosition(viewLoadProgram.getIndexOfMemory(), (String) viewLoadProgram.getInstruccionComboBox().getSelectedItem(), 0, 0);
+            dibujarLoadProgram();
+        } else if (viewLoadProgram.getPosicionRamTextField().getText().equals("")) {
+            JOptionPane.showMessageDialog(viewLoadProgram, "Debe ingresar el numero de la posicion entre 0 y 15", "Error", JOptionPane.ERROR_MESSAGE);
+        } else if (Integer.parseInt(viewLoadProgram.getPosicionRamTextField().getText()) < 16
                 && Integer.parseInt(viewLoadProgram.getPosicionRamTextField().getText()) >= 0) {
             getViewLoadProgram().loadInst();
             getRam().setPosition(viewLoadProgram.getIndexOfMemory(), (String) viewLoadProgram.getInstruccionComboBox().getSelectedItem(), Integer.parseInt(viewLoadProgram.getPosicionRamTextField().getText()), 0);
@@ -158,7 +165,9 @@ public class Model implements Runnable {
     }
 
     public void cargarDato() {
-        if (Integer.parseInt(viewLoadProgram.getTextfieldDato().getText()) < 256
+        if (viewLoadProgram.getTextfieldDato().getText().equals("")) {
+            JOptionPane.showMessageDialog(viewLoadProgram, "Debe ingresar el numero entre 0 y 255", "Error", JOptionPane.ERROR_MESSAGE);
+        } else if (Integer.parseInt(viewLoadProgram.getTextfieldDato().getText()) < 256
                 && Integer.parseInt(viewLoadProgram.getTextfieldDato().getText()) >= 0) {
             getViewLoadProgram().loadData();
             getRam().setPosition(viewLoadProgram.getIndexOfMemory(), "vacio", 0, Integer.parseInt(viewLoadProgram.getTextfieldDato().getText()));

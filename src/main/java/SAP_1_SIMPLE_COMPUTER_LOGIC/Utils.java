@@ -6,7 +6,7 @@ import java.util.Map;
 public class Utils {
 
     private static Map<String, String> instructionsA;
-    private static final String[] instructionsB = {"NOP", "LDA", "ADD", "SUB", "STA", "LDI", "JMP", "JC", "JZ", "", "", "", "", "", "OUT", "HTL"};
+    private static final String[] instructionsB = {"NOP", "LDA", "ADD", "SUB", "STA", "LDI", "JMP", "JC", "JZ", "", "", "", "", "", "OUT", "HLT"};
 
     public static void setInstructionsA() {
         instructionsA = new HashMap<>();
@@ -20,7 +20,7 @@ public class Utils {
         instructionsA.put("JC", "0111");
         instructionsA.put("JZ", "1000");
         instructionsA.put("OUT", "1110");
-        instructionsA.put("HTL", "1111");
+        instructionsA.put("HLT", "1111");
     }
 
     public static String getInstructionBit(String instruction) {

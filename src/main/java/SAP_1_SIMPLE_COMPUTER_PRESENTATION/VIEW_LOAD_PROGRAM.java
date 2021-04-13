@@ -332,6 +332,8 @@ public class View_load_program extends javax.swing.JFrame {
 
         jLabel2.setText("Seleccione Instrucción");
 
+        PosicionRamTextField.setText("0");
+        PosicionRamTextField.setToolTipText("");
         PosicionRamTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PosicionRamTextFieldActionPerformed(evt);
@@ -402,6 +404,8 @@ public class View_load_program extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("      Instrucción      ", null, InstruccionPanel, "");
 
+        textfieldDato.setText("0");
+        textfieldDato.setToolTipText("");
         textfieldDato.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 textfieldDatoKeyTyped(evt);
@@ -467,7 +471,7 @@ public class View_load_program extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(210, Short.MAX_VALUE))
+                .addContainerGap(234, Short.MAX_VALUE))
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleName("Informacion");
