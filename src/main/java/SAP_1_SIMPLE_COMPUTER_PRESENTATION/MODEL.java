@@ -100,8 +100,11 @@ public class Model implements Runnable {
         getVentana().getBtnPausa().setEnabled(false);
         getVentana().getBtnCargarProgram().setEnabled(true);
         simulando = false;
+        pausa=false;
         hiloDibujo.stop();
         hiloDibujo = null;
+        getVentana().iniciarCero();
+        getVentana().dibujarN();
         java.lang.System.gc();
     }
 
