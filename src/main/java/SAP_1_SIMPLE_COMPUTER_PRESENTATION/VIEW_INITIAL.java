@@ -36,6 +36,14 @@ public class View_initial extends javax.swing.JFrame {
     public JButton getBtnIniciar() {
         return btnPlayPause;
     }
+    
+    public JButton getBtnPausa() {
+        return btnReiniciar;
+    }
+    
+    public JButton getBtnCargarProgram() {
+        return btnCargar;
+    }
 
     public JSlider getSlide() {
         return SlideVelocidad;

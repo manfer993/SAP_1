@@ -7,7 +7,6 @@ import javax.swing.JOptionPane;
 
 public class Model implements Runnable {
 
-    
     private static ProgramCounterRegister pc;
     private static ClockCycle clock;
     private static MemoryRegister ram;
@@ -25,6 +24,7 @@ public class Model implements Runnable {
     private View_load_program viewLoadProgram;
     private Systems system;
     private boolean simulando;
+    private boolean pausa;
     private Thread hiloDibujo;
 
     public View_initial getVentana() {
@@ -47,11 +47,23 @@ public class Model implements Runnable {
         }
         return system;
     }
-
+    
+    public boolean getPausa()
+    {
+        return pausa;
+    }
+    
+    public void setPausa(boolean a)
+    {
+        pausa = a;
+    }
     // funcionalidad del sistema   
     public void iniciar() {
         getVentana();
         getVentana().setVisible(true);
+        getVentana().getBtnIniciar().setEnabled(false);
+        getVentana().getBtnDetener().setEnabled(false);
+        getVentana().getBtnPausa().setEnabled(false);
     }
 
     public void loadProgram() {
@@ -60,22 +72,32 @@ public class Model implements Runnable {
     }
 
     public void iniciarSimulacion() {
-        getVentana().getBtnIniciar().setEnabled(false);
-        getVentana().getBtnDetener().setEnabled(true);
-        hiloDibujo = new Thread(this);
-        hiloDibujo.start();
+        if (simulando && pausa) {
+            pausa = false;
+        } else {
+            getVentana().getBtnIniciar().setEnabled(false);
+            getVentana().getBtnDetener().setEnabled(true);
+            getVentana().getBtnPausa().setEnabled(true);
+            getVentana().getBtnCargarProgram().setEnabled(false);
+            hiloDibujo = new Thread(this);
+            hiloDibujo.start();
+        }
+
     }
 
-    public void terminarSimulacion() {
+    /*public void terminarSimulacion() {
         getVentana().getBtnIniciar().setEnabled(true);
         getVentana().getBtnDetener().setEnabled(false);
+        getVentana().getBtnPausa().setEnabled(false);
+        getVentana().getBtnCargarProgram().setEnabled(true);
         simulando = false;
-        hiloDibujo.interrupt();
-    }
+    }*/
 
     public void detenerSimulacion() {
         getVentana().getBtnIniciar().setEnabled(true);
         getVentana().getBtnDetener().setEnabled(false);
+        getVentana().getBtnPausa().setEnabled(false);
+        getVentana().getBtnCargarProgram().setEnabled(true);
         simulando = false;
         hiloDibujo.stop();
         hiloDibujo = null;
@@ -83,7 +105,17 @@ public class Model implements Runnable {
     }
 
     public void reiniciar() {
-        /*aun no programado*/
+        if(getPausa() && simulando)
+        {
+            setPausa(false);
+            getVentana().getBtnPausa().setText("PAUSE");
+        }else{
+            if(getPausa()==false && simulando==true)
+            {
+                setPausa(true);
+                getVentana().getBtnPausa().setText("RESUME");
+            }
+        }
     }
 
     public void loadProgramDefault() {
@@ -114,6 +146,7 @@ public class Model implements Runnable {
         if (ram != null) {
             getVentana().getBtnIniciar().setEnabled(true);
             getVentana().getBtnDetener().setEnabled(false);
+            getVentana().getBtnPausa().setEnabled(false);
         }
     }
 
@@ -140,6 +173,10 @@ public class Model implements Runnable {
 
     public void esperar() // tiempo en milisegundos
     {
+        while (getPausa()) {
+            System.out.println("Hilo pausado..."+getPausa());
+        }
+
         try {
             Thread.sleep(getSystem().getVelocidad());
         } catch (InterruptedException ex) {
@@ -207,6 +244,7 @@ public class Model implements Runnable {
         Utils.setInstructionsA();
         initializeRegisters();
         simulando = true;
+        pausa = false;
         while (pc.getPC() < 16) {
             System.out.println("pc get: " + pc.getPC());
             clkSpecific(clkCommon());
