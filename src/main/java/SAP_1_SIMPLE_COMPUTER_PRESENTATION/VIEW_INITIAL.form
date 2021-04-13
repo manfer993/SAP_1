@@ -84,7 +84,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnReiniciar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="REINICIAR"/>
+        <Property name="text" type="java.lang.String" value="PAUSE"/>
         <Property name="actionCommand" type="java.lang.String" value="reiniciar"/>
       </Properties>
     </Component>
