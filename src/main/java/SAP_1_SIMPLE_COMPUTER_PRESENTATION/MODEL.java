@@ -73,6 +73,7 @@ public class Model implements Runnable {
     }
 
     public void iniciarSimulacion() {
+
         if (simulando && pausa) {
             pausa = false;
         } else {
@@ -83,7 +84,6 @@ public class Model implements Runnable {
             hiloDibujo = new Thread(this);
             hiloDibujo.start();
         }
-
     }
 
     /*public void terminarSimulacion() {
@@ -177,7 +177,6 @@ public class Model implements Runnable {
         while (getPausa()) {
             System.out.println("Hilo pausado..."+getPausa());
         }
-
         try {
             Thread.sleep(getSystem().getVelocidad());
         } catch (InterruptedException ex) {
