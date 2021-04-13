@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class MemoryPositionModel {
+
     private String instruction;
     private int position;
     private int data;
@@ -15,5 +16,5 @@ public class MemoryPositionModel {
         this.data = data;
         this.binaryRepresentation = binaryRepresentation;
     }
-    
+
 }

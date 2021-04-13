@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 public class OutputRegister {
-    @Getter @Setter
-    private String OUT;    
+
+    @Getter
+    @Setter
+    private String OUT;
 }

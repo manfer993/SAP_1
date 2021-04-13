@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 public class AccumulatorARegister {
-    @Getter @Setter
-    private String AC;    
+
+    @Getter
+    @Setter
+    private String AC;
 }

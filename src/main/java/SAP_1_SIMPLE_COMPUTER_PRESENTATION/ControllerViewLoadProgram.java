@@ -35,7 +35,5 @@ public class ControllerViewLoadProgram implements ActionListener {
                 JOptionPane.showMessageDialog(viewload, "Function not supported");
                 break;
         }
-
     }
-
 }

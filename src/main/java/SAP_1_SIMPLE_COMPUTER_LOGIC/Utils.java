@@ -6,10 +6,10 @@ import java.util.Map;
 public class Utils {
 
     private static Map<String, String> instructionsA;
-    private static String[] instructionsB = {"NOP","LDA","ADD","SUB","STA","LDI","JMP","JC","JZ","","","","","","OUT","HTL"};
+    private static final String[] instructionsB = {"NOP", "LDA", "ADD", "SUB", "STA", "LDI", "JMP", "JC", "JZ", "", "", "", "", "", "OUT", "HTL"};
 
     public static void setInstructionsA() {
-        instructionsA = new HashMap<String, String>();
+        instructionsA = new HashMap<>();
         instructionsA.put("NOP", "0000");
         instructionsA.put("LDA", "0001");
         instructionsA.put("ADD", "0010");
@@ -22,12 +22,12 @@ public class Utils {
         instructionsA.put("OUT", "1110");
         instructionsA.put("HTL", "1111");
     }
-    
-    public static String getInstructionBit(String instruction){
+
+    public static String getInstructionBit(String instruction) {
         return instructionsA.get(instruction);
     }
-    
-    public static String getInstructionWord(int position){
+
+    public static String getInstructionWord(int position) {
         return instructionsB[position];
     }
 
@@ -44,6 +44,6 @@ public class Utils {
     }
 
     public static int getDecimal(String binaryNumber) {
-        return Integer.parseInt(binaryNumber,2);
+        return Integer.parseInt(binaryNumber, 2);
     }
 }

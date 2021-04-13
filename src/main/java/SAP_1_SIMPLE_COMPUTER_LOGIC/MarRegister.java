@@ -5,6 +5,7 @@ import lombok.Setter;
 
 public class MarRegister {
 
-    @Getter @Setter
+    @Getter
+    @Setter
     private String mar;
 }

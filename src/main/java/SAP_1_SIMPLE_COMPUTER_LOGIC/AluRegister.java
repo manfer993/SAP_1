@@ -50,7 +50,7 @@ public class AluRegister {
         for (int i = 0; i < sizeB; i++) {
             bArr[i] = Character.getNumericValue(bStringArr[i]);
         }
-        
+
         int[] resultArr;
         if (sub) {
             resultArr = subBin(acArr, bArr);
@@ -98,7 +98,7 @@ public class AluRegister {
         }
         return result;
     }
-    
+
     public int[] subBin(int a[], int b[]) {
         int carry = 0;
         int[] result = new int[a.length];

@@ -5,9 +5,11 @@ import lombok.Setter;
 
 public class FlagsRegister {
 
-    @Getter @Setter
+    @Getter
+    @Setter
     private static boolean CF = false;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     private static boolean ZF = false;
 }

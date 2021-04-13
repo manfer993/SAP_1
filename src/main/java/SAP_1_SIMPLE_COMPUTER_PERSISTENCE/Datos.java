@@ -27,26 +27,19 @@ public class Datos {
             // Lectura del archivo
             while ((linea = buffered.readLine()) != null) {
                 String[] partMem = linea.split(",");
-
                 posMem = Integer.parseInt(partMem[0]);
                 inst = partMem[1];
                 pos = Integer.parseInt(partMem[2]);
                 dato = Integer.parseInt(partMem[3]);
 
-                //System.out.println("posMem: " + posMem + " inst: " + inst + " posicion: " + pos + " dato: " + dato);
-                //System.out.println("equals: "+ inst.equals("vacio") );
-
                 ram.setPosition(posMem, inst, pos, dato);
             }
-
             // Cerramos el archivo
             buffered.close();
             lecturaArchivo.close();
-
         } catch (IOException ex) {
             System.out.println("Error en leyendo el archivo ");
         }
-        
         return ram;
     }
 

@@ -4,14 +4,17 @@ import lombok.Getter;
 import lombok.Setter;
 
 public class InstructionRegister {
-    @Getter @Setter
+
+    @Getter
+    @Setter
     private String IR;
-    
-    public String getPosition(){
+
+    public String getPosition() {
         return IR.substring(4);
     }
-    public String getInstruction(){
-        return IR.substring(0,4);
+
+    public String getInstruction() {
+        return IR.substring(0, 4);
     }
-    
+
 }

@@ -4,10 +4,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 public class ControllerRegister {
-    @Getter @Setter
+
+    @Getter
+    @Setter
     private String UC;
-    
-    public String getGraficSequencer(){
+
+    public String getGraficSequencer() {
         return Utils.getInstructionWord(Utils.getDecimal(UC));
     }
 }

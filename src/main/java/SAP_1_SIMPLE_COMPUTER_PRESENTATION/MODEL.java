@@ -59,13 +59,8 @@ public class Model implements Runnable {
     }
 
     public void iniciarSimulacion() {
-        //setVelocidad(110 - getVentana().getSliVelocidad().getValue());
         getVentana().getBtnIniciar().setEnabled(false);
         getVentana().getBtnDetener().setEnabled(true);
-        //if (simulando == false) {
-          //  hiloDibujo.resume();
-           // return;
-        //}
         hiloDibujo = new Thread(this);
         hiloDibujo.start();
     }
@@ -106,8 +101,6 @@ public class Model implements Runnable {
         }
         try {
             ram = getSystem().openFile(archivo);
-            //System.out.println("loadProgramDefault instruccion: "+ram.getPosition(11).getInstruction());
-            //System.out.println("default program antes entrando a dibujar");
             dibujarLoadProgram();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(getViewLoadProgram(), ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
@@ -139,9 +132,9 @@ public class Model implements Runnable {
     public void setVelocidad(int velocidad) {
         getSystem().setVelocidad(velocidad);
     }
-    
-    public void controlarVelocidad(){ 
-        setVelocidad(5000-getVentana().getSlide().getValue());
+
+    public void controlarVelocidad() {
+        setVelocidad(5000 - getVentana().getSlide().getValue());
     }
 
     public void esperar() // tiempo en milisegundos
@@ -202,30 +195,12 @@ public class Model implements Runnable {
 
     public void simular() {
         Utils.setInstructionsA();
-        //loadMemory();
         initializeRegisters();
         simulando = true;
         while (pc.getPC() < 16) {
             System.out.println("pc get: " + pc.getPC());
             clkSpecific(clkCommon());
         }
-    }
-
-    private static void loadMemory() {
-        ram = new MemoryRegister();
-
-        ram.setPosition(0, "LDA", 13, 0);
-        ram.setPosition(1, "ADD", 14, 0);
-        ram.setPosition(2, "SUB", 15, 0);
-        ram.setPosition(3, "JZ", 6, 0);
-        ram.setPosition(4, "OUT", 0, 0);
-        ram.setPosition(5, "HTL", 0, 0);
-        ram.setPosition(6, "LDI", 5, 0);
-        ram.setPosition(7, "STA", 15, 0);
-        ram.setPosition(8, "JMP", 0, 0);
-        ram.setPosition(13, null, 0, 5);
-        ram.setPosition(14, null, 0, 10);
-        ram.setPosition(15, null, 0, 15);
     }
 
     private static void initializeRegisters() {
