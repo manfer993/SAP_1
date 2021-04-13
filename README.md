@@ -33,16 +33,16 @@ Si desea seleccionar una instrucción, haga clic en la lista desplegable en el c
 
 Cada instrucción tiene una función, a continuación, se explica cada una: 
 
-ADD: Coloca en el registro A, el resultado de la suma entre lo anteriormente almacenado en A con lo que se encuentra almacenado en la posición x de memoria
-SUB: Coloca en el registro A, el resultado de la resta entre lo anteriormente almacenado en A con lo que se encuentra almacenado en la posición x de memoria
-LDA: Coloca en el registro A, el valor que se encuentra almacenado en la posición x de memoria
-STA: Coloca en la posición x de memoria, lo que se encuentra en el registro A, escribiendo en ejecución dentro de la RAM
-LDI: El sistema mostrará la siguiente oración 'Palabra de control' durante la ejecución de un programa de control y que es generada por la unidad de control.
-JMP: Salta a la posición x de memoria
-JC: Salta a la posición x de memoria si y sólo si hay acarreo en la última operación realizada (a >= 0)
-JZ: Salta a la posición x de memoria si y sólo si hay un cero en la última operación realizada (a = 0)
-OUT: Muestra en el registro OUT lo que se encuentra en el registro A
-HLT: Fin del programa en ejecución.
+- ADD: Coloca en el registro A, el resultado de la suma entre lo anteriormente almacenado en A con lo que se encuentra almacenado en la posición x de memoria
+- SUB: Coloca en el registro A, el resultado de la resta entre lo anteriormente almacenado en A con lo que se encuentra almacenado en la posición x de memoria
+- LDA: Coloca en el registro A, el valor que se encuentra almacenado en la posición x de memoria
+- STA: Coloca en la posición x de memoria, lo que se encuentra en el registro A, escribiendo en ejecución dentro de la RAM
+- LDI: El sistema mostrará la siguiente oración 'Palabra de control' durante la ejecución de un programa de control y que es generada por la unidad de control.
+- JMP: Salta a la posición x de memoria
+- JC: Salta a la posición x de memoria si y sólo si hay acarreo en la última operación realizada (a >= 0)
+- JZ: Salta a la posición x de memoria si y sólo si hay un cero en la última operación realizada (a = 0)
+- OUT: Muestra en el registro OUT lo que se encuentra en el registro A
+- HLT: Fin del programa en ejecución.
 
 Luego, escoja la posición de memoria que se relaciona con la instrucción seleccionada. 
 
