@@ -52,20 +52,31 @@ public class AluRegister {
         }
 
         int[] resultArr;
+        //Accarreo cuando resultado de la resta es -1
         if (sub) {
             resultArr = subBin(acArr, bArr);
         } else {
             resultArr = addBin(acArr, bArr);
         }
-        String resultStg = "";
-        for (int i = 0; i < resultArr.length; i++) {
-            resultStg = resultStg + resultArr[i];
-        }
-        decimalResult = Utils.getDecimal(resultStg);
-        if (decimalResult == 0) {
-            FlagsRegister.setZF(true);
-        }
-        this.ALU.put("result", Integer.toString(decimalResult));
+         //Acarreo cuando resultado resta no es negativa 
+        /*if (sub) {
+            int result = Utils.getDecimal(ac) - Utils.getDecimal(b);
+            if(result >= 0){
+                FlagsRegister.setCF(true);                
+            }
+            this.ALU.put("result", Integer.toString(result));
+        } else {
+            resultArr = addBin(acArr, bArr);
+            String resultStg = "";
+            for (int i = 0; i < resultArr.length; i++) {
+                resultStg = resultStg + resultArr[i];
+            }
+            decimalResult = Utils.getDecimal(resultStg);
+            if (decimalResult == 0) {
+                FlagsRegister.setZF(true);
+            }
+            this.ALU.put("result", Integer.toString(decimalResult));
+        }*/
     }
 
     public int[] addBin(int a[], int b[]) {
