@@ -24,6 +24,7 @@ public class Model implements Runnable {
     private View_load_program viewLoadProgram;
     private Systems system;
     private boolean simulando;
+    private boolean pausa;
     private Thread hiloDibujo;
 
     public View_initial getVentana() {
@@ -59,10 +60,14 @@ public class Model implements Runnable {
     }
 
     public void iniciarSimulacion() {
-        getVentana().getBtnIniciar().setEnabled(false);
-        getVentana().getBtnDetener().setEnabled(true);
-        hiloDibujo = new Thread(this);
-        hiloDibujo.start();
+        if (pausa && simulando) {
+            pausa = false;
+        } else {
+            getVentana().getBtnIniciar().setEnabled(false);
+            getVentana().getBtnDetener().setEnabled(true);
+            hiloDibujo = new Thread(this);
+            hiloDibujo.start();
+        }
     }
 
     public void terminarSimulacion() {
@@ -82,7 +87,7 @@ public class Model implements Runnable {
     }
 
     public void reiniciar() {
-        /*aun no programado*/
+        pausa = true;
     }
 
     public void loadProgramDefault() {
@@ -139,6 +144,9 @@ public class Model implements Runnable {
 
     public void esperar() // tiempo en milisegundos
     {
+        while (pausa) {
+            System.out.println("Hilo Pausado.....");
+        }
         try {
             Thread.sleep(getSystem().getVelocidad());
         } catch (InterruptedException ex) {
@@ -206,6 +214,7 @@ public class Model implements Runnable {
         Utils.setInstructionsA();
         initializeRegisters();
         simulando = true;
+        pausa = false;
         while (pc.getPC() < 16) {
             System.out.println("pc get: " + pc.getPC());
             clkSpecific(clkCommon());
