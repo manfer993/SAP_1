@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 
 public class Model implements Runnable {
 
+    
     private static ProgramCounterRegister pc;
     private static ClockCycle clock;
     private static MemoryRegister ram;

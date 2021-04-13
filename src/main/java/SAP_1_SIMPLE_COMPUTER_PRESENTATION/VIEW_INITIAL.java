@@ -345,7 +345,7 @@ public class View_initial extends javax.swing.JFrame {
 
         jLabel1.setText("VELOCIDAD DE LA ANIMACIÓN");
 
-        btnReiniciar.setText("REINICIAR");
+        btnReiniciar.setText("PAUSE");
         btnReiniciar.setActionCommand("reiniciar");
 
         btnPlayPause.setText("PLAY");
